@@ -1,0 +1,96 @@
+.contacts-sect__email > .contacts-block__subtitle:hover,
+.contacts-sect__tel > .contacts-block__subtitle:hover {
+  color: #EB0029;
+}
+
+.link_red:hover {
+  border-bottom-color: transparent;
+}
+
+.search__result-link:hover {
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+.nav .nav__link.dropdown:hover::before {
+  max-height: 45px;
+}
+
+.nav .nav__link.dropdown:hover::after {
+  transform: rotate(180deg);
+}
+
+.nav .nav__link.dropdown:hover + .sub-menu {
+  max-height: 75px;
+  pointer-events: auto;
+}
+
+.nav .sub-menu:hover {
+  max-height: 75px;
+  pointer-events: auto;
+}
+
+.close-btn:hover {
+  color: #EB0029;
+}
+
+.btn:hover,
+#commentform .submit:hover {
+  background-color: transparent;
+  color: #EB0029;
+}
+
+.btn-ol:hover {
+  color: #fff;
+  background-color: #2B1345;
+  border-color: #2B1345;
+}
+
+.single-sect__subscribe-link:hover > .single-sect__subscribe-img,
+.dots > li:not(.slick-active):hover > button .dot__inside {
+  fill: #EB0029;
+}
+
+.single-sect__author-link:hover,
+.single-sect__author-link:hover > .single-sect__author-svg {
+  fill: #5A4B77;
+  color: #5A4B77;
+  background: transparent;
+}
+
+.comment-reply-link:hover {
+  text-shadow: .25px .25px .25px;
+}
+
+.hdr__callback-btn:hover {
+  background-color: #EB0029;
+}
+
+.pdf-link:hover > .pdf-link__img {
+  opacity: .6;
+}
+
+.breadcrumbs__link:hover > .breadcrumbs__text,
+.pdf-link:hover > .pdf-link__title,
+.comment-body .comment-edit-link:hover,
+.logged-in-as > a:last-child:hover {
+  border-bottom-color: currentColor;
+}
+
+.checkinp__btn:hover,
+.privacy-policy-link:hover {
+  color: #EB0029;
+  border-bottom-color: currentColor;
+}
+
+.ftr-big__tel:hover,
+.ftr-big__email:hover,
+.nav__link:hover,
+.dev-link:hover,
+.sort-block__btn:hover {
+  color: #EB0029;
+}
+
+.risks-sect {
+  overflow: visible;
+}

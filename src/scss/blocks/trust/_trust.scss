@@ -1,0 +1,77 @@
+.trust-sect {
+  padding-top: 95px;
+  padding-bottom: 95px;
+  overflow: hidden;
+  &__title {
+    margin-bottom: 30px;
+  }
+}
+
+.features-block {
+  &__dots {
+    margin-top: 20px;
+  }
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 280px;
+  height: 285px;
+  padding: 20px;
+  &::before {
+    width: 340px;
+    height: 255px;
+    background-image: url('../img/services-oval.svg');
+  }
+  &:nth-last-child(n+2) {
+    margin-right: 20px;
+  }
+  &:nth-child(4n+1) {
+    &::before {
+      top: -20px;
+      left: -75px;
+    }
+  }
+  &:nth-child(4n+2) {
+    &::before {
+      top: -5px;
+      left: -15px;
+    }
+  }
+  &:nth-child(4n+3) {
+    &::before {
+      top: -65px;
+      right: -110px;
+    }
+  }
+  &:nth-child(4n+4) {
+    &::before {
+      top: -45px;
+      right: -45px;
+    }
+  }
+  &__img {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+  }
+  &__title {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin: 25px 0 15px;
+    font: bold 23px/125% Lato;
+    color: $purple-color;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  &__descr {
+    max-width: 100%;
+    font: normal 15px/165% Lato;
+    color: #4D4D4D;
+    z-index: 1;
+  }
+}

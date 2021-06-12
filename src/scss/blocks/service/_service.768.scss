@@ -1,0 +1,23 @@
+.service-sect {
+  padding-top: 95px;
+  &__title {
+    margin-bottom: 35px;
+  }
+}
+
+.service-card {
+  // (section width - margin-right) / visible cards
+  width: calc((650px - 20px) / 2);
+  padding: 30px 35px;
+  height: 535px;
+  &__img {
+    width: 80px;
+    height: 80px;
+  }
+  &__title {
+    max-width: 200px;
+    height: 59px;
+    margin: 60px 0 35px;
+    font-size: 25px;  
+  }
+}

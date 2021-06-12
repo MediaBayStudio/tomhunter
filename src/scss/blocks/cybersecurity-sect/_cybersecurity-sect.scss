@@ -1,0 +1,35 @@
+.cybersecurity-sect {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font: 14px/150% Lato;
+  &__title {
+    margin: 0 0 30px;
+  }
+  &__descr {
+  }
+  &__list {
+    margin-top: 40px;
+    max-width: 400px;
+  }
+  &__li {
+    &:not(:last-child) {
+      margin: 0 0 30px;
+    }
+  }
+  &__li-title {
+    margin: 0 0 20px;
+    display: block;
+    font: bold 18px/150% Lato;
+    color: $purple-color;
+  }
+  &__li-descr {
+    &::before {
+      content: '';
+      display: block;
+      margin: 0 0 10px;
+      width: 60px;
+      height: 3px;
+      background: $red-color;
+    }
+  }
+}

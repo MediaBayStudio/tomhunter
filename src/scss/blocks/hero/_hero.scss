@@ -1,0 +1,103 @@
+.hero__circle-big {
+  right: calc((100vw - 320px)/(575 - 320)*(135 - -5) + -5px);
+  top: 35px;
+}
+
+.hero__circle-medium {
+  right: calc((100vw - 320px)/(575 - 320)*(50 - -20) + -20px);
+  top: 130px;
+}
+
+.hero__circle-small {
+  right: calc((100vw - 320px)/(575 - 320)*(230 - -5) + -5px);
+  top: 240px;
+}
+
+.hero-sect {
+  display: flex;
+  padding-top: 65px;
+  padding-bottom: 25px;
+  background:
+    url('../img/pattern.png') center/cover no-repeat,
+    radial-gradient(30% 22% at 65% 77%, rgba(58, 20, 77, 0.5) 15.62%, rgba(124, 31, 43, 0.1) 100%),
+    radial-gradient(150% 88% at 70% 40%, #3A144D 0%, rgba(41, 25, 86, 0.2) 100%),
+    $hero-bg-color;
+  color: $white-color;
+  overflow: hidden;
+  position: relative;
+  > .hero-sect__slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  &__title {
+    font: bold 28px/130% Lato;
+  }
+  &__descr {
+    margin: 20px 0 40px;
+    font: 300 15px/165% Lato;
+  }
+  &__btn {
+    padding: 0 10px;
+    min-width: 208px;
+    height: 38px;
+  }
+  &__img {
+    object-fit: contain;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__slide {
+    position: relative;
+  }
+
+  &__dots {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1px;
+    width: 50px;
+    height: 25px;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    background-color: $white-color;
+    >.darr {
+      width: 16px;
+      height: 10px;
+      margin-top: auto;
+      >.darr__path {
+        stroke: #190F33;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+  }
+}
+
+.hero-sect.slick-slider {
+  >.hero-sect__title {
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+  }
+  >.hero-sect__descr {
+    min-height: 144px;
+  }
+  >.hero-sect__btn {
+    margin-bottom: 85px;
+  }
+}
+
+h2.hero-sect__title {
+  font-size: 28px;
+}

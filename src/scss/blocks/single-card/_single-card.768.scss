@@ -1,0 +1,19 @@
+.single-card {
+  // max-width: 315px;
+  max-width: none;
+  height: 600px;
+  margin: 20px 0 0 0;
+  width: calc(650px / 2 - 10px);
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+  &__img-wrap {
+    min-width: 315px;
+  }
+  &__title {
+    font-size: 25px;
+  }
+  &__bottom {
+    margin-top: auto;
+  }
+}

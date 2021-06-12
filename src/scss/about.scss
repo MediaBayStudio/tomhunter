@@ -1,0 +1,79 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.about-hero-sect {
+  padding-bottom: 315px;
+  background: url('#') center bottom/270px 255px no-repeat;
+  color: $purple-color;
+  position: relative;
+  &__title {
+    margin-bottom: 40px;
+    font: bold 30px/100% Lato;
+  }
+  &__descr {
+    font: normal 15px/167% Lato;
+    &:nth-last-of-type(n+2) {
+      margin-bottom: 35px;
+    }
+  }
+  &__logo {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: calc(50vw - 140px);
+    bottom: 225px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .about-hero-sect {
+    padding-bottom: 450px;
+    background-size: 420px 395px;
+    &__title {
+      font-size: 42px;
+    }
+    &__descr {
+      font-size: 16px;
+      line-height: 162%;
+    }
+    &__logo {
+      width: 64px;
+      height: 64px;
+      left: auto;
+      right: calc(50vw - 325px);
+      bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 991.98px) {
+  .about-hero-sect {
+    background-size: 355px 335px;
+    background-position: center right calc(50vw - 480px);
+    padding-bottom: 0;
+    &__title {
+      font-size: 58px;
+    }
+    &__descr {
+      max-width: 595px;
+    }
+    &__logo {
+      left: auto;
+      right: calc(50vw - 480px);
+      bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1319.98px) {
+  .about-hero-sect {
+    background-size: 485px 455px;
+    background-position: bottom right calc(50vw - 535px);
+    &__logo {
+      width: 80px;
+      height: 80px;
+      right: calc(50vw - 630px);
+    }
+  }
+}

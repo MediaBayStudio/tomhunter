@@ -1,0 +1,33 @@
+.activities-sect {
+  padding-top: 10px;
+  padding-bottom: 120px;
+  &__title {
+  }
+  &__activities {
+  }
+}
+
+.activity {
+  grid-template-columns: 270px 100px auto;
+  &:nth-last-child(n+2) {
+  }
+  &:nth-child(2n) {
+    grid-template-columns: 510px 70px auto;
+    > .activity__img {
+      // margin: 0 0 0 100px;
+    }
+  }
+  &__img {
+    // margin: 0 100px 0 0;
+    // width: 270px;
+  }
+  &__text {
+    // width: 480px;
+  }
+  &__title {
+    margin: 0 0 10px;
+    font-size: 24px;
+  }
+  &__descr {
+  }
+}

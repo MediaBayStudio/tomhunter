@@ -1,0 +1,27 @@
+.index-news-sect {
+  &__title {}
+
+  &__list {
+    font-size: 18px;
+  }
+
+  &__li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__li-img {
+    margin-bottom: 30px;
+  }
+
+  &__li-title {
+    margin: 0 0 15px;
+  }
+
+  &__li-descr {}
+
+  &__li-date {}
+
+  &__link {}
+}

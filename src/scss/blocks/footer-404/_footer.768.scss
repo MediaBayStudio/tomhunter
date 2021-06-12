@@ -1,0 +1,26 @@
+.ftr-big {
+  padding: 35px calc(50% - 325px);
+  &__logo, &__pp {
+    justify-self: end;
+  }
+}
+
+.ftr-big__nav {
+  grid-template-columns: auto 0.725fr auto 1fr auto;
+  > .nav__link {
+    font-size: 16px;
+  }
+}
+
+.ftr-big__nav > .sub-menu,
+.ftr-big__pp,
+.ftr-big__copy {
+  font-size: 12px;
+}
+
+.copyright-block {
+  line-height: 170%;
+  >.forward_slash {
+    text-indent: 18px;
+  }
+}

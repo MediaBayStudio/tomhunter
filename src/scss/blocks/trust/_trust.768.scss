@@ -1,0 +1,32 @@
+.feature-card {
+  width: calc((650px - 20px) / 2); // (section width - margin-right) / visible cards
+  height: 325px;
+  padding: 35px;
+  &__title {
+    font-size: 23px;
+  }
+}
+
+.trust-sect {
+  .features-block:not(.slick-slider) {
+    display: flex;
+    flex-wrap: wrap;
+    .feature-card {
+      &__img {
+        width: 60px;
+        height: 60px;
+      }
+      &__title {
+        margin-bottom: 25px;
+      }
+    }
+    >.feature-card {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-child(1), &:nth-child(2) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

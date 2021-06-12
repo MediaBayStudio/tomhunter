@@ -1,0 +1,30 @@
+.card_two-col {
+  padding: 25px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  >.card__img {
+    grid-column: 1;
+    align-self: center;
+  }
+  >.card__title {
+    grid-column: 2;
+    margin: 0 0 0 15px;
+    align-self: center;
+  }
+  >.card__descr, >.card__list {
+    grid-column: 1/span 2;
+    margin-top: 10px;
+    &:nth-child(3) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.card_sign {
+  &::after {
+    max-width: none;
+    font-size: 14px;
+  }
+}
+

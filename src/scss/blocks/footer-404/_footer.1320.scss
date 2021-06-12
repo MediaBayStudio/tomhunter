@@ -1,0 +1,20 @@
+.ftr-big {
+  padding: 50px calc(50% - 630px);
+  grid-template-columns: 1fr 1fr 100px 1fr;
+  &__nav {
+    > .nav__link {
+      margin-bottom: 15px;
+    }
+    > .sub-menu {
+      > .nav__link:nth-last-child(n+2) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// .dev {
+//   &-link {
+//     font-size: 19px;
+//   }
+// }

@@ -1,0 +1,30 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.sect-title {
+  font-size: 32px;
+}
+
+//blocks import
+@import 'blocks/btns/btns.1320';
+@import 'blocks/popups/popups.1320';
+@import 'blocks/mobile-menu/mobile-menu.1320';
+@import 'blocks/form/form.1320';
+@import 'blocks/slick/slick.1320';
+@import 'blocks/card/card.1320';
+@import 'blocks/activities/activities.1320';
+@import 'blocks/index-services/index-services.1320';
+@import 'blocks/index-about/index-about.1320';
+@import 'blocks/index-facts/index-facts.1320';
+@import 'blocks/index-news/index-news.1320';
+@import 'blocks/cybersecurity-sect/cybersecurity-sect.1320';
+@import 'blocks/index-clients/index-clients.1320';
+@import 'blocks/header/header.1320';
+@import 'blocks/hero/hero.1320';
+@import 'blocks/trust/trust.1320';
+@import 'blocks/invite/invite.1320';
+@import 'blocks/service/service.1320';
+@import 'blocks/stages/stages.1320';
+@import 'blocks/contacts/contacts.1320';
+@import 'blocks/footer/footer.1320';

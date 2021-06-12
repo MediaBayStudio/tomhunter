@@ -1,0 +1,44 @@
+@import 'assets/colors';
+.btn, .btn-ol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+.btn {
+  min-width: 160px;
+  height: 50px;
+  background-color: $red-color;
+  border: 2px solid $red-color;
+  color: $white-color;
+  font: bold 16px/100% Lato;
+  transition: background-color .35s, color .35s, transform .35s;
+  &:active {
+    transform: scale(0.985) !important;
+  }
+}
+
+.btn-ol {
+  min-width: 150px;
+  height: 40px;
+  font: bold 14px Lato;
+  color: #000;
+  border: 1px solid #E6E6E6;
+  transition: background-color .5s, color .5s, border-color .5s;
+}
+
+.close-btn {
+  width: 17.5px;
+  height: 17.5px;
+  padding: 2.5px;
+  transition: color .4s;
+  &:active {
+    transform: scale(.95);
+  }
+  &__rect {
+    width: 19px;
+    height: 2px;
+    fill: currentColor;
+  }
+}

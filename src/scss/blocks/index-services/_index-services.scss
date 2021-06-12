@@ -1,0 +1,60 @@
+
+.index-services-block {
+  &__dots {
+    margin-top: 20px;
+    .dot {
+      transform: scale(1.25);
+    }
+  }
+  .slick-list {
+    overflow: hidden;
+  }
+}
+
+.index-services-sect {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__title {
+    margin: 0 0 30px;
+  }
+}
+
+.index-service-card {
+  padding: 30px 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  font: 12px/208% Lato;
+  &::before {
+    width: 225px;
+    height: 155px;
+    top: 0;
+    left: -35px;
+    // right: -35px;
+    background-size: contain;
+  }
+  // &:first-child,
+  // &:nth-child(5n) {
+    // &::before {
+      // left: -35px;
+    // }
+  // }
+  &__title {
+    font: bold 18px/167% Lato;
+    color: $purple-color;
+    position: relative;
+  }
+  &__descr {
+    margin-top: 20px;
+    max-width: 300px;
+    position: relative;
+    &::before {
+      margin: 0 0 20px;
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: $red-color;
+    }
+  }
+}

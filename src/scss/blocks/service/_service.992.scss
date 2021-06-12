@@ -1,0 +1,4 @@
+.service-card {
+  width: calc((960px - 40px) / 3); // (section width - margin-right) / visible cards
+  height: 575px;
+}

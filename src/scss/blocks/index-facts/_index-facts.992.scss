@@ -1,0 +1,23 @@
+.facts-sect {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__title {}
+
+  &__list {}
+
+  &__li {
+    width: calc((100% - 90px) / 3);
+    &:nth-child(n) {
+      margin-right: 45px;
+    }
+    &:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+
+  &__li-img {}
+
+  &__li-title {}
+
+  &__li-descr {}
+}

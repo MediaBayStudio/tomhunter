@@ -1,0 +1,33 @@
+/* STAGES SECTION START */
+.stages-block .card::before {
+  width: 410px;
+  height: 275px;
+  top: -110px;
+  right: -190px;
+  transform: rotate(17.5deg);
+}
+
+/* STAGES SECTION END */
+@media (min-width: 575.98px) {
+  .descr-sect__title {
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  /* STAGES SECTION START */
+  .stages-block .card::before {
+    top: -120px;
+    right: 5px;
+  }
+  /* STAGES SECTION END */
+}
+
+@media (min-width: 991.98px) {
+  /* STAGES SECTION START */
+  .stages-block .card::before {
+    top: -120px;
+    right: -120px;
+  }
+  /* STAGES SECTION END */
+}

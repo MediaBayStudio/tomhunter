@@ -1,0 +1,134 @@
+label.invalid {
+  font: normal 10px/150% Lato;
+  color: $red-color;
+}
+
+input.invalid {
+  border-bottom-color: $red-color;
+}
+
+.form__inp-wrap {
+  > label.invalid {
+    display: block;
+    height: 0;
+    transform: translateY(5px);
+  }
+}
+
+.checkinp__lbl {
+  >label.invalid {
+    position: absolute;
+    top: 150%;
+    left: 30px;
+    width: 200px;
+  }
+}
+
+.checkinp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  &:checked~.checkinp__pseudo {
+    
+    &::after {
+      opacity: 1;
+    }
+  }
+  &-wrap {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__lbl {
+    position: relative;
+    margin-right: 10px;
+  }
+  &__pseudo {
+  cursor: pointer;  
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    color: $dark-red-color;
+    border-radius: 2px;
+    border: 1px solid;
+    font-size: 0;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('../img/check.svg') center/cover no-repeat;
+      opacity: 0;
+      transition: opacity .4s;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+  }
+  &__text {
+    display: inline-block;
+    max-width: 220px;
+    font-size: 10px;
+    line-height: 150%;
+    color: #4D4D4D;
+  }
+  &__btn {
+    transition: border-bottom-color .35s, color .35s;
+    border-bottom: 1px solid;
+  }
+}
+
+.form {
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__inp {
+    width: 100%;
+    border: none;
+    background: none;
+    padding-bottom: 8px;
+    font-size: 14px;
+    color: #4D4D4D;
+    border-bottom: 1px solid #D4D4D4;
+    transition: border-bottom-color .35s;
+    &::placeholder {
+      font: inherit;
+      color: #878787;
+      transition: color .35s;
+    }
+    &.valid {
+      border-bottom-color: #291956;
+    }
+    &:focus {
+      border-bottom-color: #291956;
+      &::placeholder {
+        color: rgba(0,0,0,0);
+      }
+    }
+  }
+  &__checkinp-wrap {
+    margin-top: 30px;
+    padding-left: 8px;
+  }
+  &__btn {
+    max-width: 150px;
+    display: block;
+    margin: 40px auto 0;
+  }
+}
+
+.name-inp-wrap,
+.company-inp-wrap,
+.email-inp-wrap,
+.tel-inp-wrap {
+  margin-bottom: 30px;
+}

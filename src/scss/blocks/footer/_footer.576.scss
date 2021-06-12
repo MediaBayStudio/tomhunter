@@ -1,0 +1,39 @@
+.ftr {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr;
+}
+
+.copyright-block {
+  display: grid;
+  grid-column: 1/span 2;
+  grid-row: 1;
+  .forward_slash {
+    display: inline-block;
+    grid-row: 1;
+    grid-column: 1;
+    text-indent: 12px;
+    >br {
+      display: block;
+    }
+  }
+}
+
+.copyright-date {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.dev-block {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  align-self: start;
+}
+
+.privacy-policy-link {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  justify-self: start;
+}

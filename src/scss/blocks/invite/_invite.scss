@@ -1,0 +1,13 @@
+.invite-sect {
+  padding-top: 35px;
+  padding-bottom: 40px;
+  background: url("#") center/cover no-repeat, url('#') center/cover no-repeat, #F8F8F8;
+  &__title {
+    text-transform: none;
+    max-width: 250px;
+  }
+  &__form {
+    max-width: 310px;
+    margin: auto;
+  }
+}

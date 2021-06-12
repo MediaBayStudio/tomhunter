@@ -1,0 +1,28 @@
+.hdr {
+  justify-content: flex-start;
+  >.nav {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 110px;
+    font-size: 16px;
+  }
+  .nav__link:nth-last-child(n+2) {
+    margin-right: 45px;
+  }
+  &__tel {
+    margin: 0 25px 0 auto;
+  }
+  &__callback-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    height: 40px;
+    border: 1px solid $dark-red-color;
+    border-radius: 30px;
+    transition: background-color .5s;
+  }
+  >.burger {
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+.index-about-sect {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: flex-end;
+  &__text {
+    max-width: 515px;
+  }
+
+  &__title {
+    font-size: 32px;
+  }
+
+  &__descr {}
+
+  &__img {
+    right: calc(50vw - 700px);
+    bottom: -35px;
+    width: 710px;
+    height: 620px;
+  }
+}

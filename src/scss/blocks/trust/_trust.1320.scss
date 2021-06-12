@@ -1,0 +1,30 @@
+.trust-sect {
+  padding-top: 115px;
+  padding-bottom: 115px;
+  &__title {
+    margin-bottom: 45px;
+  }
+  > .features-block {
+    overflow: hidden;
+    &:not(.slick-slider) {
+      justify-content: space-between;
+      padding: 0;
+      .feature-card {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.feature-card {
+  margin-bottom: 0 !important;
+  width: calc((1260px - 60px) / 4); // (section width - margin-right) / visible cards
+}
+
+.feature-card {
+  &__title {
+    display: block;
+    margin: 35px 0 25px;
+    font-size: 24px;
+  }
+}

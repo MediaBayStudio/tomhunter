@@ -1,0 +1,13 @@
+.single-card {
+  // max-width: 420px;
+  max-width: none;
+  padding: 0 30px 30px;
+  width: calc(960px / 2 - 50px);
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+  &__img-wrap {
+    min-width: calc(100% + 60px);
+    height: 250px;
+  }
+}

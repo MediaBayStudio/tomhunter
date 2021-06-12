@@ -1,0 +1,26 @@
+.single-card {
+  height: 555px;
+  margin: 22px 0 0;
+  padding: 0 25px 30px;
+  // width: calc(1260px / 3 - 10px);
+  width: 405px;
+  &:nth-child(odd) {
+    margin-right: 0;
+  }
+  // width: calc();
+  // &:nth-of-type(3n+3), &:last-child {
+  //   margin-right: 0;
+  // }
+  &__img-wrap {
+    min-width: calc(100% + 50px);
+    height: 240px;
+    margin-bottom: 15px;
+  }
+}
+
+.media-center-block > .single-card {
+  margin-right: 20px;
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}

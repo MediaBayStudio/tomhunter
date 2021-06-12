@@ -1,0 +1,19 @@
+.burger {
+  width: 36px;
+  height: 21px;
+  &__line {
+    width: 28px;
+    height: 3px;
+  }
+}
+
+.menu {
+  &__nav {
+    margin-top: 135px;
+    &.overline {
+      &::before {
+        top: -95px;
+      }
+    }
+  }
+}

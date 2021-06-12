@@ -1,0 +1,11 @@
+.index-clients-sect {
+  &__title {
+  }
+  &__list {
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+  &__li-img {
+    width: calc((100% - 100px) / 3);
+  }
+}

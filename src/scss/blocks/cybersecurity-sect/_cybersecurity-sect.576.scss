@@ -1,0 +1,15 @@
+.cybersecurity-sect {
+  &__title {
+  }
+  &__descr {
+  }
+  &__list {
+  }
+  &__li {
+    &:not(:last-child) {}
+  }
+  &__li-title {
+  }
+  &__li-descr {
+  }
+}

@@ -1,0 +1,11 @@
+.descr-sect {
+  padding-top: 90px;
+  padding-bottom: 325px;
+  background-size: 300px 292px;
+  &__title {
+    
+  }
+  &__descr, &__list {
+    max-width: 650px;
+  }
+}

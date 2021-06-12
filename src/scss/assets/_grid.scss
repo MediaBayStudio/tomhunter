@@ -1,0 +1,48 @@
+.container {
+  padding: 0 20px;
+}
+
+.contained {
+  width: 100vw;
+  margin-left: -20px;
+}
+
+@media (min-width: 575.98px) {
+  .container {
+    padding: 0 calc(50% - 270px);
+  }
+
+  .contained {
+    margin-left: calc((50vw - 270px) * -1);
+  }
+}
+
+@media (min-width: 767.98px) {
+  .container {
+    padding: 0 calc(50% - 325px);
+  }
+
+  .contained {
+    margin-left: calc((50vw - 325px) * -1);
+  }
+}
+
+@media (min-width: 991.98px) {
+  .container {
+    padding: 0 calc(50% - 480px);
+  }
+
+  .contained {
+    margin-left: calc((50vw - 480px) * -1);
+  }
+}
+
+@media (min-width: 1319.98px) {
+  .container {
+    padding: 0 calc(50% - 630px);
+  }
+
+  .contained {
+    margin-left: calc((50vw - 630px) * -1);
+  }
+}

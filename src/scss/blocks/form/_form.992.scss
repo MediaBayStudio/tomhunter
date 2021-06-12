@@ -1,0 +1,74 @@
+.form {
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(6, auto);
+  &__inp {
+    width: 460px;
+  }
+  &__checkinp-wrap {
+    margin-top: 60px;
+    padding-left: 0;
+    grid-row: 6;
+  }
+  &__btn {
+    grid-row: 6;
+    grid-column: 2;
+    margin: 50px 0 0;
+  }
+}
+
+
+.invite-sect__form {
+  .name-inp-wrap {
+    grid-column: 1/span 2;
+    margin-bottom: 35px;
+  }
+
+  .company-inp-wrap {
+    grid-column: 1/span 2;
+    grid-row: 3;
+    justify-self: start;
+    margin-bottom: 35px
+  }
+
+  .email-inp-wrap {
+    grid-row: 4;
+    grid-column: 1/span 2;
+    margin-bottom: 35px;
+  }
+
+  .tel-inp-wrap {
+   grid-row: 5;
+    grid-column: 1/span 2;
+    justify-self: start;
+  }
+}
+
+
+.contacts-sect__form {
+  .form__inp {
+    width: 250px;
+  }
+  .name-inp-wrap {
+    grid-column: 1px;
+  }
+  .company-inp-wrap {
+    grid-column: 2;
+    grid-row: 2;    
+  }
+  .email-inp-wrap {
+    margin-bottom: 0;
+    grid-column: 1;
+    grid-row: 3;    
+  }
+  .tel-inp-wrap {
+    grid-column: 2;
+    grid-row: 3;    
+  }
+  .form__checkinp-wrap {
+    margin-top: 50px;
+  }
+  .form__btn {
+    margin: 40px 0 0;
+    justify-self: center;
+  }
+}

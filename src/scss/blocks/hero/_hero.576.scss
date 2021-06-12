@@ -1,0 +1,13 @@
+.hero-sect {
+  &__slide {
+    padding: 0 calc(50vw - 270px);
+  }
+
+  &__img {
+    right: calc(50vw - 270px);
+  }
+
+  &__arrow {
+    left: calc(50vw - 270px);
+  }
+}

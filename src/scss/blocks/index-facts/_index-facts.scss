@@ -1,0 +1,40 @@
+.facts-sect {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #f3f3f3;
+
+  &__title {
+    margin: 0 0 30px;
+    color: $purple-color;
+  }
+
+  &__list {
+    margin-top: -60px;
+    max-width: 400px;
+    display: flex;
+    flex-flow: column;
+    font: 14px/150% Lato;
+    color: #4d4d4d;
+  }
+
+  &__li {
+    margin-top: 60px;
+  }
+
+  &__li-img {
+    width: 60px;
+    height: 60px;
+    float: left;
+  }
+
+  &__li-title {
+    margin: 0 0 10px 80px;
+    display: block;
+    font: bold 24px/150% Lato;
+    color: $red-color;
+  }
+
+  &__li-descr {
+    margin-left: 80px;
+  }
+}

@@ -1,0 +1,26 @@
+.cybersecurity-sect {
+  padding-top: 100px;
+  &__title {
+    max-width: 100%;
+  }
+  &__descr {
+  }
+  &__list {
+    margin-top: 20px;
+  }
+  &__li {
+    width: calc((100% - 90px) / 2);
+    &:not(:last-child) {}
+    &:nth-child(odd) {
+      margin-right: 90px;
+    }
+  }
+  &__li-title {
+    margin: 0 0 15px;
+  }
+  &__li-descr {
+    &::before {
+      margin: 0 0 12px;
+    }
+  }
+}

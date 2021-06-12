@@ -1,0 +1,41 @@
+.menu {
+  max-width: 450px;
+  padding: 20px 60px 55px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  &.active {
+    display: grid;
+  }
+  >.logo {
+    grid-row: 1;
+    grid-column: 1/span 2;
+  }
+  &__nav {
+    grid-row: 2;
+    grid-column: 1;
+    margin-top: 100px;
+    &.overline {
+      &::before {
+        top: -65px;
+      }
+    }
+  }
+  &__tel {
+    grid-row: 3;
+    grid-column: 1;
+    margin: 0;
+    align-self: center;
+  }
+  &__request-call-btn {
+    grid-row: 3;
+    grid-column: 2;
+  }
+}
+
+.burger {
+  &.active {
+    >.burger__svg {
+      color: #fff;
+    }
+  }
+}

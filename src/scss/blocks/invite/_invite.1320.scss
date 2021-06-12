@@ -1,0 +1,11 @@
+.invite-sect {
+  padding-bottom: 85px;
+  background:
+    url("#") left center/505px 390px no-repeat content-box,
+    url("#") center/cover no-repeat,
+    url("#") center/cover no-repeat, #F8F8F8;
+  &__form {
+    margin-right: 120px;
+    max-width: 465px;
+  }
+}

@@ -1,0 +1,7 @@
+.feature-card {
+  width: calc((540px - 20px) / 2); // (section width - margin-right) / visible cards
+  height: 310px;
+  &__title {
+    font-size: 21px;
+  }
+}

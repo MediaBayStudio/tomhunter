@@ -1,0 +1,27 @@
+.ftr {
+  font-size: 14px;
+}
+
+.copyright-block {
+  line-height: 170%;
+  >.forward_slash {
+    text-indent: 18px;
+  }
+}
+
+.dev {
+  &-block {
+    margin-bottom: 23px;
+  }
+  &-link {
+    // transform: translateY(1px);
+    font-size: 14px;
+  }
+  // &-logo {
+  //   margin-left: 4px;
+  //   width: 110px;
+  //   height: 28px;
+  //   object-fit: contain;
+  // }
+}
+

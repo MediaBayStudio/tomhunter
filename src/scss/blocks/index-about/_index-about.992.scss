@@ -1,0 +1,22 @@
+.index-about-sect {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__text {
+    max-width: 465px;
+  }
+
+  &__title {
+    margin: 0 0 50px;
+  }
+
+  &__descr {}
+
+  &__img {
+    top: auto;
+    bottom: 60px;
+    right: -50px;
+    width: 530px;
+    height: 460px;
+    transform: none;
+  }
+}

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url('../fonts/Lato-Light.woff') format("woff");
+  font-weight: 300;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url('../fonts/Lato-Regular.woff') format("woff");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url('../fonts/Lato-SemiBold.woff') format("woff");
+  font-weight: 600;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url('../fonts/Lato-Bold.woff') format("woff");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-display: swap;
+  src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
+    url('../fonts/SegoeUI-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}

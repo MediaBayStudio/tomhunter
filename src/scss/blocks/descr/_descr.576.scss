@@ -1,0 +1,10 @@
+.descr-sect {
+  &__title {
+    width: auto;
+    margin-bottom: 25px;
+  }
+  &__descr, &__list {
+    max-width: 500px;
+    margin-bottom: 25px;
+  }
+}

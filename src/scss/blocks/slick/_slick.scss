@@ -1,0 +1,94 @@
+.dot {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  &__inside {
+    fill: currentColor;
+    transition: fill .35s;
+  }
+  &__outline {
+    stroke: $red-color;
+    stroke-width: 0;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55), stroke-width .25s;
+  }
+}
+
+
+li.slick-active {
+  .dot__outline {
+    stroke-width: 2;
+    transform: scale(1);
+  }
+  > button {
+    cursor: default;
+  }
+}
+
+.dots {
+  display: none;
+  >li {
+    &:nth-last-child(n+2) {
+      margin-right: 5px;
+    }
+  }
+  button {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.slick-list ~ .dots {
+  display: flex;
+  justify-content: center;
+}
+
+.slick {
+  &-slider {
+    user-select: none;
+    touch-action: pan-y;
+  }
+  &-list {
+    width: 100%;
+    position: relative;
+    &.draggable {
+      cursor: grab;
+    }
+    &.grabbing {
+      cursor: grabbing;
+    }
+  }
+  &-track {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    &::after,
+    &::before {
+      display: table;
+      content: '';
+    }
+    &::after {
+      clear: both;
+    }
+  }
+  &-dotted {
+    display: flex;
+    flex-direction: column;
+    >.dots {
+      order: 10;
+    }
+  }
+}
+
+.slick-track,
+.slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}

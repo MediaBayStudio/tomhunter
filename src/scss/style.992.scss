@@ -1,0 +1,48 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.circle-big {
+  width: 400px;
+  height: 400px;
+}
+
+.circle-medium {
+  width: 225px;
+  height: 225px;
+}
+
+.circle-small {
+  width: 160px;
+}
+
+.callback-popup {
+  &__form {
+    .form__inp {
+      width: 310px;
+    }
+  }
+}
+
+//blocks import
+@import 'blocks/btns/btns.992';
+@import 'blocks/popups/popups.992';
+@import 'blocks/mobile-menu/mobile-menu.992';
+@import 'blocks/form/form.992';
+@import 'blocks/slick/slick.992';
+@import 'blocks/card/card.992';
+@import 'blocks/activities/activities.992';
+@import 'blocks/index-services/index-services.992';
+@import 'blocks/index-about/index-about.992';
+@import 'blocks/index-facts/index-facts.992';
+@import 'blocks/index-news/index-news.992';
+@import 'blocks/cybersecurity-sect/cybersecurity-sect.992';
+@import 'blocks/index-clients/index-clients.992';
+@import 'blocks/header/header.992';
+@import 'blocks/hero/hero.992';
+@import 'blocks/trust/trust.992';
+@import 'blocks/invite/invite.992';
+@import 'blocks/service/service.992';
+@import 'blocks/stages/stages.992';
+@import 'blocks/contacts/contacts.992';
+@import 'blocks/footer/footer.992';

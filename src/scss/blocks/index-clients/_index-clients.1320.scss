@@ -1,0 +1,11 @@
+.index-clients-sect {
+  padding-bottom: 120px;
+  &__title {
+  }
+  &__list {
+  }
+  &__li-img {
+    margin: 60px 200px 0 0;
+    width: calc((100% - 400px) / 3);
+  }
+}

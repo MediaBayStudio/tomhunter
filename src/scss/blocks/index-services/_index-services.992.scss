@@ -1,0 +1,27 @@
+.index-services-sect {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.index-service-card {
+  width: calc((100% - 60px) / 3);
+  &::before {
+  }
+  &:first-child,
+  &:nth-child(5n) {
+    &::before {
+    }
+  }
+  &:nth-child(n) {
+    margin-right: 30px;
+  }
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+  &__title {
+    &::after {
+    }
+  }
+  &__descr {
+  }
+}

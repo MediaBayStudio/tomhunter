@@ -1,0 +1,48 @@
+.index-services-sect {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__title {
+    margin: 0 0 50px;
+  }
+}
+
+.index-services-block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.index-service-card {
+  padding: 30px;
+  width: calc((100% - 20px) / 2);
+  margin: 30px 0 0 0;
+  &:nth-child(odd) {
+    margin-right: 20px;
+  }
+}
+
+.index-service-card {
+  font-size: 15px;
+  line-height: 167%;
+  &::before {
+    width: 275px;
+    height: 265px;
+    top: -60px;
+  }
+  &:first-child,
+  &:nth-child(5n) {
+    &::before {
+    }
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 120%;
+    &::after {
+    }
+  }
+  &__descr {
+    margin-top: 30px;
+    &::before {
+      width: 80px;
+    }
+  }
+}

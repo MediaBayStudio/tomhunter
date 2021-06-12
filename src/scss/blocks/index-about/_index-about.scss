@@ -1,0 +1,18 @@
+.index-about-sect {
+  padding-top: 40px;
+  &__text {
+    margin: 0 0 30px;
+    font: 300 14px/150% Lato;
+  }
+
+  &__title {
+    margin: 0 0 30px;
+  }
+
+  &__descr {}
+
+  &__img {
+    margin: auto;
+    display: block;
+  }
+}

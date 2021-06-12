@@ -1,0 +1,22 @@
+.feature-card {
+  width: 350px;
+  padding: 30px;
+}
+
+.trust-sect {
+  > .features-block.slick-slider {
+    .feature-card {
+      width: calc((960px - 40px) / 3); // (section width - margin-right) / visible cards
+    }
+  }
+
+  > .features-block:not(.slick-slider) {
+    // justify-content: space-around;
+    padding: 0 120px;
+    // >.feature-card {
+    //   margin-right: 0 !important;
+    // }
+  }
+}
+
+

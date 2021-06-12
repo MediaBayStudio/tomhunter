@@ -1,0 +1,118 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: $overlay-bg-color;
+  z-index: 5;
+  display: none;
+  animation: fadeOut .5s;
+  &.active {
+    display: block;
+    animation: fadeIn .5s;
+  }
+}
+
+.menu-overlay {
+  z-index: 2;
+}
+
+.thanks-popup, .callback-popup, .zoom-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  animation: fadeOut .5s;
+  &.active {
+    display: flex;
+    animation: fadeIn .5s;
+  }
+}
+
+.thanks-popup {
+  z-index: 6;
+}
+
+.zoom-popup {
+  &__content {
+    background-color: $white-color;
+    overflow: auto;
+    &-wrap {
+      color: $white-color;
+      max-width: 100vw;
+      position: relative;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: -27.5px;
+    right: 10px;
+  }
+  &__img {
+    padding: 25px;
+    width: 575px;
+    max-width: none;
+    max-height: 71vh;
+    object-fit: contain;
+  }
+}
+
+.thanks-popup, .callback-popup {
+  &__content {
+    width: 280px;
+    padding: 10px 40px 60px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+    text-align: center;
+    color: $purple-color;
+  }
+  &__close {
+    margin: 0 -30px 0 auto;
+  }
+  &__title {
+    margin: 35px 0 40px;
+    color: $red-color;
+    font: 500 24px/100% Lato;
+  }
+  &__descr {
+    max-width: 200px;
+    font: 16px/155% Lato;
+  }
+}
+
+.callback-popup {
+  &__content {
+    background-color: $white-color;
+  }
+  &__title {
+    margin: 30px 0;
+  }
+  &__descr {
+    margin-bottom: 30px;
+  }
+  &__form {
+    text-align: left;
+    .form>label.invalid {
+      &:nth-of-type(2) {
+        transform: translateY(5px);
+      }
+    }
+    .checkinp__lbl {
+      >label.invalid {
+        top: 120%;
+        left: 0;
+        text-align: center;
+      }
+    }
+    .checkinp__text {
+      font-size: 9px;
+    }
+  }
+}

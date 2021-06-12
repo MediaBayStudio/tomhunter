@@ -1,0 +1,42 @@
+.activities-sect {
+  padding-top: 100px;
+  &__title {
+    margin: 0 0 50px;
+  }
+  &__activities {
+    font: 15px/167% Lato;
+    color: #4d4d4d;
+  }
+}
+
+.activity {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  &:nth-last-child(n+2) {
+    margin: 0 0 80px;
+  }
+  &__img {
+    margin: 0 0 50px;
+    max-width: 85%;
+  }
+  &__text {
+  }
+  &__title {
+    margin: 0 0 10px;
+    display: block;
+    font: bold 20px/150% Lato;
+    color: #291956;
+  }
+  &__descr {
+    >span+br {
+      display: none;
+    }
+    >span {
+      display: flex;
+      >.txt_red {
+        margin: -1px 5px 0 0;
+      }
+    }
+  }
+}

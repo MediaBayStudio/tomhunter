@@ -1,0 +1,21 @@
+.descr-sect {
+  padding-top: 75px;
+  padding-bottom: 230px;
+  background: url('#') center bottom/210px 202px  no-repeat;
+  &__title {
+    width: 281px;
+    margin-bottom: 25px;
+  }
+  &__descr, &__list {
+    max-width: 400px;
+    margin-bottom: 30px;
+    font: 300 16px/157% Lato;
+    color: #4D4D4D;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__list {
+
+  }
+}

@@ -1,0 +1,71 @@
+@import 'assets/colors';
+@import 'assets/variables';
+@import 'assets/mixins';
+
+.circle-big {
+  width: 305px;
+  height: 305px;
+}
+
+.circle-medium {
+  width: 160px;
+  height: 160px;
+}
+
+.circle-small {
+  width: 115px;
+  height: 115px;
+}
+
+.callback-popup {
+  &__form {
+    .form {
+      max-width: 310px;
+      .checkinp__text{
+        font-size: 12px;
+      }
+    }
+
+    .checkinp__lbl {
+      label.invalid {
+        top: 125%;
+      }
+    }
+  }
+
+  &__content {
+    width: 515px;
+    padding: 20px 100px 40px;
+  }
+
+  &__close {
+    margin: 0 -80px 0 auto;
+  }
+
+  &__descr {
+    max-width: 300px;
+  }
+}
+
+//blocks import
+@import 'blocks/btns/btns.768';
+@import 'blocks/popups/popups.768';
+@import 'blocks/mobile-menu/mobile-menu.768';
+@import 'blocks/form/form.768';
+@import 'blocks/slick/slick.768';
+@import 'blocks/card/card.768';
+@import 'blocks/activities/activities.768';
+@import 'blocks/index-services/index-services.768';
+@import 'blocks/index-about/index-about.768';
+@import 'blocks/index-facts/index-facts.768';
+@import 'blocks/index-news/index-news.768';
+@import 'blocks/cybersecurity-sect/cybersecurity-sect.768';
+@import 'blocks/index-clients/index-clients.768';
+@import 'blocks/header/header.768';
+@import 'blocks/hero/hero.768';
+@import 'blocks/trust/trust.768';
+@import 'blocks/invite/invite.768';
+@import 'blocks/service/service.768';
+@import 'blocks/stages/stages.768';
+@import 'blocks/contacts/contacts.768';
+@import 'blocks/footer/footer.768';

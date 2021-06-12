@@ -1,0 +1,76 @@
+.card {
+  border: 1px solid #EBEBEB;
+  background-color: #fff;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('../img/card-oval.svg') center/cover no-repeat;
+    z-index: 0;
+  }
+  &__img {
+    z-index: 1;
+  }
+  &__title {
+    margin-top: 20px;
+    font: bold 20px/150% Lato;
+    color: $purple-color;
+    z-index: 1;
+  }
+  &__descr, &__list {
+    margin-top: 5px;
+    font: normal 16px/160% Lato;
+    color: #4D4D4D;
+    z-index: 1;
+    &:nth-child(3) {
+      margin-top: 20px;
+    }
+  }
+  &__list-item {
+    &::before {
+      content: '—';
+      display: inline-block;
+      margin-right: 5px;
+      font: inherit;
+    }
+  }
+}
+
+.card_one-col, .card_two-col {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card_arrow, .card_sign {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    z-index: 1;
+  }
+}
+
+.card_arrow {
+  &::after {
+    width: 5px;
+    height: 10px;
+    background: url('../img/red-arrow.svg') center/contain no-repeat;
+  }
+}
+
+.card_sign {
+  &::after {
+    content: attr(data-sign);
+    max-width: 100px;
+    color: $red-color;
+    font: normal 12px/100% Lato;
+    text-align: right;
+  }
+}

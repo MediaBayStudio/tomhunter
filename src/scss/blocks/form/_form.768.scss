@@ -1,0 +1,25 @@
+.form {
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__inp {
+    width: 310px;
+    padding-bottom: 11px;
+    font-size: 16px;
+  }
+  &__checkinp-wrap {
+    padding-left: 5px;
+  }
+}
+
+.checkinp {
+  &__text {
+    max-width: 245px;
+    font-size: 12px;
+    line-height: 125%;
+  }
+}
+
+.name-inp-wrap, .company-inp-wrap {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,31 @@
+.hero__circle-big {
+  right: 0;
+  top: -35px;
+}
+
+.hero__circle-medium {
+  right: calc(50vw - 55px); //665px
+}
+
+.hero__circle-small {
+  left: calc(50vw - 200px); //800px
+}
+
+.hero-sect {
+  padding-top: 240px;
+  padding-bottom: 70px;
+  &__descr {
+    margin: 50px 0 30px;
+  }
+  &__img {    
+    bottom: -35px;
+    right: calc(50vw - 535px);
+  }
+  &__slide {
+    padding: 0 calc(50vw - 630px);
+  }
+
+  &__arrow {
+    left: calc(50vw - 630px);
+  }
+}

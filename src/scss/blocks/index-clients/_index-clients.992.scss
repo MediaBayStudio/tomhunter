@@ -1,0 +1,16 @@
+.index-clients-sect {
+  &__title {
+    margin: 0 0 10px;
+  }
+  &__list {
+  }
+  &__li-img {
+    margin-right: 150px;
+    width: calc((100% - 300px) / 3);
+    filter: grayscale(1);
+    transition: filter .5s;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}

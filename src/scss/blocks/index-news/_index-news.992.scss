@@ -1,0 +1,24 @@
+.index-news-sect {
+  &__title {}
+
+  &__list {}
+
+  &__li {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      display: flex;
+    }
+  }
+
+  &__li-img {}
+
+  &__li-title {}
+
+  &__li-descr {}
+
+  &__li-date {}
+
+  &__link {}
+}

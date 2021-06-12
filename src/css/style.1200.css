@@ -1,0 +1,43 @@
+.hdr > .nav {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 16px;
+}
+
+.hdr .nav__link:nth-last-child(n+2) {
+  margin-right: 40px;
+}
+
+.hdr__tel-number {
+  margin-right: 20px;
+}
+
+.hdr__request-call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  height: 40px;
+  border: 1px solid red;
+  border-radius: 30px;
+}
+
+.hdr > .burger {
+  display: none;
+}
+
+.hero-sect {
+  padding-top: 200px;
+}
+
+.hero-sect__img {
+  width: 630px;
+  height: 620px;
+  bottom: 10px;
+  right: calc(50vw - 630px);
+}
+
+.hero-sect__slide {
+  padding: 0 calc(50vw - 630px);
+}

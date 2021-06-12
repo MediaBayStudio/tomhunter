@@ -1,0 +1,22 @@
+.thanks-popup {
+  &__content {
+    width: 465px;
+    padding: 20px 85px 60px;
+    align-items: center;
+  }
+  &__close {
+    margin-right: -65px;
+  }
+  &__title {
+    margin: 25px 0 35px;
+  }
+  &__descr {
+    max-width: 300px;
+  }
+}
+
+.zoom-popup {
+  &__close {
+    top: -32.5px;
+  }
+}

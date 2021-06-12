@@ -1,0 +1,28 @@
+.ftr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  &-block {
+    display: flex;
+    >.forward_slash {
+      text-indent: 0;
+      >br {
+        display: none;
+      }
+    }
+  }
+}
+
+.dev {
+  &-block {
+    margin-bottom: 0;
+    order: 9;
+  }
+}
+
+.privacy-policy-link {
+  align-self: auto;
+}

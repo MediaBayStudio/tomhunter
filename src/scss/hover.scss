@@ -1,0 +1,122 @@
+@import 'assets/colors';
+@import 'assets/mixins';
+
+
+.contacts-sect__email,
+.contacts-sect__tel {
+  > .contacts-block__subtitle:hover {
+    color: $red-color;
+  }
+}
+
+.link_red {
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.search__result-link {
+  &:hover {
+    text-decoration-color: transparent;
+  }
+}
+
+.nav {
+  .nav__link.dropdown:hover{
+    &::before {
+      max-height: 45px;
+    }
+    &::after {
+      transform: rotate(180deg);
+    }
+    +.sub-menu {
+      @include sub-menu();
+    }
+  }
+
+  .sub-menu:hover {
+    @include sub-menu();
+  }
+}
+
+.close-btn {
+  &:hover {
+    color: $red-color;
+  }
+}
+
+.btn,
+#commentform .submit {
+  &:hover {
+    background-color: transparent;
+    color: $red-color;
+  }
+}
+
+.btn-ol {
+  &:hover {
+    color: $white-color;
+    background-color: $purple-color;
+    border-color: $purple-color;
+  }
+}
+
+.single-sect__subscribe-link:hover > .single-sect__subscribe-img,
+.dots > li:not(.slick-active):hover > button .dot__inside {
+  fill: $red-color;
+}
+
+.single-sect__author-link:hover,
+.single-sect__author-link:hover > .single-sect__author-svg {
+  fill: #5A4B77;
+  color: #5A4B77;
+  background: transparent;
+}
+
+.comment-reply-link:hover {
+  text-shadow: .25px .25px .25px;
+}
+
+.hdr {
+  &__callback-btn:hover {
+    background-color: $red-color;
+  }
+}
+
+.pdf-link {
+  &:hover {
+    > .pdf-link__img {
+      opacity: .6;
+    }
+  }
+}
+
+.breadcrumbs__link:hover >.breadcrumbs__text,
+.pdf-link:hover > .pdf-link__title,
+.comment-body .comment-edit-link:hover,
+.logged-in-as > a:last-child:hover {
+  border-bottom-color: currentColor;
+}
+
+.checkinp__btn,
+.privacy-policy-link {
+  &:hover {
+    color: $red-color;
+    border-bottom-color: currentColor;
+  }
+}
+
+
+.ftr-big__tel,
+.ftr-big__email,
+.nav__link,
+.dev-link,
+.sort-block__btn {
+  &:hover {
+    color: $red-color;
+  }
+}
+
+.risks-sect {
+  overflow: visible;
+}

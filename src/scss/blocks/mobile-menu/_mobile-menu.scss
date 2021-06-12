@@ -1,0 +1,122 @@
+.menu {
+  display: none;
+  animation: fadeOut .5s;
+  padding: 15px 20px 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  // height: 568px;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
+  overflow: auto;
+  background-color: #fff;
+  color: $purple-color;
+  z-index: 4;
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 60px 0 auto;
+    font: 500 18px/100% Lato;
+    &.overline {
+      &::before {
+        top: -20px;
+      }
+    }
+  }
+  &__tel {
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  &__request-call-btn {
+    max-width: 170px;
+    height: 36px;
+    border-color: $red-color;
+    color: $purple-color;
+    font-weight: 500;
+  }
+  &.active {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn .5s;
+  }
+  > .logo {
+    align-items: flex-start;
+  }
+}
+
+.menu__nav {
+  >.nav__link {
+    &:nth-last-child(n+2) {
+      margin-bottom: 15px;
+    }
+    &.dropdown {
+      margin-bottom: 0;
+    }
+  }
+  .sub-menu {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font: 300 15px/100% Lato;
+    >.nav__link {
+      margin-top: 10px;
+      &::before {
+        content: '/';
+        display: inline-block;
+        margin-right: 0.2em;
+        color: $dark-red-color;
+        font: inherit;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.burger {
+  width: 32px;
+  height: 18px;
+  position: relative;
+  color: #fffefe;
+  z-index: 5;
+  &__line {
+    width: 25.5px;
+    height: 2.5px;
+    fill: currentColor;
+    opacity: 1;
+    transform-origin: center;
+    transition: transform .5s, color .5s, opacity .5s;
+    transform: rotate(0deg) translate(0%, 0%);
+  }
+  &.active {
+    >.burger__svg {
+      overflow: visible;
+      color: $purple-color;
+    }
+    .burger__line {
+      transition-delay: 0s;
+    }
+    .top {
+      transform: rotate(45deg) translate(-10%, 40%);
+    }
+    .middle {
+      transform: rotate(-45deg) translate(10%, -3%);
+      opacity: 0;
+
+    }
+    .bottom {
+      transform: rotate(-45deg) translate(-10%, -45%);
+    }
+  }
+}
+
+.burger,
+.nav__link {
+  &:active {
+    transform: scale(.975);
+  }
+}

@@ -1,4 +1,4 @@
-scripts
+# scripts
 .jshintrc
 *.txt
 
@@ -33,9 +33,9 @@ coverage
 .grunt
 
 #gulp
-gulpfile.js
-package-lock.json
-package.json
+# gulpfile.js
+# package-lock.json
+# package.json
 
 # Bower dependency directory (https://bower.io/)
 bower_components

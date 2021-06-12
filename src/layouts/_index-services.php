@@ -1,7 +1,8 @@
 <section class="index-services-sect container" id="service">
   <h2 class="index-services-sect__title sect-title forward_slash">Услуги</h2> <?php
   $services = get_field( 'services' );
-  if ( count( $services ) % 4 === 0 ) {
+  $count_services = count( $services );
+  if ( $count_services % 4 === 0 || $count_services === 7) {
     $class = ' columns-4';
   } else {
     $class = ' columns-3';

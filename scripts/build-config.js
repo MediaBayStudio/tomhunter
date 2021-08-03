@@ -29,6 +29,7 @@ module.exports = {
     'index-clients',
     'header',
     'hero',
+    'service-hero-new',
     'trust',
     'invite',
     'service',

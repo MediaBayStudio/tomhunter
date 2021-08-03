@@ -16,7 +16,8 @@
   $activities_sect_fields = get_field('two_columns_sect');
 
   get_header();
-  require 'layouts/_hero.php';
+  // require 'layouts/_hero.php';
+  require 'layouts/_service-hero-new.php';
 
    $descr_sect = [
     'title'       => $descr_sect_fields['sect_title'],

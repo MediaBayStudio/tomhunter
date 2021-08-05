@@ -1,0 +1,18 @@
+.service-hero {
+  background-size: 35%;
+  background-position: 83% 15%;
+
+  &__title {
+    margin: 35px 0 30px;
+  }
+
+  &__descr {
+    width: 722px;
+  }
+
+  &-inner {
+    &::before {
+      left: calc((50vw - 630px) * -1);
+    }
+  }
+}

@@ -1,6 +1,7 @@
 // let destFolder = '../../../../../OSPanel/domains/Tom-Hunter/wp-content/themes/T.Hunter/',
-let path = require('path'),
-  destFolder = path.relative('gulpfile.js', '/Applications/MAMP/htdocs/t.hunter/wp-content/themes/T.Hunter/') + '/',
+let path = require('path').posix,
+  destFolder = path.normalize('/Applications/MAMP/htdocs/t.hunter/wp-content/themes/T.Hunter/') ,
+ //  destFolder = path.normalize('/Users/vadim/Sites/localhost/t.hunter/wp-content/themes/T.Hunter/') ,
 // let destFolder = '../../../../../../Applications/MAMP/htdocs/t.hunter/wp-content/themes/T.Hunter/',
   imgFolder = './src/';
 
@@ -37,7 +38,7 @@ module.exports = {
     'contacts',
     'footer'
   ],
-  
+
   files: [
     'header',
     'footer',

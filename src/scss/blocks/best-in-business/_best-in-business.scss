@@ -1,0 +1,54 @@
+.best-in-business {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #2F133F;
+
+  &__title {
+    color: #fff;
+  }
+
+  &__list {
+    margin: 40px 0 0;
+    color: #fff;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+
+    &-item {
+      min-width: 210px;
+      max-width: 280px;
+      margin-top: 40px;
+      margin-right: 55px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .header {
+        display: flex;
+        margin: 0 0 15px;
+      }
+
+      .img-wrapper {
+        margin-right: 20px;
+        width: 80px;
+        height: 80px;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .title {
+        font: 700 36px/150% Lato, sans-serif;
+        color: $red-color;
+      }
+
+      .descr {
+        max-width: 280px;
+        font: 400 16px/150% Lato, sans-serif;
+      }
+    }
+  }
+}

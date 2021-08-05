@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
   Template Name: Услуга
 */
@@ -29,8 +29,25 @@
 
   require 'layouts/_descr.php';
 
+  if ( $risks_sect_fields['sect_title'] ) {
+    $risks_sect_images = $risks_sect_fields['images'];
+
+    $risks_sect = [
+      'title'       => $risks_sect_fields['sect_title'],
+      'paragraphs'  => $risks_sect_fields['p_repeater'],
+      'pdf'         => $risks_sect_fields['pdf'],
+      'img_320'     => $risks_sect_images['img_320']['url'],
+      'img_768'     => $risks_sect_images['img_768']['url'],
+      'img_1440'    => $risks_sect_images['img_1440']['url'],
+      'img_alt'     => $risks_sect_images['img_320']['alt'],
+      'zoom'        => $risks_sect_images['zoom']
+    ];
+  }
+
+  require 'layouts/_risks.php';
+
   if ( $activities_sect_fields['title'] ) {
-    require 'layouts/_activities.php';    
+    require 'layouts/_activities.php';
   }
 
       $childs = $stages_sect_fields['cards_settings'][0];
@@ -57,26 +74,9 @@
     require 'layouts/_stages.php';
   }
 
-  require 'layouts/_invite.php';
-
-
-  if ( $risks_sect_fields['sect_title'] ) {
-    $risks_sect_images = $risks_sect_fields['images'];
-
-    $risks_sect = [
-      'title'       => $risks_sect_fields['sect_title'],
-      'paragraphs'  => $risks_sect_fields['p_repeater'],
-      'pdf'         => $risks_sect_fields['pdf'],
-      'img_320'     => $risks_sect_images['img_320']['url'],
-      'img_768'     => $risks_sect_images['img_768']['url'],
-      'img_1440'    => $risks_sect_images['img_1440']['url'],
-      'img_alt'     => $risks_sect_images['img_320']['alt'],
-      'zoom'        => $risks_sect_images['zoom']
-    ];
-
-    require 'layouts/_risks.php';
-  }
+  require 'layouts/_best-in-business.php';
 
   require 'layouts/_service.php';
-  require 'layouts/_contacts.php';
+  // require 'layouts/_invite.php';
+  // require 'layouts/_contacts.php';
   get_footer('home');

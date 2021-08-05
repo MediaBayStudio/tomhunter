@@ -1,5 +1,5 @@
 <?php
-  global 
+  global
     $template_directory ?>
 <!DOCTYPE html>
 <html lang="ru-RU">
@@ -16,7 +16,7 @@
     'SegoeUI-SemiBold.woff'
   ];
   foreach ( $fonts as $font ) : ?>
-    
+
   <link rel="preload" href="<?php echo $template_directory . '/fonts/' . $font ?>" as="font" type="font/woff" crossorigin="anonymous" /> <?php
   endforeach ?>
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $template_directory . "/apple-touch-icon.png" ?>">
@@ -84,12 +84,12 @@
     <a href="/" class="logo" title="На главную">
       <svg class="logo__img">
         <use xlink:href="<?php echo $template_directory . "/img/sprite.svg#logo"; ?>"></use>
-      </svg> 
-    </a> <?php 
+      </svg>
+    </a> <?php
     wp_nav_menu([
       'theme_location'  => 'header_menu',
       'container'       => null,
-      'menu_class'      => 'nav', 
+      'menu_class'      => 'nav',
       'items_wrap'      => '<nav class="%2$s">%3$s</nav>',
       'walker'          => new My_Walker_Nav_Menu
     ]) ?>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
   Template Name: Услуги
 */
@@ -10,7 +10,7 @@
   $coords = get_option('contacts_coords');
   $zoom = get_option('contacts_zoom');
   $page = get_page_template_slug();
-  
+
   $descr_sect_fields = get_field('descr_sect');
   $stages_sect_fields = get_field('stages_sect');
   $risks_sect_fields = get_field('risks_sect');
@@ -28,7 +28,7 @@
   ];
 
   require 'layouts/_descr.php';
-    
+
   $childs = $stages_sect_fields['cards_settings'][0];
 
   $prefix = ' stages-block_';

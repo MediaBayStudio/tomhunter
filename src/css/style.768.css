@@ -535,7 +535,7 @@ h1.hero-sect__title, h2.hero-sect__title {
 }
 
 .service-hero-inner::before {
-  left: -60px;
+  left: calc((50vw - 325px) * -1);
 }
 
 .service-hero__list {
@@ -545,6 +545,14 @@ h1.hero-sect__title, h2.hero-sect__title {
 
 .service-hero__list-item {
   margin-right: 32px;
+}
+
+.best-in-business__list-item:nth-child(2) {
+  margin-top: 0;
+}
+
+.best-in-business__list-item:nth-child(even) {
+  margin-right: 0;
 }
 
 .feature-card {
@@ -663,6 +671,14 @@ h1.hero-sect__title, h2.hero-sect__title {
 
 .ftr {
   font-size: 14px;
+}
+
+.ftr__top {
+  margin-bottom: 30px;
+}
+
+.ftr__logo {
+  display: block;
 }
 
 .copyright-block {

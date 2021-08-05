@@ -20,7 +20,7 @@
         <figure class="img-wrapper">
           <img src="http://localhost:8888/t.hunter/wp-content/uploads/2021/08/best-in-icon-2.svg" alt="#">
         </figure>
-        <div class="title">200 +</div>
+        <div class="title">100000&nbsp;+</div>
       </div>
       <div class="descr">экспертный уровень в пентесте — мы обнаруживаем более 200 уязвимостей на рабочих станциях, серверах, сетевом оборудовании ежегодно</div>
     </li>

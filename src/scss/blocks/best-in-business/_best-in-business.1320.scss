@@ -1,0 +1,12 @@
+.best-in-business {
+  &__list {
+    &-item {
+      margin: 0;
+      margin-right: 15px;
+
+      &:nth-child(even) {
+        margin-right: 15px;
+      }
+    }
+  }
+}

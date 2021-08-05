@@ -1,3 +1,19 @@
 .service-hero {
+  min-height: auto;
   background-image: none;
+
+  &-inner {
+    &::before {
+      left: calc((50vw - 270px) * -1);
+    }
+  }
+
+  &__list {
+    flex-flow: row wrap;
+    font-size: 14px;
+
+    &-item {
+      margin-right: 32px;
+    }
+  }
 }

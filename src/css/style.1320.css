@@ -261,7 +261,16 @@
 }
 
 .service-hero-inner::before {
-  left: -90px;
+  left: calc((50vw - 630px) * -1);
+}
+
+.best-in-business__list-item {
+  margin: 0;
+  margin-right: 15px;
+}
+
+.best-in-business__list-item:nth-child(even) {
+  margin-right: 15px;
 }
 
 .trust-sect {

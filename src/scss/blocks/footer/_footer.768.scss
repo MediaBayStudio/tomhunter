@@ -1,5 +1,13 @@
 .ftr {
   font-size: 14px;
+
+  &__top {
+    margin-bottom: 30px;
+  }
+
+  &__logo {
+    display: block;
+  }
 }
 
 .copyright-block {
@@ -24,4 +32,3 @@
   //   object-fit: contain;
   // }
 }
-

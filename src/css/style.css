@@ -1905,14 +1905,16 @@ h2.hero-sect__title {
 .best-in-business__list {
   margin: 40px 0 0;
   color: #fff;
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
-  grid-gap: 25px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
 }
 
 .best-in-business__list-item {
+  min-width: 210px;
   max-width: 280px;
+  margin-top: 40px;
+  margin-right: 55px;
 }
 
 .best-in-business__list-item:first-child {
@@ -2197,15 +2199,107 @@ h2.hero-sect__title {
 }
 
 .ftr {
-  padding-top: 35px;
+  padding-top: 45px;
   padding-bottom: 35px;
   background-color: #110A26;
   color: #fff;
   font-size: 10px;
 }
 
+.ftr__top {
+  margin-bottom: 30px;
+}
+
+.ftr__logo {
+  width: 161px;
+  height: 161px;
+  display: none;
+}
+
+.ftr__sub-title {
+  margin-bottom: 15px;
+  font: 20px/125% Lato, sans-serif;
+}
+
+.ftr__contacts-list-item {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 7px;
+  font: 14px/179% Lato, sans-serif;
+}
+
+.ftr__contacts-list-item::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ftr__contacts-list-item span, .ftr__contacts-list-item a {
+  display: block;
+}
+
+.ftr__contacts .icon_tel::before {
+  background-image: url("../img/phone-icon.svg");
+}
+
+.ftr__contacts .icon_mail::before {
+  top: 9px;
+  height: 10px;
+  background-image: url("../img/mail-icon.svg");
+}
+
+.ftr__socials {
+  margin-top: 10px;
+}
+
+.ftr__socials-item {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ftr__socials-item.icon_inst {
+  background-image: url("../img/inst-icon.svg");
+}
+
+.ftr__socials-item.icon_linkedin {
+  background-image: url("../img/linkedin-icon.svg");
+}
+
+.ftr__socials-item.icon_h {
+  background-image: url("../img/H-icon.svg");
+}
+
+.ftr__socials-item.icon_fb {
+  background-image: url("../img/fb-icon.svg");
+}
+
+.ftr__socials-item.icon_tg {
+  background-image: url("../img/tg-icon.svg");
+}
+
+.ftr__socials-item a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .ftr .forward_slash::before {
   margin: 0 5px;
+  color: #fff;
 }
 
 .ftr .forward_slash > br {

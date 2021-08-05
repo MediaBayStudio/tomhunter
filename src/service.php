@@ -77,6 +77,6 @@
   require 'layouts/_best-in-business.php';
 
   require 'layouts/_service.php';
-  require 'layouts/_invite.php';
-  require 'layouts/_contacts.php';
+  // require 'layouts/_invite.php';
+  // require 'layouts/_contacts.php';
   get_footer('home');

@@ -12,7 +12,7 @@
 
   &-inner {
     &::before {
-      left: -90px;
+      left: calc((50vw - 630px) * -1);
     }
   }
 }

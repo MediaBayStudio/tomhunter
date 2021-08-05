@@ -1,11 +1,114 @@
 .ftr {
-  padding-top: 35px;
+  padding-top: 45px;
   padding-bottom: 35px;
   background-color: $ftr-bg-color;
   color: #fff;
   font-size: 10px;
+
+  &__top {
+    margin-bottom: 30px;
+  }
+
+  &__logo {
+    width: 161px;
+    height: 161px;
+    display: none;
+  }
+
+  &__sub-title {
+    margin-bottom: 15px;
+    font: 20px/125% Lato, sans-serif;
+  }
+
+  &__contacts {
+    &-list {
+      &-item {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 7px;
+        font: 14px/179% Lato, sans-serif;
+
+        &::before {
+          content: '';
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          top: 5px;
+          left: 0;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        span, a {
+          display: block;
+        }
+      }
+    }
+
+    .icon_tel {
+      &::before {
+        background-image: url('../img/phone-icon.svg');
+      }
+    }
+
+    .icon_mail {
+      &::before {
+        top: 9px;
+        height: 10px;
+        background-image: url('../img/mail-icon.svg');
+      }
+    }
+  }
+
+  &__socials {
+    margin-top: 10px;
+
+    &-item {
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &.icon {
+        &_inst {
+          background-image: url('../img/inst-icon.svg');
+        }
+
+        &_linkedin {
+          background-image: url('../img/linkedin-icon.svg');
+        }
+
+        &_h {
+          background-image: url('../img/H-icon.svg');
+        }
+
+        &_fb {
+          background-image: url('../img/fb-icon.svg');
+        }
+
+        &_tg {
+          background-image: url('../img/tg-icon.svg');
+        }
+      }
+
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
   .forward_slash::before {
     margin: 0 5px;
+    color: $white-color;
   }
   .forward_slash {
     > br {

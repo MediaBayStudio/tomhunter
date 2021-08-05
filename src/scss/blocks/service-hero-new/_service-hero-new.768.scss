@@ -1,0 +1,31 @@
+.service-hero {
+  background-image: url('../img/cover-service-hero-img.png');
+  background-size: 60%;
+  background-position: 115% 35%;
+
+  &__title {
+    font-size: 46px;
+  }
+
+  &__descr {
+    font-size: 18px;
+    width: 403px;
+  }
+
+  &-inner {
+    margin-top: 55px;
+
+    &::before {
+      left: -60px;
+    }
+  }
+
+  &__list {
+    flex-flow: row wrap;
+    font-size: 14px;
+
+    &-item {
+      margin-right: 32px;
+    }
+  }
+}

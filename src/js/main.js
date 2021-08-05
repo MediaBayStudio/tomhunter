@@ -789,7 +789,7 @@ window.addEventListener('load', function() {
       document.body.appendChild(tag);
     }, 3500);
   }
-  
+
 });
 
 
@@ -818,7 +818,7 @@ function ymapsOnload() {
             iconImageHref: dir + '/img/geo-icon.svg',
             iconImageSize: [38, 46]
         });
-  
+
       myMap.geoObjects.add(myPlacemark);
       if (navigator.userAgent.search(/Firefox/) === -1) {
         myMap.panes.get('ground').getElement().style.filter = 'url(#monochrome)';

@@ -1,7 +1,7 @@
 <section class="stages-sect container">
-  <h2 class="stages-sect__title sect-title forward_slash">Порядок <span class="txt_red">проведения работ</span></h2>
+  <h2 class="stages-sect__title sect-title forward_slash">Как мы работаем</h2>
   <div class="stages-block<?php echo $prefix; ?>">
-    <?php 
+    <?php
       foreach ($stages_cards as $card) {
         $title = $card['title'];
         $img_src = $card['img']['url'];

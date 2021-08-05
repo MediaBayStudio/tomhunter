@@ -1,0 +1,23 @@
+.service-hero {
+  min-height: auto;
+  background-size: 50%;
+  background-position: 110% 15%;
+
+  &__descr {
+    width: 636px;
+  }
+
+  &-inner {
+    margin-top: 60px;
+
+    &::before {
+      left: -32px;
+    }
+  }
+
+  &__list {
+    &-item {
+      margin: 0 auto;
+    }
+  }
+}

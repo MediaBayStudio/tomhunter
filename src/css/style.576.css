@@ -184,6 +184,10 @@
   left: calc(50vw - 270px);
 }
 
+.service-hero {
+  background-image: none;
+}
+
 .feature-card {
   width: calc((540px - 20px) / 2);
   height: 310px;

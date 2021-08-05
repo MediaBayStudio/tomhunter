@@ -207,7 +207,7 @@ svg {
     position: absolute;
     left: 0;
     bottom: -20%;
-    background-color: $red-color;    
+    background-color: $red-color;
   }
 }
 
@@ -271,6 +271,7 @@ svg {
 @import 'blocks/header/header';
 @import 'blocks/hero/hero';
 @import 'blocks/service-hero-new/service-hero-new';
+@import 'blocks/best-in-business/best-in-business';
 @import 'blocks/trust/trust';
 @import 'blocks/invite/invite';
 @import 'blocks/service/service';

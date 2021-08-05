@@ -247,6 +247,23 @@
   left: calc(50vw - 630px);
 }
 
+.service-hero {
+  background-size: 35%;
+  background-position: 83% 15%;
+}
+
+.service-hero__title {
+  margin: 35px 0 30px;
+}
+
+.service-hero__descr {
+  width: 722px;
+}
+
+.service-hero-inner::before {
+  left: -90px;
+}
+
 .trust-sect {
   padding-top: 115px;
   padding-bottom: 115px;

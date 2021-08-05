@@ -306,6 +306,28 @@
   left: calc(50vw - 480px);
 }
 
+.service-hero {
+  min-height: auto;
+  background-size: 50%;
+  background-position: 110% 15%;
+}
+
+.service-hero__descr {
+  width: 636px;
+}
+
+.service-hero-inner {
+  margin-top: 60px;
+}
+
+.service-hero-inner::before {
+  left: -32px;
+}
+
+.service-hero__list-item {
+  margin: 0 auto;
+}
+
 .feature-card {
   width: 350px;
   padding: 30px;

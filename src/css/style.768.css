@@ -515,6 +515,38 @@ h1.hero-sect__title, h2.hero-sect__title {
   margin-bottom: 315px;
 }
 
+.service-hero {
+  background-image: url("../img/cover-service-hero-img.png");
+  background-size: 60%;
+  background-position: 115% 35%;
+}
+
+.service-hero__title {
+  font-size: 46px;
+}
+
+.service-hero__descr {
+  font-size: 18px;
+  width: 403px;
+}
+
+.service-hero-inner {
+  margin-top: 55px;
+}
+
+.service-hero-inner::before {
+  left: -60px;
+}
+
+.service-hero__list {
+  flex-flow: row wrap;
+  font-size: 14px;
+}
+
+.service-hero__list-item {
+  margin-right: 32px;
+}
+
 .feature-card {
   width: calc((650px - 20px) / 2);
   height: 325px;

@@ -25,8 +25,8 @@
 /* HERO SECTION END */
 /* DESCR SECTION START */
 .descr-sect {
-  padding-top: 75px;
-  padding-bottom: 230px;
+  padding-top: 40px;
+  padding-bottom: 100px;
   background: url("#") center bottom/210px 202px no-repeat;
 }
 
@@ -102,8 +102,10 @@
 /* STAGES SECTION END */
 /* RISKS SECTION START */
 .risks-sect {
-  padding-top: 85px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   overflow: hidden;
+  background-color: #f4f3f3;
 }
 
 .risks-sect__title {
@@ -314,12 +316,14 @@
   /* HERO SECTION END */
   /* DESCR SECTION START */
   .descr-sect {
-    padding-top: 90px;
-    padding-bottom: 325px;
+    padding-top: 40px;
     background-size: 300px 292px;
   }
+  .descr-sect__title {
+    max-width: 871px;
+  }
   .descr-sect__descr, .descr-sect__list {
-    max-width: 650px;
+    max-width: 767px;
   }
   /* DESCR SECTION END */
   /* STAGES SECTION START */
@@ -361,8 +365,7 @@
   /* HERO SECTION END */
   /* DESCR SECTION START */
   .descr-sect {
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding-top: 40px;
     background-size: 425px 412px;
     background-position: top calc(50px + 35%) right calc(50vw - 480px);
   }
@@ -371,14 +374,11 @@
     margin-bottom: 40px;
   }
   .descr-sect__descr, .descr-sect__list {
-    max-width: 515px;
+    max-width: 767px;
     margin-bottom: 30px;
   }
   /* DESCR SECTION END */
   /* STAGES SECTION START */
-  .stages-sect {
-    padding-top: 0;
-  }
   .stages-block__dots {
     margin-top: 40px;
   }
@@ -397,7 +397,8 @@
   /* STAGES SECTION END */
   /* RISKS SECTION START */
   .risks-sect {
-    padding-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: auto auto auto auto 1fr;
@@ -482,10 +483,16 @@
   /* HERO SECTION END */
   /* DESCR SECTION START */
   .descr-sect {
+    padding-top: 60px;
+    padding-bottom: 115px;
     background-position: top calc(50px + 35%) right calc(50vw - 535px);
   }
   /* DESCR SECTION END */
   /* STAGES SECTION START */
+  .stages-sect {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .stages-sect__title {
     margin-bottom: 60px;
   }
@@ -503,6 +510,10 @@
   }
   /* STAGES SECTION END */
   /* RISKS SECTION START */
+  .risks-sect {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .risks-sect__img-wrap {
     margin-left: 90px;
   }

@@ -1789,6 +1789,163 @@ h2.hero-sect__title {
   font-size: 28px;
 }
 
+.breadcrumbs-list {
+  font: 12px/250% Lato, sans-serif;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+}
+
+.breadcrumbs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.breadcrumbs-list__item {
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.breadcrumbs-list__item::after {
+  content: '';
+  display: inline-block;
+  margin-left: 10px;
+  width: 4px;
+  height: 8px;
+  background: url("../img/bread-arrow-icon.svg") no-repeat center/cover;
+}
+
+.breadcrumbs-list__item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-list__item:last-child::after {
+  display: none;
+}
+
+.breadcrumbs-list__item--current {
+  color: #EB0029;
+}
+
+.service-hero {
+  min-height: 570px;
+  position: relative;
+  background-color: #2f133f;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.service-hero__title {
+  margin: 30px 0;
+  font: 30px/133% Lato, sans-serif;
+}
+
+.service-hero__descr {
+  font: 14px/179% Lato, sans-serif;
+  margin: 0 0 30px;
+}
+
+.service-hero__btn {
+  min-width: auto;
+  width: 274px;
+}
+
+.service-hero-inner {
+  margin: 35px 0 0;
+  position: relative;
+}
+
+.service-hero-inner::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 50%;
+  left: -20px;
+  bottom: 0;
+  background: #fff;
+}
+
+.service-hero__list {
+  padding: 17px;
+  background-color: #fff;
+  border: 1px solid rgba(47, 19, 63, 0.3);
+  border-radius: 8px;
+  position: relative;
+  font: 13px/200% Lato, sans-serif;
+  color: #291956;
+  display: flex;
+  flex-flow: column;
+}
+
+.service-hero__list-item {
+  position: relative;
+  margin: 0 auto 5px 0;
+}
+
+.service-hero__list-item.active::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #EB0029;
+}
+
+.best-in-business {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #2F133F;
+}
+
+.best-in-business__title {
+  color: #fff;
+}
+
+.best-in-business__list {
+  margin: 40px 0 0;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
+  grid-gap: 25px;
+}
+
+.best-in-business__list-item {
+  max-width: 280px;
+}
+
+.best-in-business__list-item:first-child {
+  margin-top: 0;
+}
+
+.best-in-business__list-item .header {
+  display: flex;
+  margin: 0 0 15px;
+}
+
+.best-in-business__list-item .img-wrapper {
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.best-in-business__list-item .img-wrapper img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.best-in-business__list-item .title {
+  font: 700 36px/150% Lato, sans-serif;
+  color: #EB0029;
+}
+
+.best-in-business__list-item .descr {
+  max-width: 280px;
+  font: 400 16px/150% Lato, sans-serif;
+}
+
 .trust-sect {
   padding-top: 95px;
   padding-bottom: 95px;

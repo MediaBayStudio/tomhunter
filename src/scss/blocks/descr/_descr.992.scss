@@ -1,6 +1,5 @@
 .descr-sect {
-  padding-top: 110px;
-  padding-bottom: 110px;
+  padding-top: 40px;
   background-size: 425px 412px;
   background-position: top calc(50px + 35%) right calc(50vw - 480px);
   &__title {
@@ -8,7 +7,7 @@
     margin-bottom: 40px;
   }
   &__descr, &__list {
-    max-width: 515px;
+    max-width: 767px;
     margin-bottom: 30px;
   }
 }

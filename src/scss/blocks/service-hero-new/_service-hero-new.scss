@@ -1,0 +1,106 @@
+.breadcrumbs-list {
+  font: 12px/250% Lato, sans-serif;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  display: flex;
+  &__item {
+    white-space: nowrap;
+    margin-right: 10px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 10px;
+      width: 4px;
+      height: 8px;
+      background: url('../img/bread-arrow-icon.svg') no-repeat center/cover;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &--current {
+      color: $red-color;
+    }
+  }
+}
+
+.service-hero {
+  min-height: 570px;
+  position: relative;
+  background-color: #2f133f;
+  background-repeat: no-repeat;
+  color: #fff;
+
+  &__title {
+    margin: 30px 0;
+    font: 30px/133% Lato, sans-serif;
+  }
+
+  &__descr {
+    font: 14px/179% Lato, sans-serif;
+    margin: 0 0 30px;
+  }
+
+  &__btn {
+    min-width: auto;
+    width: 274px;
+  }
+
+  &-inner {
+    margin: 35px 0 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      height: 50%;
+      left: -20px;
+      bottom: 0;
+      background: #fff;
+    }
+  }
+
+  &__list {
+    padding: 17px;
+    background-color: $white-color;
+    border: 1px solid rgba(47, 19, 63, 0.3);
+    border-radius: 8px;
+    position: relative;
+
+    font: 13px/200% Lato, sans-serif;
+    color: $blue-purple-color;
+
+    display: flex;
+    flex-flow: column;
+
+    &-item {
+      position: relative;
+      margin: 0 auto 5px 0;
+
+      &.active {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $red-color;
+        }
+      }
+    }
+  }
+}

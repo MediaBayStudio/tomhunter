@@ -3,7 +3,7 @@
 @import 'assets/mixins';
 
 /* HERO SECTION START */
-  
+
   .hero-sect {
     &__title {
       height: auto;
@@ -103,8 +103,11 @@
 /* RISKS SECTION START */
 
   .risks-sect {
-    padding-top: 85px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     overflow: hidden;
+    background-color: $grey-color2;
+
     &__title {
       margin-bottom: 30px;
     }
@@ -216,7 +219,7 @@
 /* RISKS SECTION END */
 
 @media (min-width: 419.98px) {
-  
+
 }
 
 
@@ -225,7 +228,7 @@
   .sect-title {
     font-size: 32px;
   }
-  
+
   /* HERO SECTION START */
 
     .hero-sect {
@@ -322,7 +325,7 @@
 
 
 @media (min-width: 767.98px) {
-  
+
   /* HERO SECTION START */
 
     .hero-sect {
@@ -383,7 +386,6 @@
 
 
   /* RISKS SECTION START */
-
     .pdf-link {
       &__title {
         font-size: 16px;
@@ -397,7 +399,7 @@
 }
 
 @media (min-width: 991.98px) {
-  
+
   /* HERO SECTION START */
 
     .hero-sect {
@@ -422,7 +424,6 @@
   /* STAGES SECTION START */
 
     .stages-sect {
-      padding-top: 0;
     }
 
     .stages-block {
@@ -459,7 +460,8 @@
   /* RISKS SECTION START */
 
     .risks-sect {
-      padding-top: 100px;
+      padding-top: 40px;
+      padding-bottom: 40px;
       display: grid;
       grid-template-rows: auto auto auto auto 1fr;
       grid-template-columns: 1fr auto;
@@ -519,7 +521,7 @@
 }
 
 @media (min-width: 1319.98px)  {
-  
+
   /* HERO SECTION START */
 
     .hero-sect {
@@ -545,6 +547,9 @@
   /* STAGES SECTION START */
 
     .stages-sect {
+      padding-top: 60px;
+      padding-bottom: 60px;
+
       &__title {
         margin-bottom: 60px;
       }
@@ -572,15 +577,17 @@
           width: calc((1260px - 60px) / 4);
         }
       }
-    }  
+    }
 
   /* STAGES SECTION END */
-
 
 
   /* RISKS SECTION START */
 
     .risks-sect {
+      padding-top: 60px;
+      padding-bottom: 60px;
+
       &__img {
         &-wrap {
           margin-left: 90px;
@@ -597,5 +604,5 @@
       }
     }
 
-  /* RISKS SECTION END */  
+  /* RISKS SECTION END */
 }

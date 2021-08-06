@@ -1,4 +1,4 @@
-<?php 
+<?php
 $template_directory = get_template_directory_uri();
 // Вставка кнопки в редактор статьи
 add_action( 'admin_print_footer_scripts', function() {
@@ -111,7 +111,7 @@ add_filter( 'get_sample_permalink_html', 'my_hide_edit_permalink', 100, 5 );
     ];
 
     if ( $scripts ) {
-      for ( $i=0; $i < count( $scripts ); $i++ ) { 
+      for ( $i=0; $i < count( $scripts ); $i++ ) {
         $array += $scripts;
       }
     }
@@ -147,7 +147,7 @@ function scripts () {
     wp_enqueue_style( '404-style', get_template_directory_uri() . '/css/404.css', [], null );
   }
 
- // Подключение нужных стилей по страницам 
+ // Подключение нужных стилей по страницам
 
   function get_pages_names() {
     $names = [];
@@ -208,7 +208,7 @@ function scripts () {
     }
 
     $html = str_replace( " id='$handle-js' ", '', $html );
-    $html = str_replace( " type='text/javascript'", '', $html ); 
+    $html = str_replace( " type='text/javascript'", '', $html );
 
      return $html;
   }, 10, 2 );
@@ -219,7 +219,7 @@ function scripts () {
     $html = str_replace( " type='text/css'", '', $html );
     return $html;
   }, 10, 2 );
-  
+
 }
 
     /* Настройка контактов в панели настройки->общее */
@@ -230,7 +230,7 @@ function scripts () {
 
     add_settings_field('address', 'Адрес', 'display_address', 'general');
     register_setting('general', 'contacts_address');
-    
+
     add_settings_field('email', 'E-mail', 'display_email', 'general');
     register_setting('general', 'contacts_email');
 
@@ -252,15 +252,15 @@ function scripts () {
   }
 
   function display_posts_desktop() {
-    echo "<input type='text' name='posts_desktop' value='" . esc_attr(get_option('posts_desktop')) . "'>";  
+    echo "<input type='text' name='posts_desktop' value='" . esc_attr(get_option('posts_desktop')) . "'>";
   }
 
   function display_posts_tablet() {
-    echo "<input type='text' name='posts_tablet' value='" . esc_attr(get_option('posts_tablet')) . "'>";  
+    echo "<input type='text' name='posts_tablet' value='" . esc_attr(get_option('posts_tablet')) . "'>";
   }
 
   function display_posts_mobile() {
-    echo "<input type='text' name='posts_mobile' value='" . esc_attr(get_option('posts_mobile')) . "'>";  
+    echo "<input type='text' name='posts_mobile' value='" . esc_attr(get_option('posts_mobile')) . "'>";
   }
 
 // Функции вывода нужных полей
@@ -269,19 +269,19 @@ function scripts () {
   }
 
   function display_address() {
-    echo "<input type='text' name='contacts_address' value='" . esc_attr(get_option('contacts_address')) . "'>";  
+    echo "<input type='text' name='contacts_address' value='" . esc_attr(get_option('contacts_address')) . "'>";
   }
 
   function display_email() {
-    echo "<input type='text' name='contacts_email' value='" . esc_attr(get_option('contacts_email')) . "'>";  
+    echo "<input type='text' name='contacts_email' value='" . esc_attr(get_option('contacts_email')) . "'>";
   }
 
   function display_coords() {
-    echo "<input type='text' name='contacts_coords' value='" . esc_attr(get_option('contacts_coords')) . "'>";  
+    echo "<input type='text' name='contacts_coords' value='" . esc_attr(get_option('contacts_coords')) . "'>";
   }
 
   function display_zoom() {
-    echo "<input type='text' name='contacts_zoom' value='" . esc_attr(get_option('contacts_zoom')) . "'>";  
+    echo "<input type='text' name='contacts_zoom' value='" . esc_attr(get_option('contacts_zoom')) . "'>";
   }
 
 
@@ -337,7 +337,7 @@ function register_post_types(){
     'show_in_rest'        => null, // добавить в REST API. C WP 4.7
     'rest_base'           => null, // $post_type. C WP 4.7
     'menu_position'       => null,
-    'menu_icon'           => null, 
+    'menu_icon'           => null,
     'hierarchical'        => false,
     'supports'            => ['title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
     'taxonomies'          => [],
@@ -368,7 +368,7 @@ function register_post_types(){
     'show_in_rest'        => null, // добавить в REST API. C WP 4.7
     'rest_base'           => null, // $post_type. C WP 4.7
     'menu_position'       => null,
-    'menu_icon'           => null, 
+    'menu_icon'           => null,
     'hierarchical'        => false,
     'supports'            => ['title'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
     'taxonomies'          => [],
@@ -469,7 +469,7 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu {
     $indent = ($depth > 0  ? str_repeat( "\t", $depth ) : ''); // code indent
     $display_depth = ($depth + 1); // because it counts the first submenu as 0
     $classes = ['sub-menu'];
-      
+
     $class_names = implode('', $classes);
 
     // build html
@@ -506,7 +506,8 @@ add_action( 'after_setup_theme', function() {
   register_nav_menus ( array(
     'header_menu' => 'Меню в шапке сайта',
     'mobile_menu' =>  'Мобильное меню на сайте',
-    'footer_menu' => 'Меню в большом футере сайта'
+    'footer_menu' => 'Меню в большом футере сайта',
+    'footer_home-menu' => 'Меню в новом футере'
   ) );
 } );
 
@@ -521,11 +522,11 @@ add_action( 'save_post', function( $post_id, $post, $update ) {
       break;
     }
   }
-}, 10, 3 );  
+}, 10, 3 );
 
 function kama_excerpt( $args = '' ){
   global $post;
-  
+
   if( is_string($args) )
     parse_str( $args, $args );
 
@@ -622,12 +623,12 @@ function load_banners() {
 
 }
 
-add_action( 'wp_ajax_nopriv_loadbanners', 'load_banners' ); 
+add_action( 'wp_ajax_nopriv_loadbanners', 'load_banners' );
 add_action( 'wp_ajax_loadbanners', 'load_banners' );
 
 function true_load_posts( $cat, $posts_per_page=7 ) {
 
-  
+
   if ( $_POST ) {
     $cat = $_POST['termId'];
     $offset = $_POST['postOffset'];
@@ -669,7 +670,7 @@ function true_load_posts( $cat, $posts_per_page=7 ) {
     $id = $post->ID;
 
     $img_768_320 = wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'post_card_768' );
-   
+
     $img_768x2_320x2_1440 = wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'post_card_768_x2' );
 
     $img_768x3_320x3_1440x2 = wp_get_attachment_image_url( get_post_thumbnail_id( $id ), 'post_card_768_x3' );
@@ -742,8 +743,8 @@ function true_load_posts( $cat, $posts_per_page=7 ) {
   echo json_encode( $response );
   die();
 }
- 
-add_action( 'wp_ajax_nopriv_loadmore', 'true_load_posts' ); 
+
+add_action( 'wp_ajax_nopriv_loadmore', 'true_load_posts' );
 add_action( 'wp_ajax_loadmore', 'true_load_posts' );
 
 
@@ -759,10 +760,10 @@ add_action( 'wp_ajax_loadmore', 'true_load_posts' );
   }
 
 function the_breadcrumb( $settings ) {
- 
+
   // получаем номер текущей страницы
   $pageNum = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
- 
+
   $separator = ' &raquo; '; //  »
 
   $container_start = $settings['container_start'];
@@ -773,7 +774,7 @@ function the_breadcrumb( $settings ) {
   $link_before = $settings['link_before'];
   $link_class = $settings['link_class'];
   $current_link_class = $settings['current_link_class'];
-  $after_links = $settings['after_links']; 
+  $after_links = $settings['after_links'];
 
   if ( $link_class ) {
     $class = 'class="' . $link_class . '"';
@@ -808,11 +809,11 @@ function the_breadcrumb( $settings ) {
       // выводим название статьи
       $class = 'class="' . $link_class . ' current"';
       echo "$link_before<a href='#' $class><span class='breadcrumbs__text'>" .get_the_title() . "</span></a>$link_after";
-    
+
       if ( $container_end ) {
       echo $container_end;
     }
- 
+
     } elseif ( is_page() ){ // страницы WordPress
 
 
@@ -831,7 +832,7 @@ function the_breadcrumb( $settings ) {
 
             echo "$link_before<a href='$page_link' $class>$page_title</a>$link_after";
           }
-          
+
         }
       }
       if ($current_link_class) {
@@ -849,7 +850,7 @@ function the_breadcrumb( $settings ) {
       if ($container_end) {
         echo $container_end;
       }
- 
+
     } elseif ( is_category() ) {
       // var_dump();
       $current_category = get_category( get_query_var('cat') );
@@ -871,7 +872,7 @@ function the_breadcrumb( $settings ) {
         $class = 'class="' . $link_class . ' current"';
         echo "$link_before<a href='".get_term_link( $current_category )."' $class><span class='breadcrumbs__text'>$current_category->name</span></a>$link_after";
       }
-      
+
 
       if ($links_after) {
         echo $links_after;
@@ -884,42 +885,42 @@ function the_breadcrumb( $settings ) {
       if ($container_end) {
         echo $container_end;
       }
- 
+
     } elseif( is_tag() ) {
- 
+
       single_tag_title();
- 
+
     } elseif (is_day() ) { // архивы (по дням)
- 
+
       echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
       echo '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a>' . $separator;
       echo get_the_time('d');
- 
+
     } elseif ( is_month() ) { // архивы (по месяцам)
- 
+
       echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
       echo get_the_time('F');
- 
+
     } elseif ( is_year() ) { // архивы (по годам)
- 
+
       echo get_the_time('Y');
- 
+
     } elseif ( is_author() ) { // архивы по авторам
- 
+
       global $author;
       $userdata = get_userdata($author);
       echo 'Опубликовал(а) ' . $userdata->display_name;
- 
+
     } elseif ( is_404() ) { // если страницы не существует
- 
+
       echo 'Ошибка 404';
- 
+
     }
- 
+
     if ($pageNum > 1) { // номер текущей страницы
       echo ' (' . $pageNum . '-я страница)';
     }
- 
+
   }
 }
 
@@ -955,6 +956,6 @@ function fill_views_column( $colname, $post_id ) {
       }
       echo "<p>$paragraph</p>";
     }
-    
+
   }
 }

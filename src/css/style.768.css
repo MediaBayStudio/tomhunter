@@ -671,14 +671,35 @@ h1.hero-sect__title, h2.hero-sect__title {
 
 .ftr {
   font-size: 14px;
+  display: flex;
+  flex-flow: wrap;
 }
 
 .ftr__top {
   margin-bottom: 30px;
 }
 
-.ftr__logo {
-  display: block;
+.ftr-home__nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 260px auto;
+  grid-template-columns: 260px auto;
+  -ms-grid-rows: 35px 35px 35px 35px 35px 35px 35px;
+  grid-template-rows: 35px 35px 35px 35px 35px 35px 35px;
+  margin-right: 40px;
+}
+
+.ftr-home__nav > .nav__link:last-child {
+  margin-bottom: 0;
+}
+
+.ftr-home__nav .sub-menu {
+  margin-bottom: 0;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: 2/-1;
+  width: 100%;
 }
 
 .copyright-block {

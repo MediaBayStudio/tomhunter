@@ -1,12 +1,30 @@
 .ftr {
   font-size: 14px;
+  display: flex;
+  flex-flow: wrap;
 
   &__top {
     margin-bottom: 30px;
   }
 
-  &__logo {
-    display: block;
+  &-home__nav {
+    display: grid;
+    grid-template-columns: 260px auto;
+    grid-template-rows: 35px 35px 35px 35px 35px 35px 35px;
+    margin-right: 40px;
+
+    >.nav__link {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .sub-menu {
+      margin-bottom: 0;
+      grid-column: 1/2;
+      grid-row: 2/-1;
+      width: 100%;
+    }
   }
 }
 

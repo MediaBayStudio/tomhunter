@@ -378,6 +378,17 @@
   font-size: 16px;
 }
 
+.ftr__logo {
+  width: 161px;
+  height: 161px;
+  margin-right: 120px;
+}
+
+.ftr-home__nav {
+  -ms-grid-columns: 400px auto;
+  grid-template-columns: 400px auto;
+}
+
 .dev-link {
   font-size: 19px;
 }

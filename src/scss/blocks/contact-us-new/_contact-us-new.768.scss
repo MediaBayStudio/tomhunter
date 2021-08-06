@@ -1,0 +1,34 @@
+.contact-us-new {
+
+  &__descr {
+    width: 388px;
+    font-size: 18px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  &__form {
+    width: 100%;
+    padding: 45px 75px;
+  }
+
+  .form__inp {
+    width: 100%;
+  }
+
+  .form__inp-wrap {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .tel-inp-wrap {
+    margin-bottom: 0;
+  }
+
+  .form__btn {
+    margin: 50px 0 0 auto;
+  }
+}

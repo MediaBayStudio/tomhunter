@@ -515,46 +515,6 @@ h1.hero-sect__title, h2.hero-sect__title {
   margin-bottom: 315px;
 }
 
-.service-hero {
-  background-image: url("../img/cover-service-hero-img.png");
-  background-size: 60%;
-  background-position: 115% 35%;
-}
-
-.service-hero__title {
-  font-size: 46px;
-}
-
-.service-hero__descr {
-  font-size: 18px;
-  width: 403px;
-}
-
-.service-hero-inner {
-  margin-top: 55px;
-}
-
-.service-hero-inner::before {
-  left: calc((50vw - 325px) * -1);
-}
-
-.service-hero__list {
-  flex-flow: row wrap;
-  font-size: 14px;
-}
-
-.service-hero__list-item {
-  margin-right: 32px;
-}
-
-.best-in-business__list-item:nth-child(2) {
-  margin-top: 0;
-}
-
-.best-in-business__list-item:nth-child(even) {
-  margin-right: 0;
-}
-
 .feature-card {
   width: calc((650px - 20px) / 2);
   height: 325px;
@@ -713,4 +673,114 @@ h1.hero-sect__title, h2.hero-sect__title {
 
 .dev-link {
   font-size: 14px;
+}
+
+.service-hero {
+  background-image: url("../img/cover-service-hero-img.png");
+  background-size: 60%;
+  background-position: 115% 35%;
+}
+
+.service-hero__title {
+  font-size: 46px;
+}
+
+.service-hero__descr {
+  font-size: 18px;
+  width: 403px;
+}
+
+.service-hero-inner {
+  margin-top: 55px;
+}
+
+.service-hero-inner::before {
+  left: calc((50vw - 325px) * -1);
+}
+
+.service-hero__list {
+  flex-flow: row wrap;
+  font-size: 14px;
+}
+
+.service-hero__list-item {
+  margin-right: 32px;
+}
+
+.best-in-business__list-item:nth-child(2) {
+  margin-top: 0;
+}
+
+.best-in-business__list-item:nth-child(even) {
+  margin-right: 0;
+}
+
+.actual-news__list {
+  justify-content: space-around;
+}
+
+.actual-news .news-item {
+  width: 304px;
+  height: 470px;
+  margin-right: 20px;
+}
+
+.actual-news .news-item:nth-child(2) {
+  display: flex;
+  margin-right: 0;
+}
+
+.actual-news .news-item__img {
+  height: 192px;
+}
+
+.actual-news .news-item__title {
+  padding: 0 25px;
+  margin: 25px 0 10px;
+  font-size: 20px;
+}
+
+.actual-news .news-item__descr {
+  font-size: 18px;
+  padding: 0 25px;
+}
+
+.actual-news .news-item__date {
+  padding: 0 25px 25px;
+}
+
+.actual-news__link {
+  margin: 30px auto 0;
+}
+
+.contact-us-new__descr {
+  width: 388px;
+  font-size: 18px;
+}
+
+.contact-us-new form {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.contact-us-new__form {
+  width: 100%;
+  padding: 45px 75px;
+}
+
+.contact-us-new .form__inp {
+  width: 100%;
+}
+
+.contact-us-new .form__inp-wrap {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.contact-us-new .tel-inp-wrap {
+  margin-bottom: 0;
+}
+
+.contact-us-new .form__btn {
+  margin: 50px 0 0 auto;
 }

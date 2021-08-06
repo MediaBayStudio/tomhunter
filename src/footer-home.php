@@ -28,7 +28,7 @@
 
         <li class="ftr__contacts-list-item phone">
           <span>Санкт-Петербург</span>
-          <a href="tel:+78126409248">+7 (812) 640-92-48</a>
+          <a href="tel:+78126409248">+7 (812) 640-92-48 </a>
         </li>
 
         <li class="ftr__contacts-list-item mail">

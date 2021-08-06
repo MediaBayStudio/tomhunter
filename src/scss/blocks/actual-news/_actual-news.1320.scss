@@ -1,0 +1,19 @@
+.actual-news {
+  .news-item {
+    width: 400px;
+    height: 540px;
+
+    &:nth-child(3) {
+      display: flex;
+      margin-right: 0;
+    }
+
+    &__img {
+      height: 250px;
+    }
+
+    &__title {
+      margin: 30px 0 15px;
+    }
+  }
+}

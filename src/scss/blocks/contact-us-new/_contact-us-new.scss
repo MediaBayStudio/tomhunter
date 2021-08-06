@@ -1,0 +1,61 @@
+.contact-us-new {
+  display: flex;
+  flex-flow: wrap;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $grey-color2;
+
+  &__inner {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__descr {
+    font: 16px/150% Lato, sans-serif;
+    color: $paragraph-color;
+  }
+
+  &__form {
+    padding: 30px 20px;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+  }
+
+  .form__inp {
+    padding-bottom: 3px;
+  }
+
+  .form__inp-wrap {
+    padding: 25px 0 0;
+    position: relative;
+    font: 16px/156% Lato, sans-serif;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #878787;
+    }
+
+    &.name-inp-wrap {
+      &::before {
+        content: 'Имя';
+      }
+    }
+
+    &.email-inp-wrap {
+      &::before {
+        content: 'Почта';
+      }
+    }
+
+    &.tel-inp-wrap {
+      &::before {
+        content: 'Контактный телефон';
+      }
+    }
+  }
+}

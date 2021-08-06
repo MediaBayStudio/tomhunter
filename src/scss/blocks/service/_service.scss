@@ -1,6 +1,6 @@
 .service-sect {
-  padding-top: 75px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   overflow: hidden;
   color: $purple-color;
   &__title {
@@ -15,8 +15,8 @@
 }
 
 .service-card {
-  padding: 20px;
-  height: 445px;
+  padding: 30px 25px;
+  height: 337px;
   width: 280px;
   &::before {
     width: 320px;
@@ -56,15 +56,15 @@
     z-index: 1;
   }
   &__title {
-    max-width: 180px;
-    height: 48px;
+    max-width: 227px;
+    height: 63px;
     font: bold 20px/120% Lato;
     color: $blue-purple-color;
     z-index: 1;
   }
   &__descr {
-    max-width: 100%;
-    font: 15px/165% Lato;
+    max-width: 227px;
+    font: 14px/167% Lato;
     color: $paragraph-color;
     z-index: 1;
     &::before {
@@ -78,7 +78,7 @@
     }
   }
   &__link {
-    margin-top: auto;
+    margin: auto auto 0;
     transition: transform .15s, background-color .5s, color .5s, border-color .5s;
     &:active {
       transform: scale(.965);

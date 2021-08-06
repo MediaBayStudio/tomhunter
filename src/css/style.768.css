@@ -606,9 +606,9 @@ h1.hero-sect__title, h2.hero-sect__title {
 }
 
 .service-card {
-  width: calc((650px - 20px) / 2);
-  padding: 30px 35px;
-  height: 535px;
+  width: 314px;
+  padding: 30px;
+  height: 337px;
 }
 
 .service-card__img {
@@ -617,9 +617,6 @@ h1.hero-sect__title, h2.hero-sect__title {
 }
 
 .service-card__title {
-  max-width: 200px;
-  height: 59px;
-  margin: 60px 0 35px;
   font-size: 25px;
 }
 

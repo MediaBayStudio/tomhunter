@@ -361,8 +361,7 @@
 }
 
 .service-card {
-  width: calc((960px - 40px) / 3);
-  height: 575px;
+  width: 307px;
 }
 
 .contacts-sect {

@@ -5,10 +5,14 @@
   color: #fff;
   font-size: 10px;
 
-  &__logo {
+  &__logo-link {
     width: 161px;
     height: 161px;
     display: none;
+  }
+
+  &__logo {
+    width: 100%;
   }
 
   &__sub-title {
@@ -99,31 +103,34 @@
       margin-right: 10px;
       width: 30px;
       height: 30px;
-      background-size: cover;
+      background-size: 50%;
       background-repeat: no-repeat;
       background-position: center;
+      border: 1px solid #fff;
+      border-radius: 50%;
 
-      &.icon {
-        &_instagram {
-          background-image: url('../img/inst-icon.svg');
-        }
-
-        &_linkedin {
-          background-image: url('../img/linkedin-icon.svg');
-        }
-
-        &_habr {
-          background-image: url('../img/H-icon.svg');
-        }
-
-        &_facebook {
-          background-image: url('../img/fb-icon.svg');
-        }
-
-        &_telegram {
-          background-image: url('../img/tg-icon.svg');
-        }
+      &_instagram {
+        background-image: url('../img/instagram-icon.svg');
       }
+
+      &_linkedin {
+        background-image: url('../img/linkedin-icon.svg');
+      }
+
+      &_habr {
+        background-size: 40%;
+        background-image: url('../img/habr-icon.svg');
+      }
+
+      &_facebook {
+        background-size: 35%;
+        background-image: url('../img/facebook-icon.svg');
+      }
+
+      &_telegram {
+        background-image: url('../img/telegram-icon.svg');
+      }
+
 
       a {
         position: absolute;

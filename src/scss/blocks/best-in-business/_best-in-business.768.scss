@@ -1,6 +1,8 @@
 .best-in-business {
   &__list {
     &-item {
+      margin-right: 55px;
+
       &:nth-child(2) {
         margin-top: 0;
       }

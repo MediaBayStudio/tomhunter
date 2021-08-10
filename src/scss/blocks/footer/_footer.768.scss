@@ -26,6 +26,10 @@
       width: 100%;
     }
   }
+
+  &__contacts {
+    margin-left: auto;
+  }
 }
 
 .copyright-block {
@@ -49,4 +53,8 @@
   //   height: 28px;
   //   object-fit: contain;
   // }
+}
+
+.privacy-policy-link {
+  justify-self: end;
 }

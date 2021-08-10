@@ -12,7 +12,7 @@ foreach ( $articles as $post ){
   ?>
      <li class="news-item">
       <a href="<?php the_permalink(); ?>" class="news-item__img-link">
-         <img src="<?php the_post_thumbnail_url(); ?>" alt="#" class="news-item__img" />
+         <img src="#" data-src="<?php the_post_thumbnail_url(); ?>" alt="#" class="news-item__img lazy" />
       </a>
 
       <h3 class="news-item__title">

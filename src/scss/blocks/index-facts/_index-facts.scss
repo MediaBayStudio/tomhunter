@@ -22,6 +22,7 @@
   }
 
   &__li-img {
+    object-fit: contain;
     width: 60px;
     height: 60px;
     float: left;

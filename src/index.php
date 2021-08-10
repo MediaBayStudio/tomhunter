@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
   Template Name: Главная
 */
@@ -36,7 +36,7 @@
   </div>
 </section> -->
 
-<?php 
+<?php
 
   #require 'layouts/_trust.php';
   #require 'layouts/_invite.php';
@@ -47,14 +47,14 @@
   <img src="<?php #echo $template_directory . "/img/circle.svg"; ?>" alt="Мишень" class="about__circle-small circle-small">
   <h2 class="about-sect__title sect-title forward_slash">О нашей компании</h2>
   <?php
-  
+
     #print_paragraphs($about_sect_fields, 'about-sect__descr');
     #$features = $about_sect_fields['features_repeater'];
   ?>
   <div class="features-block">
     <strong class="features-block__title underline">Наши преимущества:</strong>
     <ul class="features-list">
-      <?php 
+      <?php
         #foreach ($features as $feature) {
           // echo "<li class='features-list__item forward_slash'>
           //         <em class='features-list__text'>$feature[feature]</em>
@@ -99,6 +99,6 @@
 </section> -->
 
 <?php
-  require 'layouts/_contacts.php';
+  require 'layouts/_contact-us-new.php';
   get_footer('home');
  ?>

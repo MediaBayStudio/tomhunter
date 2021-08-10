@@ -1,5 +1,10 @@
 .best-in-business {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   &__list {
+    justify-content: space-around;
+
     &-item {
       margin: 0;
       margin-right: 15px;

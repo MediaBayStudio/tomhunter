@@ -3,8 +3,8 @@
     $template_directory ?>
 
 <footer class="ftr container">
-    <a href="#">
-      <img src="<?php echo $template_directory . "/img/footer-logo.svg"; ?>" alt="logo" class="ftr__logo">
+    <a class="ftr__logo-link" href="<?php echo home_url(); ?>">
+      <img src="#" data-src="<?php echo $template_directory . "/img/footer-logo.svg"; ?>" alt="logo" class="ftr__logo lazy">
     </a>
 
     <?php
@@ -37,19 +37,19 @@
       </ul>
 
       <ul class="ftr__socials">
-        <li class="ftr__socials-item icon_instagram">
+        <li class="ftr__socials-item ftr__socials-item_instagram">
           <a href="" target="_blank"></a>
         </li>
-        <li class="ftr__socials-item icon_linkedin">
+        <li class="ftr__socials-item ftr__socials-item_linkedin">
           <a href="" target="_blank"></a>
         </li>
-        <li class="ftr__socials-item icon_habr">
+        <li class="ftr__socials-item ftr__socials-item_habr">
           <a href="" target="_blank"></a>
         </li>
-        <li class="ftr__socials-item icon_facebook">
+        <li class="ftr__socials-item ftr__socials-item_facebook">
           <a href="" target="_blank"></a>
         </li>
-        <li class="ftr__socials-item icon_telegram">
+        <li class="ftr__socials-item ftr__socials-item_telegram">
           <a href="" target="_blank"></a>
         </li>
       </ul>

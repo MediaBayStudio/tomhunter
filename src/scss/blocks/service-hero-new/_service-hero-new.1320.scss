@@ -1,6 +1,11 @@
 .service-hero {
-  background-size: 35%;
-  background-position: 83% 15%;
+
+  &__bg-img {
+    width: 340px;
+    height: 340px;
+    top: 5%;
+    right: calc(50% - 520px);
+  }
 
   &__title {
     margin: 35px 0 30px;

@@ -193,6 +193,7 @@ svg {
 }
 
 .sect-title {
+  color: $blue-purple-color;
   font: bold 24px/140% Lato;
   text-transform: uppercase;
 }
@@ -261,6 +262,7 @@ svg {
 @import 'blocks/form/form';
 @import 'blocks/slick/slick';
 @import 'blocks/card/card';
+@import 'blocks/card-new/card-new';
 @import 'blocks/activities/activities';
 @import 'blocks/index-services/index-services';
 @import 'blocks/index-about/index-about';
@@ -281,3 +283,6 @@ svg {
 @import 'blocks/best-in-business/best-in-business';
 @import 'blocks/actual-news/actual-news';
 @import 'blocks/contact-us-new/contact-us-new';
+@import 'blocks/testing-objects/testing-objects';
+@import 'blocks/testing-models/testing-models';
+@import 'blocks/customer-gets/customer-gets';

@@ -14,6 +14,7 @@
   $stages_sect_fields = get_field('stages_sect');
   $risks_sect_fields = get_field('risks_sect');
   $activities_sect_fields = get_field('two_columns_sect');
+  $best_in_business_fields = get_field('best_in_business');
 
   get_header();
   // require 'layouts/_hero.php';
@@ -74,7 +75,13 @@
     require 'layouts/_stages.php';
   }
 
-  require 'layouts/_best-in-business.php';
+  $best_in_business_cards = $best_in_business_fields['cards'];
+
+  if ( $best_in_business_cards ) {
+    require 'layouts/_best-in-business.php';
+  }
+
+
   require 'layouts/_service.php';
   require 'layouts/_actual-news.php';
   require 'layouts/_contact-us-new.php';

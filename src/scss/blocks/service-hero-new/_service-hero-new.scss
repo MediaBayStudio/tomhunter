@@ -43,6 +43,11 @@
   background-repeat: no-repeat;
   color: #fff;
 
+  &__bg-img {
+    position: absolute;
+    display: none;
+  }
+
   &__title {
     margin: 30px 0;
     font: 30px/133% Lato, sans-serif;

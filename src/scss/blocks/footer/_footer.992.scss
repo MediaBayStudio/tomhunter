@@ -1,5 +1,6 @@
 .ftr {
-  &__logo {
+  &__logo-link {
+    display: block;
     width: 115px;
     height: 115px;
     margin-right: 50px;
@@ -24,7 +25,6 @@
   }
 
   &__contacts {
-    margin-left: auto;
 
     &-list {
       &-item {
@@ -53,6 +53,7 @@
       width: 40px;
       height: 40px;
       margin-right: 15px;
+      background-size: auto;
     }
   }
 

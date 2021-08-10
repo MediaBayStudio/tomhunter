@@ -1,0 +1,8 @@
+.card-new {
+  &::before {
+    width: 230px;
+    height: 200px;
+    top: -50px;
+    left: -40px;
+  }
+}

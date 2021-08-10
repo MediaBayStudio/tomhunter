@@ -5,19 +5,52 @@
   color: #fff;
   font-size: 10px;
 
-  &__top {
-    margin-bottom: 30px;
-  }
-
-  &__logo {
+  &__logo-link {
     width: 161px;
     height: 161px;
     display: none;
   }
 
+  &__logo {
+    width: 100%;
+  }
+
   &__sub-title {
     margin-bottom: 15px;
     font: 20px/125% Lato, sans-serif;
+  }
+
+  &-home__nav {
+    display: flex;
+    flex-flow: column;
+
+    .nav__link{
+      border-bottom: none !important;
+    }
+
+    >.nav__link {
+      font: 20px/125% Lato, sans-serif;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    .sub-menu {
+      margin-bottom: 30px;
+      font: 14px/204% Lato, sans-serif;
+      display: flex;
+      flex-flow: column;
+
+      >.nav__link {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
   &__contacts {
@@ -40,23 +73,23 @@
           background-position: center;
         }
 
+        &.phone {
+          &::before {
+            background-image: url('../img/phone-icon.svg');
+          }
+        }
+
+        &.mail {
+          &::before {
+            top: 9px;
+            height: 10px;
+            background-image: url('../img/mail-icon.svg');
+          }
+        }
+
         span, a {
           display: block;
         }
-      }
-    }
-
-    .icon_tel {
-      &::before {
-        background-image: url('../img/phone-icon.svg');
-      }
-    }
-
-    .icon_mail {
-      &::before {
-        top: 9px;
-        height: 10px;
-        background-image: url('../img/mail-icon.svg');
       }
     }
   }
@@ -70,31 +103,34 @@
       margin-right: 10px;
       width: 30px;
       height: 30px;
-      background-size: cover;
+      background-size: 50%;
       background-repeat: no-repeat;
       background-position: center;
+      border: 1px solid #fff;
+      border-radius: 50%;
 
-      &.icon {
-        &_inst {
-          background-image: url('../img/inst-icon.svg');
-        }
-
-        &_linkedin {
-          background-image: url('../img/linkedin-icon.svg');
-        }
-
-        &_h {
-          background-image: url('../img/H-icon.svg');
-        }
-
-        &_fb {
-          background-image: url('../img/fb-icon.svg');
-        }
-
-        &_tg {
-          background-image: url('../img/tg-icon.svg');
-        }
+      &_instagram {
+        background-image: url('../img/instagram-icon.svg');
       }
+
+      &_linkedin {
+        background-image: url('../img/linkedin-icon.svg');
+      }
+
+      &_habr {
+        background-size: 40%;
+        background-image: url('../img/habr-icon.svg');
+      }
+
+      &_facebook {
+        background-size: 35%;
+        background-image: url('../img/facebook-icon.svg');
+      }
+
+      &_telegram {
+        background-image: url('../img/telegram-icon.svg');
+      }
+
 
       a {
         position: absolute;
@@ -104,6 +140,11 @@
         left: 0;
       }
     }
+  }
+
+  &__bottom {
+    margin-top: 30px;
+    flex: 1 0 100%;
   }
 
   .forward_slash::before {

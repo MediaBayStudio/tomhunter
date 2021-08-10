@@ -1,0 +1,39 @@
+.actual-news {
+  &__list {
+    justify-content: space-around;
+  }
+
+  .news-item {
+    width: 304px;
+    height: 470px;
+    margin-right: 20px;
+
+    &:nth-child(2) {
+      display: flex;
+      margin-right: 0;
+    }
+
+    &__img {
+      height: 192px;
+    }
+
+    &__title {
+      padding: 0 25px;
+      margin: 25px 0 10px;
+      font-size: 20px;
+    }
+
+    &__descr {
+      font-size: 18px;
+      padding: 0 25px;
+    }
+
+    &__date {
+      padding: 0 25px 25px;
+    }
+  }
+
+  &__link {
+    margin: 30px auto 0;
+  }
+}

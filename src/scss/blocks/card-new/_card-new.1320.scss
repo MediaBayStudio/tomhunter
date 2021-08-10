@@ -1,0 +1,19 @@
+.card-new {
+
+  &::before {
+    width: 300px;
+    height: 260px;
+    top: -55px;
+    left: -40px;
+  }
+
+  &__title {
+    width: 200px;
+    font-size: 22px;
+    line-height: 150%;
+  }
+
+  &__text {
+    font-size: 17px;
+  }
+}

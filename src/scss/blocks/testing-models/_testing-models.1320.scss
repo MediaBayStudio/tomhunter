@@ -1,0 +1,18 @@
+.testing-models {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__list {
+    margin-top: 60px;
+  }
+
+  .card-new {
+    width: 405px;
+    height: 622px;
+
+    &::before {
+      width: 320px;
+      height: 280px;
+    }
+  }
+}

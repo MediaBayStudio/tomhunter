@@ -1,0 +1,36 @@
+.testing-models {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__list {
+    margin-top: 35px;
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .card-new {
+    height: 606px;
+    padding: 30px 16px 0;
+
+    &::before {
+      width: 250px;
+      height: 200px;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    &__text {
+      margin-top: 15px;
+    }
+
+    &__img {
+      width: 111px;
+      height: 40px;
+      right: 15px;
+      bottom: 30px;
+    }
+  }
+}

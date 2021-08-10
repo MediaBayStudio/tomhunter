@@ -4,49 +4,21 @@
   </h2>
 
   <ul class="best-in-business__list">
+    <?php
+      foreach ( $best_in_business_cards as $card) :
+        $title = $card['title'];
+        $icon_src = $card['icon']['url'];
+        $descr = $card['descr'];?>
 
     <li class="best-in-business__list-item">
       <div class="header">
         <figure class="img-wrapper">
-          <img src="http://localhost:8888/t.hunter/wp-content/uploads/2021/08/best-in-icon-1.svg" alt="#">
+          <img src="#" data-src="<?php echo $icon_src?>" alt="#" class="lazy">
         </figure>
-        <div class="title">1500 +</div>
+        <div class="title"><?php echo $title?></div>
       </div>
-      <div class="descr">у нас есть опыт реализации масштабных проектов, среди которых — внутреннее тестирование на проникновение локальной сети, распределённую по городам в количестве 1500+ узлов</div>
+      <div class="descr"><?php echo $descr?></div>
     </li>
-
-    <li class="best-in-business__list-item">
-      <div class="header">
-        <figure class="img-wrapper">
-          <img src="http://localhost:8888/t.hunter/wp-content/uploads/2021/08/best-in-icon-2.svg" alt="#">
-        </figure>
-        <div class="title">100000&nbsp;+</div>
-      </div>
-      <div class="descr">экспертный уровень в пентесте — мы обнаруживаем более 200 уязвимостей на рабочих станциях, серверах, сетевом оборудовании ежегодно</div>
-    </li>
-
-    <li class="best-in-business__list-item">
-      <div class="header">
-        <figure class="img-wrapper">
-          <img src="http://localhost:8888/t.hunter/wp-content/uploads/2021/08/best-in-icon-3.svg" alt="#">
-        </figure>
-        <div class="title">10 +</div>
-      </div>
-      <div class="descr">
-        специалисты подтверждают свою квалификацию на международном уровне и имеют сертификаты OSCP, OSWE, CEH, CWAP, ISO/IEC 27001
-      </div>
-    </li>
-
-    <li class="best-in-business__list-item">
-      <div class="header">
-        <figure class="img-wrapper">
-          <img src="http://localhost:8888/t.hunter/wp-content/uploads/2021/08/best-in-icon-3.svg" alt="#">
-        </figure>
-        <div class="title">10 +</div>
-      </div>
-      <div class="descr">
-        специалисты подтверждают свою квалификацию на международном уровне и имеют сертификаты OSCP, OSWE, CEH, CWAP, ISO/IEC 27001
-      </div>
-    </li>
+   <?php endforeach ?>
   </ul>
 </section>

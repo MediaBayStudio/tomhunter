@@ -1,0 +1,21 @@
+.testing-models {
+
+  &__list {
+    margin-top: 40px;
+  }
+
+  .card-new {
+    margin-right: 20px;
+    width: 460px;
+    height: 565px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      width: 320px;
+      height: 280px;
+    }
+  }
+}

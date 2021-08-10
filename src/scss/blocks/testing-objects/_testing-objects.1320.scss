@@ -1,0 +1,15 @@
+.testing-object {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  &__list {
+    margin-top: 60px;
+  }
+
+  &-item {
+    margin-bottom: 45px;
+
+    &__text {
+      width: 830px;
+    }
+  }
+}

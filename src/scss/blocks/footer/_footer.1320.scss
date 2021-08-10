@@ -1,5 +1,21 @@
 .ftr {
   font-size: 16px;
+
+  &__logo-link {
+    width: 161px;
+    height: 161px;
+    margin-right: 120px;
+  }
+
+  &__logo {
+    width: 161px;
+    height: 161px;
+  }
+
+  &-home__nav {
+    margin-left: 0;
+    grid-template-columns: 370px auto;
+  }
 }
 
 .dev {

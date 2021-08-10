@@ -1,7 +1,16 @@
+.breadcrumbs-list {
+  font-size: 16px;
+}
+
 .service-hero {
-  background-image: url('../img/cover-service-hero-img.png');
-  background-size: 60%;
-  background-position: 115% 35%;
+
+  &__bg-img {
+    width: 260px;
+    height: 290px;
+    display: block;
+    top: 18%;
+    right: calc(50vw - 334px);
+  }
 
   &__title {
     font-size: 46px;

@@ -9,10 +9,11 @@
   <p class="service-hero__descr">Проводим тестирование на&nbsp;проникновение, устанавливаем существующие уязвимые места в&nbsp;информационных системах, приложениях и&nbsp;сервисах. Составим подробный план по&nbsp;устранению уязвимостей</p>
   <a href="#callback" class="service-hero__btn hero-sect__link btn">Получить консультацию</a>
 
+  <img src="#" data-src="<?php echo get_template_directory_uri(); ?>/img/cover-service-hero-img.png" alt="#" class="service-hero__bg-img lazy">
+
   <div class="service-hero-inner">
     <ul class="service-hero__list">
       <?php
-            // параметры по умолчанию
             $pages = get_posts([
               'numberposts' => -1,
               'meta_key'    => '_wp_page_template',
@@ -20,15 +21,20 @@
               'post_type'   => 'page',
             ]);
 
-            // var_dump($posts[0]->post_title);
-
             foreach( $pages as $page ) :
-              $current = $post->post_title === $page->post_title ? ' active' : '' ?>
+              switch ($page->ID) :
+                case 183:
+                case 203:
+                case 219:
+                case 2328:
+                case 2367:
+                  $current = $post->post_title === $page->post_title ? ' active' : '' ?>
 
-
-              <li class='service-hero__list-item<?php echo $current?>'>
-                <a href="<?php the_permalink( $page ) ?>"><?php echo $page->post_title ?></a>
-              </li><?php
+                  <li class='service-hero__list-item<?php echo $current?>'>
+                    <a href="<?php the_permalink( $page ) ?>"><?php echo $page->post_title ?></a>
+                  </li><?php
+                  break;
+                endswitch;
               endforeach?>
     </ul>
   </div>

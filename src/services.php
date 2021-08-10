@@ -14,12 +14,13 @@
   $descr_sect_fields = get_field('descr_sect');
   $stages_sect_fields = get_field('stages_sect');
   $risks_sect_fields = get_field('risks_sect');
+  $best_in_business_fields = get_field('best_in_business');
 
   get_header();
-  require 'layouts/_hero.php';
-  require 'layouts/_service.php';
 
-   $descr_sect = [
+  require 'layouts/_service-hero-new.php';
+
+  $descr_sect = [
     'title'       => $descr_sect_fields['sect_title'],
     'paragraphs'  => $descr_sect_fields['p_repeater'],
     'list_title'  => $descr_sect_fields['list_title'],
@@ -28,29 +29,32 @@
   ];
 
   require 'layouts/_descr.php';
+  require 'layouts/_testing-objects.php';
 
-  $childs = $stages_sect_fields['cards_settings'][0];
+  // $childs = $stages_sect_fields['cards_settings'][0];
+  // $prefix = ' stages-block_';
 
-  $prefix = ' stages-block_';
+  // if ($childs == 4) {
+  //   $prefix .= 'four';
+  // } else if ($childs == 3) {
+  //   $prefix .= 'three';
+  // } else if ($childs == 2) {
+  //   $prefix .= 'two';
+  // } else {
+  //   $prefix = '';
+  // }
 
-  if ($childs == 4) {
-    $prefix .= 'four';
-  } else if ($childs == 3) {
-    $prefix .= 'three';
-  } else if ($childs == 2) {
-    $prefix .= 'two';
-  } else {
-    $prefix = '';
-  }
+  // if ($prefix !== '') {
+  //   $prefix .= '-children';
+  // }
 
-  if ($prefix !== '') {
-    $prefix .= '-children';
-  }
+  // $stages_cards = $stages_sect_fields['cards_repeater'];
+  // require 'layouts/_stages.php';
 
-  $stages_cards = $stages_sect_fields['cards_repeater'];
 
-  require 'layouts/_stages.php';
-  require 'layouts/_invite.php';
+  require 'layouts/_testing-models.php';
+  require 'layouts/_customer-gets.php';
+  require 'layouts/_thunt-advantages.php';
 
   $risks_sect_images = $risks_sect_fields['images'];
 
@@ -68,9 +72,8 @@
     'units'       => $risks_sect_fields['units'],
     'small_units' => $risks_sect_fields['small_units']
   ];
+  require 'layouts/_actual-news.php';
 
-  require 'layouts/_risks.php';
 
-
-  require 'layouts/_contacts.php';
+  require 'layouts/_contact-us-new.php';
   get_footer('home');

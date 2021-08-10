@@ -1,0 +1,42 @@
+.card-new {
+  position: relative;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(180deg, #FCFCFC 0%, #F2F2F2 100%);
+    z-index: 0;
+  }
+
+  &__title {
+    position: relative;
+    width: 159px;
+    color: #291956;
+    font-size: 16px;
+    line-height: 130%;
+    z-index: 1;
+  }
+
+  &__text {
+    color: #4d4d4d;
+    font-size: 15px;
+    line-height: 130%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__img {
+    position: absolute;
+    object-fit: contain;
+    z-index: 1;
+  }
+}

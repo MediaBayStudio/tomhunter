@@ -1,0 +1,33 @@
+.customer-gets {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__body {
+    margin-top: 15px;
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  &__inner {
+    width: 280px;
+    color: $paragraph-color;
+    font: 15px/150% Lato, sans-serif;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    width: 278px;
+    margin-top: 40px;
+  }
+}

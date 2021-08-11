@@ -1,0 +1,45 @@
+.webapp-analysis-stages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__list {
+    margin-top: 40px;
+  }
+
+  .card-new {
+    width: 280px;
+    height: 490px;
+    padding: 30px 25px 120px;
+
+    &::before {
+      width: 280px;
+      height: 195px;
+      top: -20px;
+      left: -60px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      width: 225px;
+    }
+
+    &__img {
+      position: absolute;
+      width: 135px;
+      height: 95px;
+      bottom: 25px;
+      right: 25px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      .card-new__img {
+        right: 20px;
+      }
+    }
+  }
+}

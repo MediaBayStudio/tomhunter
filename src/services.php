@@ -72,8 +72,10 @@
     'units'       => $risks_sect_fields['units'],
     'small_units' => $risks_sect_fields['small_units']
   ];
+
+
+  require 'layouts/_service.php';
   require 'layouts/_actual-news.php';
-
-
   require 'layouts/_contact-us-new.php';
+
   get_footer('home');

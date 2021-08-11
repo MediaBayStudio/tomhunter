@@ -488,4 +488,66 @@
     $('.slick-list.draggable').removeClass('grabbing');
   });
 
+  /**
+   * Слайдеры по секциям
+   */
+
+  // Общие настройки для слайдера
+  const commonSlickOptions = {
+    arrows: false,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    dots: true,
+    customPaging: function() {
+      return dot;
+    },
+  }
+
+  // (layouts/_testing-models.php) - 'Модели тестирования' на общей странице 'Услуги'
+
+  $('.testing-models__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'testing-models__dots dots',
+    responsive: [
+          {
+            breakpoint: 1023.98,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 1319.98,
+            settings: 'unslick'
+          }
+    ]
+  })
+
+  // (layouts/stages/_stages-intranet-pentest.php) - Как мы работаем на странице 'INTRANET пентест'
+
+  $('.intranet-pentest-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'intranet-pentest-stages__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/stages/_stages-webapp-analysis.php) - Как мы работаем на странице 'Анализ защищённости web-приложений'
+
+  $('.webapp-analysis-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'webapp-analysis-stages__list__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
 })();

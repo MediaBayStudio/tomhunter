@@ -8,7 +8,13 @@
     flex-flow: wrap;
   }
 
+  &__dots {
+    margin: 35px auto 0;
+  }
+
   .card-new {
+    width: 280px;
+    margin-right: 25px;
     height: 606px;
     padding: 30px 16px 0;
 

@@ -506,3 +506,44 @@
   height: 191px;
   margin-right: 90px;
 }
+
+.intranet-pentest-stages {
+  padding-top: 115px;
+  padding-bottom: 115px;
+}
+
+.intranet-pentest-stages__list {
+  margin-top: 60px;
+}
+
+.intranet-pentest-stages .card-new {
+  width: 400px;
+  height: 251px;
+  padding: 30px 35px;
+}
+
+.intranet-pentest-stages .card-new__img {
+  width: 195px;
+  height: 137px;
+  bottom: 30px;
+  right: -35px;
+}
+
+.intranet-pentest-stages .card-new:last-child .card-new__img {
+  width: 150px;
+  height: 60px;
+  right: 30px;
+}
+
+.webapp-analysis-stages .card-new {
+  width: 395px;
+  height: 507px;
+}
+
+.webapp-analysis-stages .card-new__title {
+  width: 200px;
+}
+
+.webapp-analysis-stages .card-new__text {
+  width: 300px;
+}

@@ -50,6 +50,7 @@ li.slick-active {
     touch-action: pan-y;
   }
   &-list {
+    overflow-x: hidden;
     width: 100%;
     position: relative;
     &.draggable {

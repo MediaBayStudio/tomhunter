@@ -840,6 +840,7 @@ h1.hero-sect__title, h2.hero-sect__title {
 }
 
 .testing-models .card-new {
+  width: 470px;
   height: 440px;
   padding: 30px 35px 0;
 }
@@ -877,4 +878,66 @@ h1.hero-sect__title, h2.hero-sect__title {
 .customer-gets__img {
   width: 307px;
   margin: 40px auto 0;
+}
+
+.intranet-pentest-stages__list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.intranet-pentest-stages .card-new {
+  width: 305px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 25px 35px;
+}
+
+.intranet-pentest-stages .card-new:last-child .card-new__img {
+  width: 125px;
+  height: 50px;
+  right: 25px;
+}
+
+.intranet-pentest-stages .card-new__img {
+  width: 155px;
+  height: 110px;
+}
+
+.webapp-analysis-stages__list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.webapp-analysis-stages .card-new {
+  width: 648px;
+  height: 304px;
+  margin-bottom: 20px;
+  padding: 30px 35px;
+}
+
+.webapp-analysis-stages .card-new:last-child {
+  margin-bottom: 0;
+}
+
+.webapp-analysis-stages .card-new::before {
+  width: 325px;
+  height: 265px;
+  top: -40px;
+  left: -70px;
+}
+
+.webapp-analysis-stages .card-new__title {
+  width: 243px;
+}
+
+.webapp-analysis-stages .card-new__text {
+  width: 523px;
+}
+
+.webapp-analysis-stages .card-new__img {
+  width: 155px;
+  height: 110px;
+  bottom: 0;
+  right: 35px;
 }

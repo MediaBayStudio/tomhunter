@@ -1,5 +1,5 @@
 <section class="testing-models container">
-  <h1 class="testing-models__title sect-title forward_slash">Модели тестирования</h1>
+  <h2 class="testing-models__title sect-title forward_slash">Модели тестирования</h2>
 
   <ul class="testing-models__list">
     <li class="testing-models__card card-new">

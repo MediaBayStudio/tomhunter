@@ -1,0 +1,29 @@
+.webapp-analysis-stages {
+
+  &__list {
+    flex-flow: row wrap;
+  }
+
+  .card-new {
+    width: 300px;
+    height: 490px;
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
+
+    &__title {
+      width: 140px;
+    }
+
+    &__text {
+      width: 240px;
+    }
+  }
+}

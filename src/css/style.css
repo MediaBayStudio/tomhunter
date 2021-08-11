@@ -1104,6 +1104,7 @@ li.slick-active > button {
 }
 
 .slick-list {
+  overflow-x: hidden;
   width: 100%;
   position: relative;
 }
@@ -1150,7 +1151,7 @@ li.slick-active > button {
   transform: translate3d(0, 0, 0);
 }
 
-.card-new {
+.card {
   border: 1px solid #EBEBEB;
   background-color: #fff;
   border-radius: 8px;
@@ -1158,7 +1159,7 @@ li.slick-active > button {
   overflow: hidden;
 }
 
-.card-new::before {
+.card::before {
   content: '';
   position: absolute;
   display: block;
@@ -1166,29 +1167,29 @@ li.slick-active > button {
   z-index: 0;
 }
 
-.card-new__img {
+.card__img {
   z-index: 1;
 }
 
-.card-new__title {
+.card__title {
   margin-top: 20px;
   font: bold 20px/150% Lato;
   color: #2B1345;
   z-index: 1;
 }
 
-.card-new__descr, .card-new__list {
+.card__descr, .card__list {
   margin-top: 5px;
   font: normal 16px/160% Lato;
   color: #4D4D4D;
   z-index: 1;
 }
 
-.card-new__descr:nth-child(3), .card-new__list:nth-child(3) {
+.card__descr:nth-child(3), .card__list:nth-child(3) {
   margin-top: 20px;
 }
 
-.card-new__list-item::before {
+.card__list-item::before {
   content: '—';
   display: inline-block;
   margin-right: 5px;
@@ -1931,14 +1932,14 @@ h2.hero-sect__title {
 }
 
 .service-sect {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
   overflow: hidden;
   color: #2B1345;
 }
 
 .service-sect__title {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .services-block__dots {
@@ -1949,39 +1950,20 @@ h2.hero-sect__title {
   padding: 30px 25px;
   height: 337px;
   width: 280px;
+  margin-right: 20px;
 }
 
 .service-card::before {
-  width: 320px;
+  width: 280px;
   height: 240px;
-  top: -5px;
-  background-image: url("../img/services-oval.svg");
-}
-
-.service-card:nth-child(5n+1)::before {
-  left: -75px;
-}
-
-.service-card:nth-child(5n+2)::before {
-  right: -20px;
-}
-
-.service-card:nth-child(5n+3)::before {
-  top: -30px;
-  right: -75px;
-}
-
-.service-card:nth-child(5n+4)::before {
   top: -40px;
-  right: -60px;
+  left: -50px;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, #FCFCFC 0%, #F2F2F2 100%);
 }
 
-.service-card:nth-child(5n+5)::before {
-  top: -40px;
-}
-
-.service-card:nth-last-child(n+2) {
-  margin-right: 20px;
+.service-card:last-child {
+  margin-right: 0;
 }
 
 .service-card__img {
@@ -1993,6 +1975,7 @@ h2.hero-sect__title {
 .service-card__title {
   max-width: 227px;
   height: 63px;
+  margin-bottom: 10px;
   font: bold 20px/120% Lato;
   color: #291956;
   z-index: 1;
@@ -2008,7 +1991,7 @@ h2.hero-sect__title {
 .service-card__descr::before {
   content: '';
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: block;
   width: 80px;
   height: 3px;
@@ -2596,7 +2579,13 @@ h2.hero-sect__title {
   flex-flow: wrap;
 }
 
+.testing-models__dots {
+  margin: 35px auto 0;
+}
+
 .testing-models .card-new {
+  width: 280px;
+  margin-right: 25px;
   height: 606px;
   padding: 30px 16px 0;
 }
@@ -2654,4 +2643,84 @@ h2.hero-sect__title {
 .customer-gets__img {
   width: 278px;
   margin-top: 40px;
+}
+
+.intranet-pentest-stages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.intranet-pentest-stages__list {
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.intranet-pentest-stages__dots {
+  margin-top: 30px;
+}
+
+.intranet-pentest-stages .card-new {
+  width: 280px;
+  height: 170px;
+  padding: 15px 20px;
+}
+
+.intranet-pentest-stages .card-new__img {
+  position: absolute;
+  width: 135px;
+  height: 95px;
+  bottom: 25px;
+  right: -25px;
+}
+
+.intranet-pentest-stages .card-new:last-child .card-new__img {
+  right: 20px;
+}
+
+.webapp-analysis-stages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.webapp-analysis-stages__list {
+  margin-top: 40px;
+}
+
+.webapp-analysis-stages .card-new {
+  width: 280px;
+  height: 490px;
+  padding: 30px 25px 120px;
+}
+
+.webapp-analysis-stages .card-new::before {
+  width: 280px;
+  height: 195px;
+  top: -20px;
+  left: -60px;
+}
+
+.webapp-analysis-stages .card-new__title {
+  margin-bottom: 30px;
+}
+
+.webapp-analysis-stages .card-new__text {
+  width: 225px;
+}
+
+.webapp-analysis-stages .card-new__img {
+  position: absolute;
+  width: 135px;
+  height: 95px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.webapp-analysis-stages .card-new:last-child {
+  margin-right: 0;
+}
+
+.webapp-analysis-stages .card-new:last-child .card-new__img {
+  right: 20px;
 }

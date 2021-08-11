@@ -7,7 +7,7 @@ function moveLayouts(cb) {
   .pipe(strip())
   .pipe(dest(config.distFolder));
 
-  src('./src/layouts/*.+(html|php)')
+  src('./src/layouts/**/*.+(html|php)')
   .pipe(strip())
   .pipe(dest(`${config.distFolder}layouts/`));
 

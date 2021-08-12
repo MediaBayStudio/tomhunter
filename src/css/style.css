@@ -1250,15 +1250,15 @@ li.slick-active > button {
   position: relative;
   width: 159px;
   color: #291956;
-  font-size: 16px;
-  line-height: 130%;
+  font-size: 20px;
+  line-height: 150%;
   z-index: 1;
 }
 
 .card-new__text {
   color: #4d4d4d;
   font-size: 15px;
-  line-height: 130%;
+  line-height: 150%;
   position: relative;
   z-index: 1;
 }
@@ -1385,6 +1385,7 @@ li.slick-active > button {
 }
 
 .index-about-sect__title {
+  color: #fff;
   margin: 0 0 30px;
 }
 
@@ -1974,7 +1975,7 @@ h2.hero-sect__title {
 
 .service-card__title {
   max-width: 227px;
-  height: 63px;
+  height: 53px;
   margin-bottom: 10px;
   font: bold 20px/120% Lato;
   color: #291956;
@@ -2318,7 +2319,7 @@ h2.hero-sect__title {
 }
 
 .service-hero__list {
-  padding: 17px;
+  padding: 15px;
   background-color: #fff;
   border: 1px solid rgba(47, 19, 63, 0.3);
   border-radius: 8px;
@@ -2363,8 +2364,7 @@ h2.hero-sect__title {
 }
 
 .best-in-business__list-item {
-  min-width: 210px;
-  max-width: 280px;
+  width: 255px;
   margin-top: 40px;
 }
 
@@ -2387,6 +2387,8 @@ h2.hero-sect__title {
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  -o-object-position: top;
+  object-position: top;
 }
 
 .best-in-business__list-item .title {
@@ -2396,7 +2398,7 @@ h2.hero-sect__title {
 
 .best-in-business__list-item .descr {
   max-width: 280px;
-  font: 400 16px/150% Lato, sans-serif;
+  font: 400 15px/150% Lato, sans-serif;
 }
 
 .actual-news {
@@ -2410,6 +2412,7 @@ h2.hero-sect__title {
 
 .actual-news__list {
   display: flex;
+  justify-content: center;
   flex-flow: wrap;
 }
 
@@ -2688,10 +2691,14 @@ h2.hero-sect__title {
   margin-top: 40px;
 }
 
+.webapp-analysis-stages__dots {
+  margin-top: 30px;
+}
+
 .webapp-analysis-stages .card-new {
   width: 280px;
   height: 490px;
-  padding: 30px 25px 120px;
+  padding: 30px 25px;
 }
 
 .webapp-analysis-stages .card-new::before {
@@ -2703,16 +2710,19 @@ h2.hero-sect__title {
 
 .webapp-analysis-stages .card-new__title {
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .webapp-analysis-stages .card-new__text {
   width: 225px;
+  font-size: 15px;
+  line-height: 130%;
 }
 
 .webapp-analysis-stages .card-new__img {
   position: absolute;
   width: 135px;
-  height: 95px;
+  height: 60px;
   bottom: 25px;
   right: 25px;
 }
@@ -2723,4 +2733,230 @@ h2.hero-sect__title {
 
 .webapp-analysis-stages .card-new:last-child .card-new__img {
   right: 20px;
+}
+
+.wi-fi-pentest-stages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.wi-fi-pentest-stages__list {
+  margin-top: 40px;
+}
+
+.wi-fi-pentest-stages__dots {
+  margin-top: 30px;
+}
+
+.wi-fi-pentest-stages .card-new {
+  width: 280px;
+  height: 490px;
+  padding: 30px 23px;
+}
+
+.wi-fi-pentest-stages .card-new::before {
+  width: 285px;
+  height: 215px;
+  top: -50px;
+  left: -60px;
+}
+
+.wi-fi-pentest-stages .card-new__title {
+  width: 170px;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.wi-fi-pentest-stages .card-new__text {
+  font-size: 15px;
+  line-height: 130%;
+}
+
+.wi-fi-pentest-stages .card-new__img {
+  position: absolute;
+  width: 135px;
+  height: 95px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.social-pentest-stages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.social-pentest-stages__list {
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.social-pentest-stages__dots {
+  margin-top: 30px;
+}
+
+.social-pentest-stages .card-new {
+  width: 280px;
+  height: 370px;
+  padding: 30px 20px;
+}
+
+.social-pentest-stages .card-new::before {
+  width: 210px;
+  height: 185px;
+}
+
+.social-pentest-stages .card-new__img {
+  position: absolute;
+  width: 137px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.social-pentest-stages .card-new__title {
+  font-size: 20px;
+  width: 170px;
+}
+
+.social-pentest-stages .card-new__text {
+  margin-top: 30px;
+  width: 235px;
+  font-size: 16px;
+}
+
+.external-pentest-stages {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.external-pentest-stages__list {
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.external-pentest-stages__dots {
+  margin-top: 30px;
+}
+
+.external-pentest-stages .card-new {
+  width: 280px;
+  height: 300px;
+  padding: 30px 20px;
+}
+
+.external-pentest-stages .card-new::before {
+  width: 185px;
+  height: 160px;
+}
+
+.external-pentest-stages .card-new__img {
+  position: absolute;
+  width: 137px;
+  height: 40px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.external-pentest-stages .card-new__title {
+  font-size: 20px;
+  width: 210px;
+}
+
+.external-pentest-stages .card-new__text {
+  margin-top: 15px;
+  width: 225px;
+  font-size: 15px;
+}
+
+.hero-new {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: #2f133f;
+  color: #fff;
+}
+
+.hero-new__inner:first-child {
+  margin-bottom: 40px;
+}
+
+.hero-new__title {
+  margin-bottom: 30px;
+  font: 30px/133% Lato, sans-serif;
+}
+
+.hero-new__descr {
+  margin-bottom: 30px;
+  font: 14px/179% Lato, sans-serif;
+}
+
+.hero-new__btn {
+  width: 100%;
+}
+
+.hero-new__list {
+  width: 280px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90px 90px 90px;
+  grid-template-columns: 90px 90px 90px;
+  -ms-grid-rows: 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px;
+}
+
+.hero-new__list-item img {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.hero-new__list-item p {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.hero-new__list-item:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.hero-new__list-item:nth-child(2) {
+  grid-column: 3/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.hero-new__list-item:nth-child(3) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.hero-new__list-item:nth-child(4) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  grid-row: 3/-1;
+}
+
+.hero-new__list-item:nth-child(5) {
+  grid-column: 3/-1;
+  grid-row: 3/-1;
 }

@@ -12,7 +12,7 @@
   $about_sect_fields = get_field('about_sect');
   $page = get_page_template_slug();
   get_header();
-  require 'layouts/_hero.php';
+  require 'layouts/_hero-new.php';
   // require 'layouts/_service.php';
   require 'layouts/_index-services.php';
   require 'layouts/_index-about.php';

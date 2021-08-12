@@ -3,7 +3,7 @@
   </h2>
 
   <ul class="best-in-business__list">
-    <li class="thunt-advantages-item best-in-business__list-item" style="width: 280px;">
+    <li class="thunt-advantages-item best-in-business__list-item">
       <div class="header">
         <figure class="img-wrapper">
           <img src="#" data-src="http://localhost:8888/t.hunter/wp-content/uploads/2021/08/icon1.svg" alt="#" class="lazy">

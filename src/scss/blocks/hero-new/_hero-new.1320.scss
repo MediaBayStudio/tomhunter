@@ -1,0 +1,22 @@
+.hero-new {
+  padding-top: 95px;
+  padding-bottom: 95px;
+
+  &__inner {
+    &:first-child {
+      width: 561px;
+      margin-right: auto;
+    }
+  }
+
+  &__title {
+    font-size: 46px;
+    line-height: 141%;
+  }
+
+  &__list {
+    width: 468px;
+    grid-template-columns: 190px 130px 135px;
+    grid-template-rows: 85px 70px 90px;
+  }
+}

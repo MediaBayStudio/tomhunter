@@ -168,6 +168,15 @@
   left: -40px;
 }
 
+.card-new__title {
+  width: 200px;
+  font-size: 22px;
+}
+
+.card-new__text {
+  font-size: 17px;
+}
+
 .activities-sect {
   padding-top: 120px;
   padding-bottom: 40px;
@@ -729,12 +738,20 @@ h1.hero-sect__title, h2.hero-sect__title {
   margin-right: 32px;
 }
 
+.best-in-business__list {
+  justify-content: flex-start;
+}
+
 .best-in-business__list-item {
   margin-right: 55px;
 }
 
-.best-in-business__list-item:nth-child(2) {
+.best-in-business__list-item:nth-child(-n+2) {
   margin-top: 0;
+}
+
+.best-in-business__list-item:nth-child(n+3) {
+  margin-top: 50px;
 }
 
 .best-in-business__list-item:nth-child(even) {
@@ -841,7 +858,7 @@ h1.hero-sect__title, h2.hero-sect__title {
 
 .testing-models .card-new {
   width: 470px;
-  height: 440px;
+  height: 480px;
   padding: 30px 35px 0;
 }
 
@@ -911,7 +928,7 @@ h1.hero-sect__title, h2.hero-sect__title {
 
 .webapp-analysis-stages .card-new {
   width: 648px;
-  height: 304px;
+  height: 355px;
   margin-bottom: 20px;
   padding: 30px 35px;
 }
@@ -940,4 +957,139 @@ h1.hero-sect__title, h2.hero-sect__title {
   height: 110px;
   bottom: 0;
   right: 35px;
+}
+
+.wi-fi-pentest-stages__list {
+  display: flex;
+}
+
+.wi-fi-pentest-stages .card-new {
+  width: 314px;
+  height: 500px;
+  padding: 35px;
+}
+
+.wi-fi-pentest-stages .card-new::before {
+  width: 230px;
+  height: 185px;
+  top: -40px;
+  left: -40px;
+}
+
+.wi-fi-pentest-stages .card-new:first-child {
+  margin: 0 20px 0 auto;
+}
+
+.wi-fi-pentest-stages .card-new:last-child {
+  margin-right: auto;
+}
+
+.wi-fi-pentest-stages .card-new__title {
+  width: 245px;
+}
+
+.wi-fi-pentest-stages .card-new__text {
+  width: 245px;
+}
+
+.wi-fi-pentest-stages .card-new__img {
+  width: 155px;
+  height: 110px;
+  bottom: 0;
+  right: 35px;
+}
+
+.social-pentest-stages .card-new {
+  width: 672px;
+  height: 285px;
+  margin-right: 20px;
+  padding: 30px 35px;
+}
+
+.social-pentest-stages .card-new::before {
+  width: 260px;
+  height: 195px;
+}
+
+.social-pentest-stages .card-new__title {
+  font-size: 22px;
+}
+
+.social-pentest-stages .card-new__text {
+  margin-top: 20px;
+  width: 425px;
+  font-size: 17px;
+}
+
+.external-pentest-stages .card-new {
+  width: 203px;
+  height: 355px;
+  margin-right: 20px;
+  padding: 20px 30px 0 15px;
+}
+
+.external-pentest-stages .card-new:first-child {
+  margin-left: auto;
+}
+
+.external-pentest-stages .card-new:last-child {
+  margin-right: auto;
+}
+
+.external-pentest-stages .card-new::before {
+  width: 200px;
+  height: 195px;
+}
+
+.external-pentest-stages .card-new__title {
+  width: 200px;
+  height: 55px;
+}
+
+.external-pentest-stages .card-new__text {
+  width: 153px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.external-pentest-stages .card-new__img {
+  width: 157px;
+  height: 50px;
+  bottom: 10px;
+}
+
+.hero-new {
+  padding-top: 75px;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.hero-new__inner:first-child {
+  width: 284px;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+
+.hero-new__title {
+  font-size: 28px;
+  line-height: 143%;
+}
+
+.hero-new__descr {
+  font-size: 16px;
+  line-height: 156%;
+}
+
+.hero-new__btn {
+  width: 274px;
+}
+
+.hero-new__list {
+  width: 330px;
+  margin: 0;
+  padding-top: 15px;
+  -ms-grid-columns: 110px 110px 110px;
+  grid-template-columns: 110px 110px 110px;
+  -ms-grid-rows: 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px;
 }

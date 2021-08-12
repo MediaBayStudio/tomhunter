@@ -545,7 +545,46 @@ $(document).ready(function() {
 	
 	  $('.webapp-analysis-stages__list').slick({
 	    ...commonSlickOptions,
-	    dotsClass: 'webapp-analysis-stages__list__dots dots',
+	    dotsClass: 'webapp-analysis-stages__dots dots',
+	    responsive: [
+	      {
+	        breakpoint: 767.98,
+	        settings: 'unslick'
+	      }
+	    ]
+	  })
+	
+	  // (layouts/stages/_stages-wi-fi-pentest.php) - Как мы работаем на странице 'Wi-Fi пентест'
+	
+	  $('.wi-fi-pentest-stages__list').slick({
+	    ...commonSlickOptions,
+	    dotsClass: 'wi-fi-pentest-stages__dots dots',
+	    responsive: [
+	      {
+	        breakpoint: 767.98,
+	        settings: 'unslick'
+	      }
+	    ]
+	  })
+	
+	  // (layouts/stages/_stages-wi-fi-pentest.php) - Как мы работаем на странице 'Wi-Fi пентест'
+	
+	  $('.social-pentest-stages__list').slick({
+	    ...commonSlickOptions,
+	    dotsClass: 'social-pentest-stages__dots dots',
+	    responsive: [
+	      {
+	        breakpoint: 1023.98,
+	        settings: 'unslick'
+	      }
+	    ]
+	  })
+	
+	  // (layouts/stages/_stages-external-pentest.php) - Как мы работаем на странице 'Пентест внешнего периметра'
+	
+	  $('.external-pentest-stages__list').slick({
+	    ...commonSlickOptions,
+	    dotsClass: 'external-pentest-stages__dots dots',
 	    responsive: [
 	      {
 	        breakpoint: 767.98,

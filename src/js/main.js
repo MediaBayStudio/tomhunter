@@ -762,7 +762,6 @@ document.addEventListener('DOMContentLoaded', function() {
     clearSrc: true,
     clearMedia: true
   });
-
 });
 
 

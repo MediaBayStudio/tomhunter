@@ -36,7 +36,7 @@
     </li>
 
     <li class="webapp-analysis-stages__card card-new">
-      <h3 class="card-new__title">Поиск уязвимостей</h3>
+      <h3 class="card-new__title">Поиск<br>уязвимостей</h3>
 
       <p class="card-new__text">
         — запускаем сканирование веб-приложений специализированным ПО

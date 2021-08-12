@@ -1,4 +1,6 @@
 .webapp-analysis-stages {
+  padding-top: 115px;
+  padding-bottom: 115px;
 
   .card-new {
     width: 395px;
@@ -6,9 +8,11 @@
 
     &__title {
       width: 200px;
+      font-size: 22px;
     }
 
     &__text {
+      font-size: 17px;
       width: 300px;
     }
   }

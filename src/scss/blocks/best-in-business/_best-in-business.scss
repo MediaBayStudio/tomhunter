@@ -8,19 +8,12 @@
   }
 
   &__list {
-    margin: 40px 0 0;
     color: #fff;
     display: flex;
     flex-flow: wrap;
-    justify-content: center;
 
     &-item {
-      width: 255px;
       margin-top: 40px;
-
-      &:first-child {
-        margin-top: 0;
-      }
 
       .header {
         display: flex;
@@ -45,7 +38,6 @@
       }
 
       .descr {
-        max-width: 280px;
         font: 400 15px/150% Lato, sans-serif;
       }
     }

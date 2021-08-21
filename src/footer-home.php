@@ -18,7 +18,7 @@
   ?>
 
     <div class="ftr__contacts">
-      <h3 class="ftr__sub-title">Контакты</h3>
+      <h3 class="ftr__sub-title"><a href="<?php echo site_url() ?>/contacts">Контакты</a></h3>
 
       <ul class="ftr__contacts-list">
         <li class="ftr__contacts-list-item phone">
@@ -68,16 +68,12 @@
   </div>
 </footer>
 
-<!-- <svg class="dev-logo">
-        <use xlink:href="<?php #echo get_template_directory_uri() . "/img/sprite.svg#media-bay-logo";
-                          ?>"></use>
-      </svg> -->
-
 <?php
 require 'layouts/_overlay.php';
 require 'layouts/_thankspopup.php';
 require 'layouts/_callbackpopup.php';
 require 'layouts/_zoompopup.php';
+require 'layouts/_materials-popup.php';
 wp_footer();
 ?>
 </body>

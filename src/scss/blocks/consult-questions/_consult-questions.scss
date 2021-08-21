@@ -1,0 +1,80 @@
+.questions {
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  &__list {
+    margin-top: 50px;
+  }
+
+  &__item {
+    margin-top: 30px;
+
+    &-title {
+      position: relative;
+      padding: 0 55px 8px 0;
+      font: 700 17px/120% Lato, sans-serif;
+      color: $blue-purple-color;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &::after {
+        content: '\00D7';
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: 300;
+        font-size: 34px;
+        transform: rotate(45deg);
+        color: #381E54;
+        transition: transform .2s linear;
+      }
+    }
+
+    &-answer {
+      font: 14px/150% Lato, sans-serif;
+      color: $paragraph-color;
+      position: relative;
+      opacity: 0;
+      height: 0;
+      transition: height .3s linear,
+                  margin-top .3s linear,
+                  padding-top .3s linear,
+                  opacity .5s linear;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 3px;
+        background-color: $red-color;
+        transition: width 200ms linear;
+      }
+
+      strong {
+        color: $blue-purple-color;
+      }
+    }
+
+    &_open {
+      .questions__item {
+        &-title {
+          &::after {
+            transform: rotate(-135deg);
+            color: $red-color;
+          }
+        }
+
+        &-answer {
+          margin-top: 20px;
+          padding-top: 10px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

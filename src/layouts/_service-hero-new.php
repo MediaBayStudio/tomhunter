@@ -1,13 +1,19 @@
 <section class="service-hero container">
   <ul class="breadcrumbs-list">
-    <li class="breadcrumbs-list__item">Услуги</li>
-    <li class="breadcrumbs-list__item">Пентест</li>
-    <li class="breadcrumbs-list__item breadcrumbs-list__item--current">Пентест внешнего периметра</li>
+    <li class="breadcrumbs-list__item">
+    <a href="<?php echo home_url()?>">Услуги</a>
+    </li>
+    <li class="breadcrumbs-list__item"><a href="<?php echo home_url()?>/pentest">Пентест</a></li>
+    <?php if ($post->ID !== 129) : ?>
+      <li class="breadcrumbs-list__item breadcrumbs-list__item--current">
+        <a href="<?php get_permalink($post->ID) ?>"><?php $post->post_title ?></a>
+      </li>
+    <?php endif ?>
   </ul>
 
   <h1 class="service-hero__title">Тестирование на&nbsp;проникновение</h1>
   <p class="service-hero__descr">Проводим тестирование на&nbsp;проникновение, устанавливаем существующие уязвимые места в&nbsp;информационных системах, приложениях и&nbsp;сервисах. Составим подробный план по&nbsp;устранению уязвимостей</p>
-  <a href="#callback" class="service-hero__btn hero-sect__link btn">Получить консультацию</a>
+  <a href="#contact-us-new" class="service-hero__btn hero-sect__link btn">Получить консультацию</a>
 
   <img src="#" data-src="<?php echo get_template_directory_uri(); ?>/img/cover-service-hero-img.png" alt="#" class="service-hero__bg-img lazy">
 

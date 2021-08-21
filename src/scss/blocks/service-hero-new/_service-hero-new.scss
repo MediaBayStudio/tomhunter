@@ -1,25 +1,24 @@
 .breadcrumbs-list {
-  font: 12px/250% Lato, sans-serif;
+  font: 14px/214% Lato, sans-serif;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  display: flex;
 
   &::-webkit-scrollbar {
     display: none;
   }
-
-  display: flex;
   &__item {
     white-space: nowrap;
-    margin-right: 10px;
+    margin-right: 20px;
 
     &::after {
-      content: '';
+      content: '\276F';
       display: inline-block;
-      margin-left: 10px;
-      width: 4px;
+      margin-left: 20px;
+      width: 5px;
       height: 8px;
-      background: url('../img/bread-arrow-icon.svg') no-repeat center/cover;
+      color: $white-color;
     }
 
     &:last-child {
@@ -37,13 +36,13 @@
 }
 
 .service-hero {
-  min-height: 570px;
   position: relative;
   background-color: #2f133f;
   background-repeat: no-repeat;
   color: #fff;
 
   &__bg-img {
+    object-fit: contain;
     position: absolute;
     display: none;
   }
@@ -59,7 +58,7 @@
   }
 
   &__btn {
-    min-width: auto;
+    font-size: 15px;
     width: 274px;
   }
 
@@ -94,6 +93,7 @@
     &-item {
       position: relative;
       margin: 0 auto 5px 0;
+      transition: opacity 80ms linear;
 
       &.active {
         &::after {
@@ -105,6 +105,10 @@
           height: 1px;
           background-color: $red-color;
         }
+      }
+
+      &:hover {
+        opacity: .5;
       }
     }
   }

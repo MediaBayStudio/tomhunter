@@ -1,16 +1,21 @@
-<?php 
+<?php
 // поиск по заголовкам в базе данных
-require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-config.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
+// require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-config.php');
+// require_once($_SERVER['DOCUMENT_ROOT'] . $folder . '/wp-load.php');
+
+require_once($_SERVER['DOCUMENT_ROOT'] . '/t.hunter/wp-config.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/t.hunter/wp-load.php');
+
+// var_dump( $_POST['search'] )
 
 $search = $_POST['search'];
 
-$posts = $wpdb->get_results( 
+$posts = $wpdb->get_results(
   "
   SELECT ID
   FROM $wpdb->posts
   WHERE post_type = 'post'
-  AND post_status = 'publish' 
+  AND post_status = 'publish'
   AND post_title
   LIKE '%$search%'
   "

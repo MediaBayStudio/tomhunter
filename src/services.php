@@ -15,6 +15,8 @@
   $stages_sect_fields = get_field('stages_sect');
   $risks_sect_fields = get_field('risks_sect');
   $best_in_business_fields = get_field('best_in_business');
+  $complex_of_service_fields = get_field('complex_of_service');
+  $work_result_fields = get_field('work_result');
 
   get_header();
 
@@ -29,31 +31,21 @@
   ];
 
   require 'layouts/_descr.php';
-  require 'layouts/_testing-objects.php';
 
-  // $childs = $stages_sect_fields['cards_settings'][0];
-  // $prefix = ' stages-block_';
+  $complex_of_service_points = $complex_of_service_fields['points'];
 
-  // if ($childs == 4) {
-  //   $prefix .= 'four';
-  // } else if ($childs == 3) {
-  //   $prefix .= 'three';
-  // } else if ($childs == 2) {
-  //   $prefix .= 'two';
-  // } else {
-  //   $prefix = '';
-  // }
-
-  // if ($prefix !== '') {
-  //   $prefix .= '-children';
-  // }
-
-  // $stages_cards = $stages_sect_fields['cards_repeater'];
-  // require 'layouts/_stages.php';
-
+  if ( $complex_of_service_points ) {
+    require 'layouts/_complex-of-service-sect.php';
+  }
 
   require 'layouts/_testing-models.php';
-  require 'layouts/_customer-gets.php';
+
+  $work_res = [
+    'title' => $work_result_fields['sect_title'],
+    'descr' => $work_result_fields['descr']
+  ];
+
+  require 'layouts/_work-result.php';
   require 'layouts/_thunt-advantages.php';
 
   $risks_sect_images = $risks_sect_fields['images'];

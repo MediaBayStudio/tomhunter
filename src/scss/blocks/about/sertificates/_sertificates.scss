@@ -1,0 +1,32 @@
+.sertificates {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background-color: #2F133F;
+  color: $white-color;
+
+  &__title {
+    color: $white-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .sertificate {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+
+    &__title {
+      margin: 25px 0;
+      font: 24px/130% Lato, sans-serif;
+      text-transform: uppercase;
+      color: $red-color;
+    }
+
+    &__descr {
+      font: 16px/130% Lato, sans-serif;
+    }
+  }
+}

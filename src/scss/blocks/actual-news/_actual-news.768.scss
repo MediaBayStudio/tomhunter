@@ -1,16 +1,15 @@
 .actual-news {
   &__list {
-    justify-content: space-around;
+    display: flex;
+    margin-left: 20px;
   }
 
   .news-item {
     width: 304px;
-    height: 470px;
     margin-right: 20px;
 
     &:nth-child(2) {
       display: flex;
-      margin-right: 0;
     }
 
     &__img {
@@ -24,8 +23,7 @@
     }
 
     &__descr {
-      font-size: 18px;
-      padding: 0 25px;
+      padding: 0 25px 50px;
     }
 
     &__date {
@@ -34,6 +32,7 @@
   }
 
   &__link {
+    width: 274px;
     margin: 30px auto 0;
   }
 }

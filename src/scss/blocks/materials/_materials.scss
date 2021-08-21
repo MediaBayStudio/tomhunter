@@ -1,0 +1,32 @@
+.materials {
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  &__list {
+    margin-top: 10px;
+  }
+
+  &__file {
+    position: relative;
+    margin-top: 30px;
+    padding-left: 45px;
+    font-size: 14px;
+    line-height: 150%;
+    color: $paragraph-color;
+    transition: opacity 80ms linear;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 0;
+      left: 0;
+      background: url('../img/files-icon.svg') no-repeat center / cover;
+    }
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}

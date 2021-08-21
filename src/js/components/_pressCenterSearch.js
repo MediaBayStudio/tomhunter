@@ -73,6 +73,7 @@
                   if (startPos !== -1) {
                     let postLink = post.link,
                       postTitle = insertMark(post.title, startPos, searchInp.value.length);
+                      console.log(postTitle);
                       searchStartText.classList.add('hide');
 
                     html += `<a href="${postLink}" class="search__result-link" title="Перейти на страницу статьи">${postTitle}</a>`;
@@ -110,7 +111,7 @@
         searchInp.classList.remove('focused', 'searching');
         searchInp.removeEventListener('input', forbidInput);
     });
-   
+
   }
 
 })();

@@ -1,3 +1,11 @@
+.index-services-sect {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__title {
+    margin: 0 0 40px;
+  }
+}
 
 .index-services-block {
   &__dots {
@@ -11,50 +19,43 @@
   }
 }
 
-.index-services-sect {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  &__title {
-    margin: 0 0 30px;
-  }
-}
-
 .index-service-card {
-  padding: 30px 20px;
+  padding: 40px 20px;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  font: 12px/208% Lato;
+
   &::before {
-    width: 225px;
-    height: 155px;
-    top: 0;
+    width: 235px;
+    height: 195px;
+    border-radius: 50%;
+    top: -35px;
     left: -35px;
-    // right: -35px;
-    background-size: contain;
+    background: linear-gradient(180deg, #FCFCFC 0%, #F2F2F2 100%);
   }
-  // &:first-child,
-  // &:nth-child(5n) {
-    // &::before {
-      // left: -35px;
-    // }
-  // }
+
   &__title {
-    font: bold 18px/167% Lato;
+    width: 275px;
+    min-height: 75px !important;
+    font: bold 19px/158% Lato, sans-serif;
     color: $purple-color;
     position: relative;
-  }
-  &__descr {
-    margin-top: 20px;
-    max-width: 300px;
-    position: relative;
-    &::before {
-      margin: 0 0 20px;
+
+    &::after {
       content: '';
-      display: block;
-      width: 60px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 80px;
       height: 3px;
-      background: $red-color;
+      background-color: $red-color;
     }
+  }
+
+  &__descr {
+    margin-top: 15px;
+    position: relative;
+    color: $paragraph-color;
+    font: 15px/167% Lato, sans-serif;
   }
 }

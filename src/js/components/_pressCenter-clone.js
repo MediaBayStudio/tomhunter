@@ -1,5 +1,6 @@
 ;(function() {
   let mediaCenterBlock = document.querySelector('.media-center-block');
+  searchInp = document.querySelector('.search__inp');
 
   if (mediaCenterBlock) {
     document.body.removeChild(document.querySelector('.postcat'));
@@ -21,7 +22,7 @@
         }
       },
       // printPosts = function(start, counter) {
-      //   if (posts.count > 0) { 
+      //   if (posts.count > 0) {
       //     // console.log(posts);
       //     let cardsWrapper;
 
@@ -81,7 +82,7 @@
       //       loadMoreBtn.classList.remove('hide');
       //     }
 
-      //     // выводим на экран баннеры 
+      //     // выводим на экран баннеры
       //     if (currentPostsLength % postsCounter === 0) {
       //       let bannerCount = (counter / postsCounter) - 1;
 
@@ -94,7 +95,7 @@
       //         printBanner(bannerCount);
       //       }
 
-            
+
       //       // вставляем в нужные места
       //       if (postsCounter === 5) {
       //         let lastSingleCard = mediaCenterBlock.querySelector('.single-card:last-of-type');
@@ -132,7 +133,7 @@
             // let {title, descr, link, images} = banners[i],
             //   img320 = images.img_320,
             //   img768 = images.img_768,
-            //   html = 
+            //   html =
             //   `<a href="${link.url}" class="service-block" title="Перейти на страницу ${title}">
             //     <img src="#" alt="${img320.alt}" class="service-block__img lazy"
             //     data-src="${img320.src}"
@@ -200,7 +201,7 @@
             let {title, descr, link, images} = banners[i],
               img320 = images.img_320,
               img768 = images.img_768,
-              html = 
+              html =
               `<a href="${link.url}" class="service-block" title="Перейти на страницу ${title}">
                 <img src="#" alt="${img320.alt}" class="service-block__img lazy"
                 data-src="${img320.src}"
@@ -237,7 +238,7 @@
 
       //       printPosts(0, postsCounter);
       //       // console.log(posts);
-        
+
       //     } else if (xhr.readyState === 4 && xhr.status !== 200) {
       //       pageLoader && pageLoader.classList.remove('active');
       //       let html = '<p>Возникла какая-то ошибка, попробуйте обновить страницу</p>';
@@ -315,7 +316,7 @@
         setBtnVisibility();
       });
     });
-  
+
   let cardsWrapper = mediaCenterBlock.querySelector('.cards-wrapper');
 
   if (cardsWrapper) {
@@ -327,9 +328,9 @@
       cardsWrapper.classList.add('wrapped');
     }
 
-    
+
   }
-        
+
   }
 
 })();

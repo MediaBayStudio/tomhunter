@@ -12,6 +12,10 @@
     right: calc(50vw - 334px);
   }
 
+  &-single__bg-img {
+    display: none;
+  }
+
   &__title {
     font-size: 46px;
   }

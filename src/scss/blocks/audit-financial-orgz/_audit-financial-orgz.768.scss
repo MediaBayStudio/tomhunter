@@ -1,0 +1,26 @@
+.financial-orgz {
+  &__descr {
+    font-size: 16px;
+  }
+
+  &__list {
+    margin-top: 0;
+  }
+
+  .card-new {
+    margin-top: 30px;
+
+    &::before {
+      width: 280px;
+      height: 240px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 15px;
+    }
+  }
+}

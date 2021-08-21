@@ -1,7 +1,5 @@
 <section class="actual-news container">
-  <h2 class="actual-news__title sect-title forward_slash">
-    Актуальные новости
-  </h2>
+  <h2 class="actual-news__title sect-title forward_slash">Новости</h2>
 
   <ul class="actual-news__list">
   <?php

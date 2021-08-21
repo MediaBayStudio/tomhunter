@@ -18,7 +18,7 @@
   require 'layouts/_index-about.php';
   require 'layouts/_cybersecurity-sect.php';
   require 'layouts/_index-facts.php';
-  require 'layouts/_index-news.php';
+  require 'layouts/_actual-news.php';
   require 'layouts/_index-clients.php' ?>
 
 <!-- <section class="statistics-sect container sect_purple">

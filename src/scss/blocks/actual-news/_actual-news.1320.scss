@@ -1,11 +1,9 @@
 .actual-news {
   .news-item {
     width: 400px;
-    height: 540px;
 
     &:nth-child(3) {
       display: flex;
-      margin-right: 0;
     }
 
     &__img {

@@ -6,6 +6,10 @@
 @import 'assets/mixins';
 @import 'assets/animations';
 
+:root {
+  scroll-padding-top: 30px;
+}
+
 body.wait {
   cursor: wait;
 }
@@ -283,12 +287,20 @@ svg {
 @import 'blocks/best-in-business/best-in-business';
 @import 'blocks/actual-news/actual-news';
 @import 'blocks/contact-us-new/contact-us-new';
-@import 'blocks/testing-objects/testing-objects';
+@import 'blocks/complex-of-service/complex-of-service';
 @import 'blocks/testing-models/testing-models';
-@import 'blocks/customer-gets/customer-gets';
+@import 'blocks/work-result/work-result';
 @import 'blocks/stages-new/intranet-pentest/stages';
 @import 'blocks/stages-new/webapp-analysis/stages';
 @import 'blocks/stages-new/wi-fi-pentest/stages';
 @import 'blocks/stages-new/social-pentest/stages';
 @import 'blocks/stages-new/external-pentest/stages';
 @import 'blocks/hero-new/hero-new';
+@import 'blocks/about/sertificates/sertificates';
+@import 'blocks/audit-commerc-secret/audit-commerc-secret';
+@import 'blocks/audit-financial-orgz/audit-financial-orgz';
+@import 'blocks/materials/materials';
+@import 'blocks/consult-questions/consult-questions';
+@import 'blocks/personal-data-gdpr-req/personal-data-gdpr-req';
+@import 'blocks/tech-info-protection-stages/tech-info-protection-stages';
+@import 'blocks/press-centr/press-centr';

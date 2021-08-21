@@ -1,0 +1,78 @@
+.press-centr {
+
+  &__header {
+    padding: 30px 0 10px;
+  }
+
+  &__nav {
+    font-size: 18px;
+    line-height: 167%;
+
+    &-link {
+      margin-right: 50px;
+    }
+  }
+
+  .search {
+    margin: 0 0 0 auto;
+
+    &__inp {
+      max-width: 170px;
+
+      &.focused {
+        ~.search__overlay {
+          width: 0;
+        }
+
+        ~.search__icon {
+          right: 87.5%;
+        }
+      }
+    }
+    &__result {
+      padding: 20px 25px;
+      font-size: 14px;
+
+      &-link {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+    }
+
+    &__result, &__result-link {
+      font-size: 13px;
+    }
+  }
+
+  &__list {
+    margin: 20px -20px 0 0;
+
+    &-item {
+      width: calc(100% / 2 - 20px);
+      margin-right: 20px;
+    }
+  }
+
+  .single-card {
+
+    &__img {
+
+      &-wrap {
+        height: 192px;
+      }
+    }
+
+    &__title {
+      &-wrap {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.mass-media-contacts {
+  &__descr {
+    width: 600px;
+    font-size: 16px;
+  }
+}

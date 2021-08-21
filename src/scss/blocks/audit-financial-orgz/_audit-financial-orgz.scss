@@ -1,0 +1,45 @@
+.financial-orgz {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__descr {
+    margin-top: 40px;
+    font-size: 15px;
+    line-height: 22px;
+    color: $paragraph-color;
+  }
+
+  &__list {
+    margin-top: 35px;
+  }
+
+  .card-new {
+    padding: 25px;
+
+    &::before {
+      width: 230px;
+      height: 190px;
+    }
+
+    &__title {
+      position: relative;
+      height: 44px;
+      font-size: 17px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: $red-color;
+      }
+    }
+
+    &__text {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+}

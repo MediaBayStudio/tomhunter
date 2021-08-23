@@ -35,7 +35,7 @@ input.invalid {
   margin: 0;
   padding: 0;
   &:checked~.checkinp__pseudo {
-    
+
     &::after {
       opacity: 1;
     }
@@ -49,7 +49,7 @@ input.invalid {
     margin-right: 10px;
   }
   &__pseudo {
-  cursor: pointer;  
+  cursor: pointer;
     display: inline-flex;
     width: 20px;
     height: 20px;
@@ -120,7 +120,7 @@ input.invalid {
     padding-left: 8px;
   }
   &__btn {
-    max-width: 150px;
+    max-width: 190px;
     display: block;
     margin: 40px auto 0;
   }

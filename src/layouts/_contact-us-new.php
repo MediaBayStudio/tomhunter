@@ -1,4 +1,4 @@
-<section class="contact-us-new container">
+<section id="contact-us-new" class="contact-us-new container">
   <div class="contact-us-new__inner">
     <h2 class="contact-us-new__title sect-title forward_slash">
       Свяжитесь с нами

@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
   Template Name: О компании
 */
@@ -26,7 +26,7 @@
     'current_link_class'  => 'current',
     'after_links'         => ''
   ]);
-  
+
 ?>
 
 <section class="about-hero-sect container lazy" data-src="url(<?php echo $about_hero_sect_img; ?>)">
@@ -34,15 +34,22 @@
   <?php
     print_paragraphs($about_sect_fields, 'about-hero-sect__descr');
   ?>
-  <img src="#" data-src="<?php echo get_template_directory_uri() . '/img/logo-less.svg' ?>" alt="Логотип Tom Hunter" class="about-hero-sect__logo lazy">
 </section>
 
 <?php
-  require 'layouts/_service.php';
+  require 'layouts/about/_certificates.php';
 
-  $trust_bg_color = '#F8F8F8';
+  $complex_of_service_fields = get_field('complex_of_service');
+  $complex_of_service_points = $complex_of_service_fields['points'];
 
-  require 'layouts/_trust.php';
-  require 'layouts/_contacts.php';
+  if ( $complex_of_service_points ) {
+    require 'layouts/_complex-of-service-sect.php';
+  };
+
+  require 'layouts/_index-facts.php';
+
+
+  require 'layouts/_actual-news.php';
+  require 'layouts/_contact-us-new.php';
   get_footer('home');
 ?>

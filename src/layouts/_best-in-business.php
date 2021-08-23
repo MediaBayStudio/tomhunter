@@ -1,6 +1,6 @@
-<section class="best-in-business container">
+<section id="best-in-business" class="best-in-business container">
   <h2 class="best-in-business__title sect-title forward_slash">
-    Лучшие в своем деле
+    <?php echo $best_in_business_fields['title'] ?>
   </h2>
 
   <ul class="best-in-business__list">

@@ -37,9 +37,46 @@
     }
   });
 
-  
+
 
   callbackPopup.style && overlayClick(callbackPopup);
   zoomPopup.style && overlayClick(zoomPopup);
-  
+
+  callbackPopup = new SimplePopup({
+    popup: '.materials-popup',
+    openBtn: '.materials__file-open-btn',
+    closeBtn: '.materials-popup__close',
+    overlay: '.overlay',
+    popupAnimation: 'fadeOut .5s',
+    overlayAnimation: 'fadeOut .5s',
+    scrollThreshold: '1000'
+  });
+
+  materialsBtnsOnClick(setMaterialsPopupText)
+
+  /**
+   * Получаем у элемента дата атрибут(data-popup-content) и вставляем в попап как html
+   * @param {HTMLElement} materialBtn
+   */
+  function setMaterialsPopupText(materialBtn) {
+    const materialPopupDescr = document.querySelector('.materials-popup__descr');
+    let html = materialBtn.dataset.popupContent;
+
+    materialPopupDescr.innerHTML = html;
+  }
+
+  /**
+   * Выполняем переданную функцию, которой в аргумент передается сама кнопка
+   * @param {Function} fn
+   */
+  function materialsBtnsOnClick(fn) {
+    const materialsBtns = document.querySelectorAll('.materials__file-open-btn');
+
+    materialsBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        fn(btn)
+      })
+    })
+  }
+
 })();

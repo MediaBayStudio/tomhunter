@@ -3,15 +3,10 @@
   padding-bottom: 60px;
 
   &__list {
-    justify-content: space-around;
 
     &-item {
-      margin: 0;
-      margin-right: 15px;
-
-      &:nth-child(even) {
-        margin-right: 15px;
-      }
+      width: 260px;
+      margin: 60px 55px 0 0;
     }
   }
 }

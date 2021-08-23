@@ -48,16 +48,16 @@ document.addEventListener('DOMContentLoaded', function() {
   //=include _fixhdr.js
   //=include _scrollToAnchors.js
   //=include _telmask.js
-  //=include _pressCenter.js
+  //=include _pressCentr-loadNewPosts.js
   //=include _pressCenterSearch.js
   //=include _relatedSingles.js
   //=include _preloader.js
+
 
   lazy = new lazyload({
     clearSrc: true,
     clearMedia: true
   });
-
 });
 
 
@@ -123,3 +123,50 @@ function ymapsOnload() {
       }
     });
   }
+
+consultQuestions()
+
+function consultQuestions() {
+  const questionsList = document.querySelector('.questions__list');
+
+  if (!questionsList) return;
+
+  questionsList.addEventListener('click', e => {
+    let target = e.target;
+    let question = target.closest('.questions__item');
+    let questionTitle = target.closest('.questions__item-title');
+    let answer = question.querySelector('.questions__item-answer');
+
+    if (questionTitle) {
+      if (!question.classList.contains('questions__item_open')) {
+        question.classList.add('questions__item_open');
+        answer.style.height = answer.scrollHeight + 'px';
+      } else {
+        question.classList.remove('questions__item_open');
+        answer.style.height = 0;
+      }
+    }
+  });
+}
+
+swapTitleTextOnMobile()
+
+/**
+ * Смена текста в заголовке секции "Защита от несанкционированного доступа" на странице "Техническая защита информации"
+ * на мобильном
+ */
+
+
+function swapTitleTextOnMobile() {
+  if (!window.location.href.includes('tech-info-protection')) return;
+
+  const title = document.querySelector('.swap-title-on-mobile');
+
+  const textForSwap = 'Защита от несанкционированного доступа';
+  const newText = 'Защита от незаконного доступа';
+  const windowWidth = document.documentElement.clientWidth
+
+  if (title.textContent.includes(textForSwap) && windowWidth < 768) {
+    title.textContent = newText
+  }
+}

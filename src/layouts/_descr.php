@@ -1,4 +1,4 @@
-<section class="descr-sect container" id="descr" style="background-image: url(<?php echo $descr_sect['img_src']; ?>)">
+<section id="descr-sect" class="descr-sect container" id="descr" style="background-image: url(<?php echo $descr_sect['img_src']; ?>)">
   <h2 class="descr-sect__title sect-title forward_slash"><?php echo $descr_sect['title']; ?></h2>
   <?php
     foreach ($descr_sect['paragraphs'] as $paragraph) {

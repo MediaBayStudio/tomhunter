@@ -1,3 +1,13 @@
+.index-service-card {
+  &__title {
+    min-height: 60px;
+  }
+
+  &__descr {
+    max-width: 315px;
+  }
+}
+
 .invite-sect {
   padding-bottom: 85px;
   background:

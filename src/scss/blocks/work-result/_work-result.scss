@@ -1,0 +1,22 @@
+.work-result {
+  padding-top: 40px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-flow: wrap;
+
+  &__title {
+    width: 100%;
+  }
+
+  &__descr {
+    width: 100%;
+    margin-top: 15px;
+    color: $paragraph-color;
+    font: 15px/150% Lato, sans-serif;
+  }
+
+  &__img {
+    width: 278px;
+    margin: 40px auto 0;
+  }
+}

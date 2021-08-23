@@ -1,5 +1,12 @@
 <?php
 $template_directory = get_template_directory_uri();
+
+// Enable the option show in rest
+add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
+
+// Enable the option edit in rest
+add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
+
 // Вставка кнопки в редактор статьи
 add_action( 'admin_print_footer_scripts', function() {
   if ( ! wp_script_is( 'quicktags' ) )
@@ -40,7 +47,7 @@ remove_filter( 'the_excerpt', 'wpautop' );
     }
 
 // отключаем стандартные метки
-    register_taxonomy( 'post_tag', ['public' => false] );
+    // register_taxonomy( 'post_tag', ['public' => false] );
   }
 add_action( 'init', 'disable_wp_scripts') ;
 
@@ -132,7 +139,7 @@ function scripts () {
   wp_enqueue_style( '1320px-style', get_template_directory_uri() . '/css/style.1320.css', [], null, '(min-width: 1319.98px)' );
   wp_enqueue_style( 'hover-style', get_template_directory_uri() . '/css/hover.css', [], null, '(hover), (min-width: 1024.98px)' );
 
-  if ( is_page_template( 'service.php') || is_page_template( 'services.php' ) ) {
+  if ( is_page_template( 'service.php') || is_page_template( 'services.php' ) || is_page_template( 'audit.php' ) || is_page_template( 'consulting.php' ) || is_page_template( 'personal-data.php' ) || is_page_template( 'CII-security.php' ) || is_page_template( 'tech-info-protection.php' )   ) {
     wp_enqueue_style( 'service-style', get_template_directory_uri() . '/css/service.css', [], null );
   } else if ( is_single() ) {
     wp_register_script( 'hljs', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js');

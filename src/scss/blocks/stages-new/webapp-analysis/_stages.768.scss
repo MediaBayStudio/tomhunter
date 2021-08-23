@@ -1,0 +1,41 @@
+.webapp-analysis-stages {
+
+  &__list {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .card-new {
+    width: 648px;
+    height: 355px;
+    margin-bottom: 20px;
+    padding: 30px 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      width: 325px;
+      height: 265px;
+      top: -40px;
+      left: -70px;
+    }
+
+    &__title {
+      width: 243px;
+    }
+
+    &__text {
+      width: 523px;
+    }
+
+    &__img {
+      width: 155px;
+      height: 110px;
+      bottom: 0;
+      right: 35px;
+    }
+  }
+}

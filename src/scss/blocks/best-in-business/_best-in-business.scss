@@ -8,20 +8,12 @@
   }
 
   &__list {
-    margin: 40px 0 0;
     color: #fff;
     display: flex;
     flex-flow: wrap;
-    justify-content: center;
 
     &-item {
-      min-width: 210px;
-      max-width: 280px;
       margin-top: 40px;
-
-      &:first-child {
-        margin-top: 0;
-      }
 
       .header {
         display: flex;
@@ -36,6 +28,7 @@
         img {
           width: 100%;
           object-fit: contain;
+          object-position: top;
         }
       }
 
@@ -45,8 +38,7 @@
       }
 
       .descr {
-        max-width: 280px;
-        font: 400 16px/150% Lato, sans-serif;
+        font: 400 15px/150% Lato, sans-serif;
       }
     }
   }

@@ -1,0 +1,25 @@
+.press-centr {
+  .search {
+    margin-top: 0;
+
+    &__inp {
+      max-width: 170px;
+      &.focused {
+        ~.search__overlay {
+          width: 0;
+        }
+        ~.search__icon {
+          right: 87.5%;
+        }
+      }
+    }
+    &__result, &__result-link {
+      font-size: 13px;
+    }
+
+    &__result {
+      right: 0;
+      left: auto;
+    }
+  }
+}

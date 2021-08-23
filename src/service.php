@@ -2,6 +2,7 @@
 /*
   Template Name: Услуга
 */
+  global $post;
   $tel = get_option('contacts_tel');
   $tel_dry = preg_replace('/\s/', '', $tel);
   $address = get_option('contacts_address');
@@ -17,7 +18,6 @@
   $best_in_business_fields = get_field('best_in_business');
 
   get_header();
-  // require 'layouts/_hero.php';
   require 'layouts/_service-hero-new.php';
 
    $descr_sect = [
@@ -51,29 +51,30 @@
     require 'layouts/_activities.php';
   }
 
-      $childs = $stages_sect_fields['cards_settings'][0];
+  // $childs = $stages_sect_fields['cards_settings'][0];
+  // $prefix = ' stages-block_';
 
-  $prefix = ' stages-block_';
+  // if ($childs == 4) {
+  //   $prefix .= 'four';
+  // } else if ($childs == 3) {
+  //   $prefix .= 'three';
+  // } else if ($childs == 2) {
+  //   $prefix .= 'two';
+  // } else {
+  //   $prefix = '';
+  // }
 
-  if ($childs == 4) {
-    $prefix .= 'four';
-  } else if ($childs == 3) {
-    $prefix .= 'three';
-  } else if ($childs == 2) {
-    $prefix .= 'two';
-  } else {
-    $prefix = '';
-  }
+  // if ($prefix !== '') {
+  //   $prefix .= '-children';
+  // }
 
-  if ($prefix !== '') {
-    $prefix .= '-children';
-  }
+  // $stages_cards = $stages_sect_fields['cards_repeater'];
 
-  $stages_cards = $stages_sect_fields['cards_repeater'];
+  // if ( $stages_cards ) {
+  //   require 'layouts/_stages.php';
+  // }
 
-  if ( $stages_cards ) {
-    require 'layouts/_stages.php';
-  }
+  include 'layouts/stages/_stages-' . $post->post_name . '.php';
 
   $best_in_business_cards = $best_in_business_fields['cards'];
 

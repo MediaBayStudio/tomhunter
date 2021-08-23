@@ -1,0 +1,35 @@
+.tech-info-protection-stages {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__list {
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+  }
+
+  &__dots {
+    margin-top: 30px;
+  }
+
+  .card-new {
+    width: 280px;
+    height: 170px;
+    padding: 15px 20px;
+
+    &__img {
+      position: absolute;
+      width: 135px;
+      height: 95px;
+      bottom: 25px;
+      right: -25px;
+    }
+
+    &:last-child {
+      .card-new__img {
+        right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.press-centr {
+  &__sect {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__header {
+
+    .breadcrumbs-list {
+      width: 100%;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__nav {
+
+    &-link {
+      margin-right: 82px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+
+    &-item {
+      width: calc(100% / 3 - 20px);
+      margin-right: 20px;
+    }
+  }
+
+  .single-card {
+
+    &__img {
+
+      &-wrap {
+        height: 242px;
+      }
+    }
+  }
+}

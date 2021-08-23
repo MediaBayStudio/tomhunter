@@ -22,30 +22,30 @@
     indexNewsBlock = document.querySelector('.index-news-sect__list'),
     indexNews = document.querySelectorAll('.index-news-sect__li'),
 
-    buildIndexServiceSlider = function() {
-      if (indexServiceBlock && indexServices.length > 2) {
-        if (matchMedia('(max-width: 767.98px)').matches) {
-          $(indexServiceBlock).slick({
-            accessibility: false,
-            // slidesToShow: 1,
-            // slidesToScroll: 1,
-            infinite: false,
-            arrows: false,
-            dots: true,
-            dotsClass: 'index-news-sect__dots dots',
-            // slide: '.single-card',
-            // centerMode: true,
-            // centerPadding: '0px',
-            // variableWidth: true,
-            customPaging: function() {
-              return dot;
-            }
-          });
-        } else {
-          // $(indexServiceBlock).slick('unslick');
-        }
-      }
-    },
+    // buildIndexServiceSlider = function() {
+    //   if (indexServiceBlock && indexServices.length > 2) {
+    //     if (matchMedia('(max-width: 767.98px)').matches) {
+    //       $(indexServiceBlock).slick({
+    //         accessibility: false,
+    //         // slidesToShow: 1,
+    //         // slidesToScroll: 1,
+    //         infinite: false,
+    //         arrows: false,
+    //         dots: true,
+    //         dotsClass: 'index-news-sect__dots dots',
+    //         // slide: '.single-card',
+    //         // centerMode: true,
+    //         // centerPadding: '0px',
+    //         // variableWidth: true,
+    //         customPaging: function() {
+    //           return dot;
+    //         }
+    //       });
+    //     } else {
+    //       // $(indexServiceBlock).slick('unslick');
+    //     }
+    //   }
+    // },
 
     buildIndexNewsSlider = function() {
       if (indexNewsBlock && indexNews.length > 2) {
@@ -101,10 +101,10 @@
       }
     };
 
-  if (indexServiceBlock) {
-    window.addEventListener('resize', buildIndexServiceSlider);
-    buildIndexServiceSlider();
-  }
+  // if (indexServiceBlock) {
+  //   window.addEventListener('resize', buildIndexServiceSlider);
+  //   buildIndexServiceSlider();
+  // }
 
   if (indexNewsBlock) {
     window.addEventListener('resize', buildIndexNewsSlider);
@@ -488,4 +488,153 @@
     $('.slick-list.draggable').removeClass('grabbing');
   });
 
+  /**
+   * Слайдеры по секциям
+   */
+
+  // Общие настройки для слайдера
+  const commonSlickOptions = {
+    arrows: false,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    dots: true,
+    customPaging: function() {
+      return dot;
+    },
+  }
+
+  // (layouts/_testing-models.php) - 'Модели тестирования' на общей странице 'Услуги'
+  $('.testing-models__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'testing-models__dots dots',
+    responsive: [
+          {
+            breakpoint: 1023.98,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 1319.98,
+            settings: 'unslick'
+          }
+    ]
+  })
+
+  // (layouts/stages/_stages-intranet-pentest.php) - Как мы работаем на странице 'INTRANET пентест'
+  $('.intranet-pentest-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'intranet-pentest-stages__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/stages/_stages-webapp-analysis.php) - Как мы работаем на странице 'Анализ защищённости web-приложений'
+  $('.webapp-analysis-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'webapp-analysis-stages__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/stages/_stages-wi-fi-pentest.php) - Как мы работаем на странице 'Wi-Fi пентест'
+  $('.wi-fi-pentest-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'wi-fi-pentest-stages__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/stages/_social-pentest.php) - Как мы работаем на странице 'Социальный пентест'
+  $('.social-pentest-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'social-pentest-stages__dots dots',
+    responsive: [
+      {
+        breakpoint: 1023.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/stages/_stages-external-pentest.php) - Как мы работаем на странице 'Пентест внешнего периметра'
+  $('.external-pentest-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'external-pentest-stages__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/_index-services.php) - Блок 'Услуги' на странице 'Главной странице'
+  $('.index-services-block').slick({
+    ...commonSlickOptions,
+    dotsClass: 'index-services-block__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 1023.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/audit/_commercial_secret.php) - Блок 'Коммерческая тайна' на странице 'Аудит'
+  $('.commerc-secret__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'index-services-block__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (layouts/audit/_financial-orgz.php) - Блок 'Финансовые организации' на странице 'Аудит'
+  $('.financial-orgz__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'index-services-block__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
+
+  // (src/tech-info-protection.php) - Блок 'Этапы работ' на странице 'Техническая защита информации'
+  $('.tech-info-protection-stages__list').slick({
+    ...commonSlickOptions,
+    dotsClass: 'index-services-block__dots dots',
+    responsive: [
+      {
+        breakpoint: 767.98,
+        settings: 'unslick'
+      }
+    ]
+  })
 })();

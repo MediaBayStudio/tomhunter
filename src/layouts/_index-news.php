@@ -1,4 +1,4 @@
-<?php 
+<?php
 $posts = get_posts( [
   'numberposts' => 3
 ] ) ?>
@@ -41,5 +41,5 @@ $posts = get_posts( [
     endforeach;
     wp_reset_postdata() ?>
   </div>
-  <a href="<?php echo site_url() ?>/press-center/news" class="btn-ol index-news-sect__link">Все новости</a>
+  <a href="<?php echo site_url() ?>/press-center/news" class="btn-ol index-news-sect__link">Посмотреть все</a>
 </section>

@@ -20,16 +20,16 @@
   &__title {
     position: relative;
     width: 159px;
-    color: #291956;
-    font-size: 16px;
-    line-height: 130%;
+    color: $blue-purple-color;
+    font-size: 20px;
+    line-height: 150%;
     z-index: 1;
   }
 
   &__text {
     color: #4d4d4d;
     font-size: 15px;
-    line-height: 130%;
+    line-height: 150%;
     position: relative;
     z-index: 1;
   }

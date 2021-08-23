@@ -1,0 +1,54 @@
+.complex-of-service {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__list {
+    margin-top: 40px;
+  }
+
+  &-item {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: wrap;
+
+    &__img {
+      width: 50px;
+      height: 50px;
+      margin-right: 25px;
+      display: inline-block;
+
+      & + .complex-of-service-item__title {
+        padding-left: 0;
+      }
+    }
+
+    &__title {
+      display: inline-block;
+      position: relative;
+      font: 700 17px/120% Lato, sans-serif;
+      color: $blue-purple-color;
+      flex: 1;
+
+      &.title-underline {
+        min-height: 40px;
+        padding: 0 0 10px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 80px;
+          height: 3px;
+          background-color: $red-color;
+        }
+      }
+    }
+
+    &__text {
+      margin-top: 20px;
+      color: $paragraph-color;
+      font: 15px/167% Lato, sans-serif;
+    }
+  }
+}

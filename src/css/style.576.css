@@ -206,18 +206,6 @@
   height: 465px;
 }
 
-.contacts-sect__form {
-  max-width: none;
-}
-
-.contacts-sect__email {
-  margin-right: 70px;
-}
-
-.contacts-sect__address {
-  margin-right: 48px;
-}
-
 .ftr__bottom {
   display: -ms-grid;
   display: grid;
@@ -293,7 +281,7 @@
 }
 
 .service-hero__list-item {
-  margin-right: 32px;
+  margin-right: 25px;
 }
 
 .contacts-sect__form {
@@ -306,4 +294,29 @@
 
 .contacts-sect__address {
   margin-right: 48px;
+}
+
+.press-centr .search {
+  margin-top: 0;
+}
+
+.press-centr .search__inp {
+  max-width: 170px;
+}
+
+.press-centr .search__inp.focused ~ .search__overlay {
+  width: 0;
+}
+
+.press-centr .search__inp.focused ~ .search__icon {
+  right: 87.5%;
+}
+
+.press-centr .search__result, .press-centr .search__result-link {
+  font-size: 13px;
+}
+
+.press-centr .search__result {
+  right: 0;
+  left: auto;
 }

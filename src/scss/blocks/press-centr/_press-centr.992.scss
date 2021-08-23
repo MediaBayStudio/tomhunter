@@ -1,0 +1,61 @@
+.press-centr {
+  &__header {
+    padding: 30px 0 10px;
+  }
+
+  &__nav {
+    font-size: 18px;
+    line-height: 167%;
+
+    &-link {
+      margin-right: 50px;
+    }
+  }
+
+  .search {
+    &__inp {
+      max-width: 190px;
+      // &:focus {
+      &.focused {
+        transition-delay: 0;
+        ~ .search__icon {
+          right: 90%;
+        }
+      }
+    }
+    &__icon {
+      right: 90%;
+    }
+    &__overlay {
+      display: none;
+    }
+    &__result {
+      max-width: 440px;
+      min-height: 150px;
+      padding: 25px;
+      font-size: 15px;
+      &-link {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__list {
+    margin: 20px -20px 0 0;
+
+    &-item {
+      width: calc(100% / 2 - 20px);
+      margin-right: 20px;
+    }
+  }
+
+  .single-card {
+
+    &__img {
+
+      &-wrap {
+        height: 289px;
+      }
+    }
+  }
+}

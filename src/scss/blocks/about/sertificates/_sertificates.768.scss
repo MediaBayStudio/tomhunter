@@ -1,0 +1,20 @@
+.sertificates {
+  overflow-x: hidden;
+
+  &__list {
+    justify-content: center;
+    margin-right: -50px;
+  }
+
+  .sertificate {
+    width: auto;
+    max-width: 260px;
+    margin: 40px 50px 0 0;
+
+    &__img {
+      width: 175px;
+      height: 115px;
+      object-fit: contain;
+    }
+  }
+}

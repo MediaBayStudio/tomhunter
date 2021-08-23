@@ -1,11 +1,11 @@
 ;(function() {
-  let mediaCenterBlock = document.querySelector('.media-center-block');
+  //let mediaCenterBlock = document.querySelector('.media-center-block');
+  searchInp = document.querySelector('.search__inp');
 
   if (mediaCenterBlock) {
     document.body.removeChild(document.querySelector('.postcat'));
-    searchInp = document.querySelector('.search__inp');
 
-    let 
+    let
     // loadMoreBtn = document.querySelector('.load-more-btn'),
       sortBlock = document.querySelector('.sort-block'),
       // pageLoader = document.querySelector('.media-center-sect > .loader-bg'),
@@ -34,7 +34,7 @@
         // если десктоп, то в каждой семерке берем первые 4, вставляем в обертку и туда же баннер
         // чередуем баннер
         if (postsPerPage === 7) {
-          let banner = mediaCenterBlock.querySelector('.media-center-block > a:first-of-type');        
+          let banner = mediaCenterBlock.querySelector('.media-center-block > a:first-of-type');
 
           if (banner) {
             let cardsWrapper = document.createElement('div'),
@@ -161,7 +161,7 @@
         let lastCardsWrapper;
 
         if (posts.count > 3) {
-          
+
           if (postsPerPage === 7) {
             lastCardsWrapper = mediaCenterBlock.querySelector('.cards-wrapper:last-of-type');
           }
@@ -169,7 +169,7 @@
           let {title, descr, link, images} = banner[0],
             img320 = images.img_320,
             img768 = images.img_768,
-            html = 
+            html =
             `<a href="${link.url}" class="service-block" title="Перейти на страницу ${title}">
               <img src="#" alt="${img320.alt}" class="service-block__img lazy"
               data-src="${img320.src}"
@@ -185,7 +185,7 @@
             mediaCenterBlock.insertAdjacentHTML('beforeend', html);
           }
         }
-        
+
       };
 
 
@@ -197,7 +197,7 @@
       if ((doc.scrollHeight - doc.clientHeight <= window.pageYOffset + 500) && !inProgress) {
           let singles = mediaCenterBlock.querySelectorAll('.single-card'),
             bannersLength = mediaCenterBlock.querySelectorAll('.service-block').length;
-            
+
         if (singles.length < postsTotalLength) {
           mediaCenterBlock.classList.add('loading');
           // console.log('bannersLength', bannersLength);
@@ -258,7 +258,6 @@
     //     }, 25);
     //   });
     // });
-        
-  }
 
+  }
 })();

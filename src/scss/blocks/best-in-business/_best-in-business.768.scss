@@ -1,14 +1,13 @@
 .best-in-business {
   &__list {
+    display: flex;
+    flex-flow: wrap;
+
     &-item {
-      margin-right: 55px;
+      width: 280px;
 
-      &:nth-child(2) {
-        margin-top: 0;
-      }
-
-      &:nth-child(even) {
-        margin-right: 0;
+      &:nth-child(odd) {
+        margin-right: 55px;
       }
     }
   }

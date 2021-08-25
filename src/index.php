@@ -12,6 +12,7 @@
   $about_sect_fields = get_field('about_sect');
   $page = get_page_template_slug();
   get_header();
+
   require 'layouts/_hero-new.php';
   // require 'layouts/_service.php';
   require 'layouts/_index-services.php';
@@ -19,7 +20,8 @@
   require 'layouts/_cybersecurity-sect.php';
   require 'layouts/_index-facts.php';
   require 'layouts/_actual-news.php';
-  require 'layouts/_index-clients.php' ?>
+  // require 'layouts/_index-clients.php'
+?>
 
 <!-- <section class="statistics-sect container sect_purple">
   <h2 class="statistics-sect__title sect-title forward_slash">Статистика защищенности компаний в россии</h2>

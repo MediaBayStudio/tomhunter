@@ -1,8 +1,11 @@
 <section class="service-hero container">
   <ul class="breadcrumbs-list">
-    <li class="breadcrumbs-list__item">Услуги</li>
-    <li class="breadcrumbs-list__item">Пентест</li>
-    <li class="breadcrumbs-list__item breadcrumbs-list__item--current">Пентест внешнего периметра</li>
+    <li class="breadcrumbs-list__item">
+      <a href="<?php echo home_url()?>">Услуги</a>
+    </li>
+    <li class="breadcrumbs-list__item breadcrumbs-list__item--current">
+      <a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title ?></a>
+    </li>
   </ul>
 
   <?php
@@ -15,7 +18,7 @@
 
   <h1 class="service-hero__title"><?php echo $title ?></h1>
   <p class="service-hero__descr"><?php echo $descr ?></p>
-  <a href="#callback" class="service-hero__btn hero-sect__link btn">Получить консультацию</a>
+  <a href="#contact-us-new" class="service-hero__btn hero-sect__link btn">Получить консультацию</a>
 
   <img src="#" data-src="<?php echo $imgURL ?>" alt="#" class="service-hero__bg-img
   service-hero-single__bg-img lazy">

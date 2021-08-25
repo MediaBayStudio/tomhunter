@@ -66,18 +66,32 @@ body.no-scroll {
   // transform: translateY(40px + $breadcrumbs_height);
   padding-top: 20px;
   padding-bottom: 50px;
-  font: normal 15px/100% Lato;
+  font: normal 14px/100% Lato;
   color: $purple-color;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: flex;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   &__text {
     border-bottom: 1px solid transparent;
     transition: border-bottom-color .35s;
   }
+
   &__link {
+    white-space: nowrap;
+    margin-right: 20px;
+
     &::after {
-      content: '/';
+      content: '\276F';
       display: inline-block;
-      margin: 0 2px;
-      font: inherit;
+      margin-left: 20px;
+      width: 5px;
+      height: 8px;
     }
     &.current {
       color: $red-color;

@@ -4,24 +4,26 @@
 
   &__list {
     margin-top: 10px;
+    position: relative;
+    z-index: 99;
   }
 
   &__file {
-    position: relative;
+    display: flex;
     margin-top: 30px;
-    padding-left: 45px;
     font-size: 14px;
     line-height: 150%;
     color: $paragraph-color;
+    text-align: left;
     transition: opacity 80ms linear;
+    cursor: pointer;
 
     &::before {
       content: '';
-      position: absolute;
       width: 30px;
       height: 30px;
-      top: 0;
-      left: 0;
+      flex-shrink: 0;
+      margin-right: 15px;
       background: url('../img/files-icon.svg') no-repeat center / cover;
     }
 

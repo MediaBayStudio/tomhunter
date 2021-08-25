@@ -203,7 +203,6 @@
 
 .service-card {
   width: calc((540px - 20px) / 2);
-  height: 465px;
 }
 
 .ftr__bottom {

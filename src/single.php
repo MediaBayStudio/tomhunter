@@ -1,4 +1,4 @@
-<?php 
+<?php
   $tel = get_option( 'contacts_tel' );
   $tel_dry = preg_replace( '/\s/', '', $tel );
   $address = get_option( 'contacts_address' );
@@ -25,9 +25,10 @@
 
   function get_img( $id, $size_id ) {
     return wp_get_attachment_image_url( get_post_thumbnail_id( $id ), $size_id );
-  }
+  };
 
   $post_id = get_the_ID();
+  $post_thumb = get_post_thumbnail_id( $post_id );
 
   $post_img_320 = get_img( $post_id, 'post_card_768' ) . " 1x, " . get_img( $post_id, 'post_card_768_x2' ) . " 2x, " . get_img($post_id, 'post_card_768_x3' ) . " 3x";
 
@@ -41,11 +42,15 @@
   <h1 class="single-sect__title"><?php the_title(); ?></h1> <?php
   if ( has_excerpt( get_the_ID() ) ) : ?>
     <p class="single-sect__descr"><?php the_excerpt(); ?></p> <?php
-  endif ?>
+  endif;
+  if ( $post_thumb ) : ?>
+
   <img src="#" alt="#" class="single-sect__img lazy"
   data-src="image-set(<?php echo $post_img_320; ?>)"
   data-media="(min-width: 767.98px) {image-set(<?php echo $post_img_768; ?>)}
               (min-width: 1319.98px) {image-set(<?php echo $post_img_1440; ?>)}">
+
+  <?php endif ?>
   <div class="single-sect__content"> <?php
   the_content() ?>
     <div class="single-sect__sign">
@@ -132,51 +137,72 @@
   ] );
 
   if ( $related_posts ) : ?>
-    <div class="related-singles container"> <?php
-    foreach( $related_posts as $post ) : setup_postdata($post);
-      $img_320    = wp_get_attachment_image_url( get_post_thumbnail_id(), 'post_card_768' );
+    <div class="related-singles container press-centr">
+      <ul class="news__list">
+        <?php
+          foreach( $related_posts as $post ) : setup_postdata($post);
+            $img_320    = wp_get_attachment_image_url( get_post_thumbnail_id(), 'post_card_768' );
 
-      $img_768_x2 = wp_get_attachment_image_url( get_post_thumbnail_id(), 'post_card_768_x2' );
+            $img_768_x2 = wp_get_attachment_image_url( get_post_thumbnail_id(), 'post_card_768_x2' );
 
-      $img_768_x3 = wp_get_attachment_image_url( get_post_thumbnail_id(), 'post_card_768_x3' );
+            $img_768_x3 = wp_get_attachment_image_url( get_post_thumbnail_id(), 'post_card_768_x3' );
 
-        // $excerpt       = get_the_excerpt();
-        // $preview_descr = set_max_charlength( $excerpt, get_field( 'post_excerpt_length' ) );
-      $excerpt = kama_excerpt( [
-        'maxchar'   =>  get_field( 'post_excerpt_length', $id ),
-        'autop'     =>  false,
-        'ignore_more' => true
-      ] );
-      $preview_descr = $excerpt;
-      $title         = get_the_title();
-      $date          = get_the_date( 'd.m.Y' );
-      $link          = get_the_permalink();
-      $categories    = [];
+              // $excerpt       = get_the_excerpt();
+              // $preview_descr = set_max_charlength( $excerpt, get_field( 'post_excerpt_length' ) );
+            $excerpt = kama_excerpt( [
+              'maxchar'   =>  get_field( 'post_excerpt_length', $id ),
+              'autop'     =>  false,
+              'ignore_more' => true
+            ] );
+            $preview_descr = $excerpt;
+            $title         = get_the_title();
+            $date          = get_the_date( 'd.m.Y' );
+            $link          = get_the_permalink();
+            $categories    = [];
 
 
-      $terms = get_the_terms( $post, 'category' );
+            $terms = get_the_terms( $post, 'category' );
 
-      foreach ( $terms as $term ) {
-        array_push($categories, $term->name);
-      } ?>
-      <article class="single-card">
-        <a href="<?php echo $link; ?>" class="single-card__img-wrap">
-          <img src="#" alt="<?php echo $title; ?>"
-            data-src='<?php echo "image-set($img_320 1x, $img_768_x2 2x, $img_768_x3 3x)" ?>'
-            data-media="(min-width: 767.98px) {<?php echo "image-set($img_320 1x, $img_768_x2 2x, $img_768_x3 3x)" ?>}
-                        (min-width: 1319.98px) {<?php echo "image-set($img_768_x2 1x, $img_768_x3 2x)" ?>}" class="single-card__img lazy">
-        </a>
-        <span class="single-card__category"><?php echo implode( ', ', $categories ); ?></span>
-        <a href="<?php echo $link; ?>" class="single-card__title-wrap">
-          <strong class="single-card__title"><?php echo $title; ?></strong>
-        </a>
-        <p class="single-card__descr"><?php echo $preview_descr; ?></p>
-        <div class="single-card__bottom">
-          <a href="<?php echo $link; ?>" class="single-card__link link_red">Читать...</a>
-          <span class="single-card__date"><?php echo $date; ?></span>
-        </div>
-      </article> <?php
-    endforeach; wp_reset_query() ?>
-    </div> <?php
-  endif;
-  get_footer('404');
+            foreach ( $terms as $term ) {
+              array_push($categories, $term->name);
+            } ?>
+
+            <?php
+              $custom_term = wp_get_post_terms( $post->ID, 'mass_media_source' )[0];
+              $icon = (get_field( 'icon', $custom_term ))['sizes']['large'];
+            ?>
+
+              <li class="news__list-item">
+                <article class="single-card<?php echo ( !$post_thumb ) ? ' mass-media__single-card' : '' ?>">
+                  <a href="<?php echo $link; ?>" class="single-card__img-wrap">
+
+                    <?php if ( $icon ) : ?>
+                      <img src="#" alt="#" data-src='<?php echo $icon; ?>' class="single-card__img lazy">
+                    <?php elseif ( $post_thumb) : ?>
+
+                    <img src="#" alt="<?php echo $title; ?>"
+                      data-src='<?php echo "image-set($img_320 1x, $img_768_x2 2x, $img_768_x3 3x)" ?>'
+                      data-media="(min-width: 767.98px) {<?php echo "image-set($img_320 1x, $img_768_x2 2x, $img_768_x3 3x)" ?>}
+                                  (min-width: 1319.98px) {<?php echo "image-set($img_768_x2 1x, $img_768_x3 2x)" ?>}" class="single-card__img lazy">
+                    <?php endif ?>
+                  </a>
+                  <span class="single-card__category"><?php echo implode( ', ', $categories ); ?></span>
+                  <a href="<?php echo $link; ?>" class="single-card__title-wrap">
+                    <strong class="single-card__title"><?php echo $title; ?></strong>
+                  </a>
+                  <p class="single-card__descr"><?php echo $preview_descr; ?></p>
+                  <div class="single-card__bottom">
+                    <a href="<?php echo $link; ?>" class="single-card__link link_red">Читать...</a>
+                    <span class="single-card__date"><?php echo $date; ?></span>
+                  </div>
+                </article>
+              </li>
+        <?php
+          endforeach;
+          wp_reset_query()
+        ?>
+      </ul>
+    </div>
+    <?php
+    endif;
+  get_footer('home');

@@ -47,7 +47,7 @@ remove_filter( 'the_excerpt', 'wpautop' );
     }
 
 // отключаем стандартные метки
-    // register_taxonomy( 'post_tag', ['public' => false] );
+    register_taxonomy( 'post_tag', ['public' => false] );
   }
 add_action( 'init', 'disable_wp_scripts') ;
 
@@ -395,7 +395,25 @@ function register_post_types(){
   remove_post_type_support( 'page', 'thumbnail' );
   remove_post_type_support( 'page', 'revisions' );
   remove_post_type_support( 'page', 'comments' );
-}
+};
+
+add_action( 'init', 'register_taxonomies');
+
+function register_taxonomies() {
+  register_taxonomy( 'mass_media_source', [ 'post' ], [
+    'label'          => '',
+    'labels'         => [
+      'name'              => _x( 'Источники Мы в СМИ', 'taxonomy general name' ),
+			'singular_name'     => _x( 'Источник Мы в СМИ', 'taxonomy singular name' ),
+    ],
+    'description'   => '',
+    'public'        => true,
+    'hierarchical'  => false,
+    'show_in_rest'  => true,
+    'rewrite'       => true,
+    'rest_base'     => null
+  ]);
+};
 
 // Параметры меню
 class My_Walker_Nav_Menu extends Walker_Nav_Menu {

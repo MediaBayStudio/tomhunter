@@ -40,15 +40,6 @@
     }
   }
 
-  &__list {
-    margin: 20px -20px 0 0;
-
-    &-item {
-      width: calc(100% / 2 - 20px);
-      margin-right: 20px;
-    }
-  }
-
   .single-card {
 
     &__img {
@@ -57,5 +48,14 @@
         height: 289px;
       }
     }
+  }
+}
+
+.news__list {
+  margin: 20px -20px 0 0;
+
+  &-item {
+    width: calc(100% / 2 - 20px);
+    margin-right: 20px;
   }
 }

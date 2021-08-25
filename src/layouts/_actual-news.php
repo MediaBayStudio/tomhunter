@@ -4,10 +4,15 @@
   <ul class="actual-news__list">
   <?php
     global $post;
-    $articles = get_posts( [ 'posts_per_page' => 3, 'category'=>'news' ] );
+    $articles = get_posts([
+      'posts_per_page' => 3,
+      'category'       => -25,
+    ]);
     foreach ( $articles as $post ){
       setup_postdata($post);
       $link = get_the_permalink();
+      $custom_term = wp_get_post_terms( $post->ID, 'mass_media_source' )[0];
+      $icon = (get_field( 'icon', $custom_term ))['sizes']['large'];
   ?>
      <li class="news-item">
       <a href="<?php echo $link ?>" class="news-item__img-link">
@@ -29,5 +34,5 @@
   wp_reset_postdata();  ?>
   </ul>
 
-  <a href="<?php echo home_url(); ?>/press-center" class="actual-news__link btn">Посмотреть все</a>
+  <a href="<?php echo home_url(); ?>/press-center" class="actual-news__link">Посмотреть все</a>
 </section>

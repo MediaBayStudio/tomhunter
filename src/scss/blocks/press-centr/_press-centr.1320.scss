@@ -20,11 +20,11 @@
   }
 
   &__list {
-    margin-top: 40px;
 
     &-item {
-      width: calc(100% / 3 - 20px);
-      margin-right: 20px;
+      &:nth-child(3) {
+        display: block;
+      }
     }
   }
 
@@ -36,5 +36,13 @@
         height: 242px;
       }
     }
+  }
+}
+
+.news__list {
+  margin-top: 40px;
+
+  &-item {
+    width: calc(100% / 3 - 20px);
   }
 }

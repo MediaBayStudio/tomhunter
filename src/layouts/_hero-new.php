@@ -5,7 +5,7 @@
   <div class="hero-new__inner">
     <h1 class="hero-new__title">Эффективная защита информационных систем</h1>
     <p class="hero-new__descr">Комплекс услуг по обеспечению информационной безопасности</p>
-    <a href="#callback" class="hero-new__btn hero-sect__link btn">Получить консультацию</a>
+    <a href="#contact-us-new" class="hero-new__btn hero-sect__link btn">Получить консультацию</a>
   </div>
 
   <div class="hero-new__inner">

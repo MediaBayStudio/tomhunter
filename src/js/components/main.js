@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 window.addEventListener('load', function() {
-
-
   // быстрая загрузка главных изображений
   let lazyload = document.querySelectorAll('.lazyload');
 
@@ -74,25 +72,97 @@ window.addEventListener('load', function() {
 
   // lazyload яндекс карт
   let mapBlock = document.querySelector('#map');
+
   if (mapBlock) {
-    setTimeout(function() {
-      let scriptSrc = "https://api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU&onload=ymapsOnload",
-          tag = document.createElement("script");
+    let myMap;
+    const addresses = {
+      spb: {
+        coords: [59.849962, 30.302950],
+        addres: '196247, Ленинский пр-т, 153 лит. А,\nБЦ «SetlCenter», офис 637'
+      },
+      msc: {
+        coords: [55.815539, 37.518309],
+        addres: '127299, ул. Космонавта Волкова 12,\nпомещение 205'
+      }
+    };
 
-      tag.setAttribute("async", "async");
-      tag.setAttribute("src", scriptSrc);
-      document.body.appendChild(tag);
-    }, 3500);
-  }
+    const btns = document.querySelectorAll('[data-loc-name]');
 
+    btns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const location = btn.dataset.locName;
+        clearBtnsActiveClass(btns, 'active');
+        btn.classList.add('active');
+
+        myMap.setCenter(addresses[location]['coords'])
+
+        let myPlacemarkMsc = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'T.Hunter',
+          balloonContent: addresses.msc.addres
+        }, {
+          iconLayout: 'default#image',
+          iconImageHref: dir + '/img/geo-icon.svg',
+          iconImageSize: [38, 46]
+        });
+
+        myMap.geoObjects.add(myPlacemarkMsc);
+      });
+    })
+
+    ymaps.ready(loadMap);
+
+    function loadMap() {
+      myMap = new ymaps.Map('map', {
+          center: [addresses.spb.coords[0], addresses.spb.coords[1]],
+          zoom: mapZoom,
+          controls: ['zoomControl']
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
+
+      let myPlacemarkSpb = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'T.Hunter',
+          balloonContent: addresses.spb.addres
+        }, {
+          iconLayout: 'default#image',
+          iconImageHref: dir + '/img/geo-icon.svg',
+          iconImageSize: [38, 46]
+        });
+
+      myMap.geoObjects.add(myPlacemarkSpb);
+
+      if (navigator.userAgent.search(/Firefox/) === -1) {
+        myMap.panes.get('ground').getElement().style.filter = 'url(#monochrome)';
+      }
+      else {
+        myMap.panes.get('ground').getElement().style.filter = 'grayscale(100%)';
+      }
+    };
+
+    function clearBtnsActiveClass(btns, className) {
+      btns.forEach(function(btn) {
+        btn.classList.remove(className)
+      })
+    }
+  };
 });
 
+// setTimeout(function() {
+//   // let scriptSrc = "https://api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU&onload=ymapsOnload",
+//   let scriptSrc = "https://api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU",
+//       tag = document.createElement("script");
 
-function ymapsOnload() {
+//   tag.setAttribute("async", "async");
+//   tag.setAttribute("src", scriptSrc);
+//   document.body.appendChild(tag);
+// }, 0);
+
+
+function ymapsOnload(lon, lat) {
     ymaps.ready(function () {
       let coords = {
-        a: mapCoords.a,
-        b: mapCoords.b
+        a: lon,
+        b: lat
       },
         myMap = new ymaps.Map('map', {
         center: [coords.a, coords.b],
@@ -115,6 +185,7 @@ function ymapsOnload() {
         });
 
       myMap.geoObjects.add(myPlacemark);
+
       if (navigator.userAgent.search(/Firefox/) === -1) {
         myMap.panes.get('ground').getElement().style.filter = 'url(#monochrome)';
       }

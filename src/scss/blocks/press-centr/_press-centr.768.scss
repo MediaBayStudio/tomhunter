@@ -45,11 +45,11 @@
   }
 
   &__list {
-    margin: 20px -20px 0 0;
 
     &-item {
-      width: calc(100% / 2 - 20px);
-      margin-right: 20px;
+      &:nth-child(3) {
+        display: none;
+      }
     }
   }
 
@@ -67,6 +67,15 @@
         font-size: 20px;
       }
     }
+  }
+}
+
+.news__list {
+  margin: 20px -20px 0 0;
+
+  &-item {
+    width: calc(100% / 2 - 20px);
+    margin-right: 20px;
   }
 }
 

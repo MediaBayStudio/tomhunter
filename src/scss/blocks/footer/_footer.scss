@@ -13,6 +13,9 @@
 
   &__logo {
     width: 100%;
+    &.lazy {
+      background: none;
+    }
   }
 
   &__sub-title {
@@ -43,13 +46,14 @@
     }
 
     .sub-menu {
+      margin-top: 10px;
       margin-bottom: 30px;
       font: 14px/204% Lato, sans-serif;
       display: flex;
       flex-flow: column;
 
       >.nav__link {
-        margin-bottom: 15px;
+        margin-bottom: 17px;
 
         &:last-child {
           margin-bottom: 0;
@@ -97,6 +101,8 @@
         }
 
         a {
+          transition: opacity .1s linear;
+
           &:hover {
             opacity: .7;
           }
@@ -119,6 +125,7 @@
       background-position: center;
       border: 1px solid #fff;
       border-radius: 50%;
+      transition: opacity .1s linear;
 
       &:hover {
         opacity: .7;

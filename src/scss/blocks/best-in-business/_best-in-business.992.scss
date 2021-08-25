@@ -1,6 +1,7 @@
 .best-in-business {
   &__list {
     flex-flow: nowrap;
+    justify-content: center;
     margin-right: -40px;
 
     &-item {

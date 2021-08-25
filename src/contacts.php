@@ -41,10 +41,22 @@
       </li>
     </ul>
 
-    <div class="contacts-sect__map"></div>
+    <div class="contacts-sect__map">
+      <span class="contacts-sect__map-title active" data-loc-name='spb'>Санкт-Петербург</span>
+      <span class="contacts-sect__map-title" data-loc-name='msc'>Москва</span>
+      <div id="map"></div>
+    </div>
   </div>
 
+  <svg style="display:none">
+  <filter id="monochrome" color-interpolation-filters="sRGB" x="0" y="0" height="100%" width="100%">
+    <feColorMatrix type="matrix" values="0 1.0 0 0 0 0 1.0 0 0 0 0 0.6 1 0 0 0 0 0 1 0"/>
+  </filter>
+</svg>
+
 </section>
+
+<script async src="https://api-maps.yandex.ru/2.1/?apikey=82596a7c-b060-47f9-9fb6-829f012a9f04&lang=ru_RU"></script>
 
 <?php require 'layouts/_contact-us-new.php'; ?>
 

@@ -6,7 +6,7 @@
     <li class="breadcrumbs-list__item"><a href="<?php echo home_url()?>/pentest">Пентест</a></li>
     <?php if ($post->ID !== 129) : ?>
       <li class="breadcrumbs-list__item breadcrumbs-list__item--current">
-        <a href="<?php get_permalink($post->ID) ?>"><?php $post->post_title ?></a>
+        <a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title ?></a>
       </li>
     <?php endif ?>
   </ul>

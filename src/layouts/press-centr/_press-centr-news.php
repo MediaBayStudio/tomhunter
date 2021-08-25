@@ -1,6 +1,6 @@
 <section class="press-centr__sect news-sect">
   <h1 class="sect-title forward_slash" hidden="true">Новости</h1>
-  <ul class="last-news__list news__list">
+  <ul class="news__list">
     <?php
       $news = get_posts([
         'category_name' => 'news',
@@ -28,9 +28,9 @@
         ];
         ?>
 
-        <li class="press-centr__list-item news__list-item">
+        <li class="news__list-item">
           <article class="single-card">
-            <a href="<?php echo $news_item->guid ?>" class="single-card__img-wrap">
+            <a href="<?php echo get_the_permalink($news_item->ID) ?>" class="single-card__img-wrap">
             <img
               src="#"
               alt="#"
@@ -41,12 +41,12 @@
               class="single-card__img lazy">
             </a>
             <span class="single-card__category">Новости</span>
-            <a href="<?php echo $news_item->guid ?>" class="single-card__title-wrap">
+            <a href="<?php echo get_the_permalink($news_item->ID) ?>" class="single-card__title-wrap">
               <strong class="single-card__title"><?php echo $news_item->post_title ?></strong>
             </a>
             <p class="single-card__descr"><?php echo $news_item->post_excerpt ?></p>
             <div class="single-card__bottom">
-              <a href="<?php echo $news_item->guid ?>" class="single-card__link link_red">
+              <a href="<?php echo get_the_permalink($news_item->ID) ?>" class="single-card__link link_red">
                 Читать...
               </a>
               <span class="single-card__date"><?php echo $post_date ?></span>

@@ -17,7 +17,6 @@
 
 .service-card {
   padding: 30px 25px;
-  height: 337px;
   width: 280px;
   margin-right: 20px;
 
@@ -48,6 +47,7 @@
   }
   &__descr {
     max-width: 227px;
+    padding-bottom: 25px;
     font: 14px/167% Lato;
     color: $paragraph-color;
     z-index: 1;

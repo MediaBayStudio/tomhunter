@@ -2,6 +2,10 @@
   font-size: 32px;
 }
 
+.breadcrumbs {
+  padding-top: 30px;
+}
+
 .contacts-sect__form .form__title,
 .contacts-sect__form .name-inp-wrap,
 .contacts-sect__form .company-inp-wrap {
@@ -63,7 +67,6 @@
 
 .index-services-sect {
   padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .index-service-card {
@@ -322,6 +325,23 @@
   width: 300px;
 }
 
+.contacts-sect {
+  padding-top: 60px;
+  padding-bottom: 90px;
+}
+
+.contacts-sect__list {
+  margin-right: 105px;
+}
+
+.contacts-sect__map {
+  max-width: 620px;
+}
+
+.contacts-sect__map #map {
+  height: 390px;
+}
+
 .ftr {
   font-size: 16px;
 }
@@ -345,6 +365,10 @@
 
 .dev-link {
   font-size: 19px;
+}
+
+.service-hero .breadcrumbs-list {
+  padding-top: 30px;
 }
 
 .service-hero__bg-img {
@@ -441,7 +465,6 @@
 .work-result__img {
   width: 366px;
   height: 191px;
-  margin: 60px 90px 0 0;
 }
 
 .intranet-pentest-stages {
@@ -698,15 +721,18 @@
   margin-right: 82px;
 }
 
-.press-centr__list {
-  margin-top: 40px;
-}
-
-.press-centr__list-item {
-  width: calc(100% / 3 - 20px);
-  margin-right: 20px;
+.press-centr__list-item:nth-child(3) {
+  display: block;
 }
 
 .press-centr .single-card__img-wrap {
   height: 242px;
+}
+
+.news__list {
+  margin-top: 40px;
+}
+
+.news__list-item {
+  width: calc(100% / 3 - 20px);
 }
